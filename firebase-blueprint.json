@@ -1,0 +1,83 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profiles",
+      "description": "User account documents containing settings, preferences, and masterclass progress",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "authProvider": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "onboardingCompleted": { "type": "boolean" },
+        "preferences": { "type": "object" },
+        "masterclassProgress": { "type": "object" }
+      },
+      "required": ["uid", "authProvider", "onboardingCompleted", "preferences"]
+    },
+    "matchReactions": {
+      "title": "Match Fan Reactions",
+      "description": "Real-time fan reactions, cheers, and commentary shouts for live cricket matches",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "matchId": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userAvatar": { "type": "string" },
+        "reactionType": { "type": "string", "enum": ["six", "wicket", "cheer", "fire", "shock", "clutch"] },
+        "message": { "type": "string", "maxLength": 140 },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "matchId", "userId", "userName", "reactionType", "createdAt"]
+    },
+    "communityPolls": {
+      "title": "Community Match Polls",
+      "description": "Real-time live match prediction polls and vote counts synchronized across clients",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "matchId": { "type": "string" },
+        "question": { "type": "string" },
+        "options": { "type": "array" },
+        "votes": { "type": "object" },
+        "totalVotes": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "matchId", "question", "options", "votes", "totalVotes"]
+    },
+    "pollVotes": {
+      "title": "User Poll Votes",
+      "description": "Individual votes recorded per user to ensure 1 vote per user",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "pollId": { "type": "string" },
+        "selectedOption": { "type": "string" },
+        "votedAt": { "type": "string" }
+      },
+      "required": ["userId", "pollId", "selectedOption", "votedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "users",
+      "description": "Private user account profile, notification alerts, and masterclass progress"
+    },
+    "/matches/{matchId}/reactions/{reactionId}": {
+      "schema": "matchReactions",
+      "description": "Live real-time fan reactions and cheers for specific cricket matches"
+    },
+    "/community_polls/{pollId}": {
+      "schema": "communityPolls",
+      "description": "Public match prediction polls visible and synchronized across all clients"
+    },
+    "/community_polls/{pollId}/votes/{userId}": {
+      "schema": "pollVotes",
+      "description": "Individual user vote records for community polls"
+    }
+  }
+}

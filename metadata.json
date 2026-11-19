@@ -1,0 +1,6 @@
+{
+  "name": "Cucuber Apex Cricket",
+  "description": "Apex sports tech app for live cricket scores, Masterclass batting and bowling training academy, AI match catch-up summaries, custom event alerts, ball-by-ball commentary, and curated news.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
