@@ -1,343 +1,608 @@
 {
-  "timestamp": 1790656538229,
-  "count": 17,
-  "articles": [
+  "timestamp": 1795437969163,
+  "provider": "ESPNcricinfo+BBC Sport Cricket+Cricket Australia+The Guardian Cricket",
+  "data": [
     {
-      "id": "grounded-news-0-1790656593929",
-      "title": "ICC preparing to reshape the international cricket calendar for the 2027–31 cycle",
-      "summary": "The International Cricket Council (ICC) is discussing significant changes to the international cricket calendar for the 2027–31 cycle, with a proposed shift towards more T20 Internationals and fewer bilateral ODI series. These discussions are taking place at the ICC's Cricket Operations Workshop in Dubai this week, with the Future Tours Programme (FTP) expected to be finalized in November. The aim is to give bilateral ODIs greater context while accommodating the growing demand for T20 cricket.",
-      "source": "IRIE FM",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFR_I2lbRuLb_p9ROPzKfa1PGxlU_VyjK88-_WSrih3CU30EWY8mF52nSDgx2PeWj-zhYTWL5JJmKA4PUO26jLNVNWXcVQ-4MwBTLiZ36ZZ-1ypr0u5LvC4xPr0KhpT46YEKXnZRG-rdFbLXDusUvvUu8WxVvQD30PEs8Nz5WPn6Bj24pDKPVYoWTmN5eWB-Z2feiimroG0eMiE4CIVoJh1",
-      "publishedTime": "September 28, 2026",
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "Silk anchors Tasmania recovery amid renewed attention on Bancroft",
+      "summary": "With his side in trouble at 157 for 5 after electing to bat, Silk hit 128 off 180 balls and shared a sixth-wicket partnership of 122 with injury sub Prestwidge",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/sheffield-shield-jordan-silk-anchors-tasmania-recovery-amid-renewed-attention-on-bancroft-1563690",
+      "url": "https://www.cricinfo.com/story/sheffield-shield-jordan-silk-anchors-tasmania-recovery-amid-renewed-attention-on-bancroft-1563690",
+      "publishedTime": "2026-11-23T11:37:15.000Z",
       "category": "Breaking News",
-      "timeAgo": "1d ago",
-      "readTime": "3 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+      "timeAgo": "1h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/425600/425646.5.jpg",
       "tags": [
-        "Cricket",
-        "ICC",
-        "Future Tours Programme",
-        "T20 Internationals",
-        "ODI series"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFR_I2lbRuLb_p9ROPzKfa1PGxlU_VyjK88-_WSrih3CU30EWY8mF52nSDgx2PeWj-zhYTWL5JJmKA4PUO26jLNVNWXcVQ-4MwBTLiZ36ZZ-1ypr0u5LvC4xPr0KhpT46YEKXnZRG-rdFbLXDusUvvUu8WxVvQD30PEs8Nz5WPn6Bj24pDKPVYoWTmN5eWB-Z2feiimroG0eMiE4CIVoJh1"
+        "ESPNcricinfo"
+      ]
     },
     {
-      "id": "grounded-news-1-1790656593929",
-      "title": "Stumped for wood, bamboo bats offer cricket a substitute to leather on willow",
-      "summary": "Cricket is facing a growing challenge due to the scarcity of traditional willow for bats, exacerbated by climate change and increased global participation. Researchers at the University of Cambridge have proposed bamboo as a sustainable, cheaper, and environmentally friendly alternative. A prototype bamboo bat has demonstrated a noticeable sweet spot and could be a viable option for recreational and school cricket.",
-      "source": "The Guardian",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHX3JUh67NY-O1U9mn7Bn3SnPs_KsYji6ILfN72T9eMlj2uHKMEsBik6VXZjE6afbqK4Su2wzYbhxK3ElXcV0JyNgCDNZg6P3BiH8tcigwZZPNevJaR5pt_BcrLxW6Gq6vsdes5HdzYTN3-wu-W4J9Dst_78VVJ7hscaf2o5Fio1YibWEJTRq_734U7SsyZoJCoQrIpFl8p1r0_XtCabTaWhT5eDOTkG4Tebpk=",
-      "publishedTime": "September 29, 2026",
-      "category": "Latest",
-      "timeAgo": "4h ago",
-      "readTime": "3 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=800&q=80",
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "South Africa bowl in Centurion; Bangladesh bring in Jaker and field all-pace attack",
+      "summary": "Shoriful Islam and Khaled Ahmed came into the team, with Mehidy Hasan Miraz sitting out",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/sa-vs-ban-south-africa-bowl-in-centurion-bangladesh-bring-in-jaker-ali-and-field-all-pace-attack-1563693",
+      "url": "https://www.cricinfo.com/story/sa-vs-ban-south-africa-bowl-in-centurion-bangladesh-bring-in-jaker-ali-and-field-all-pace-attack-1563693",
+      "publishedTime": "2026-11-23T11:37:00.000Z",
+      "category": "Teams",
+      "timeAgo": "1h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/421500/421584.5.jpg",
       "tags": [
-        "Cricket",
-        "Bamboo Bats",
-        "Sustainability",
-        "Cricket Equipment"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHX3JUh67NY-O1U9mn7Bn3SnPs_KsYji6ILfN72T9eMlj2uHKMEsBik6VXZjE6afbqK4Su2wzYbhxK3ElXcV0JyNgCDNZg6P3BiH8tcigwZZPNevJaR5pt_BcrLxW6Gq6vsdes5HdzYTN3-wu-W4J9Dst_78VVJ7hscaf2o5Fio1YibWEJTRq_734U7SsyZoJCoQrIpFl8p1r0_XtCabTaWhT5eDOTkG4Tebpk="
+        "ESPNcricinfo",
+        "South Africa"
+      ]
     },
     {
-      "id": "grounded-news-2-1790656593929",
-      "title": "India vs West Indies: Virat Kohli joins Sachin Tendulkar in passing 15,000 ODI runs as his 55th ton fires India to victory",
-      "summary": "Virat Kohli smashed an unbeaten 139 off 88 balls, including 10 fours and nine sixes, to lead India to an eight-wicket victory over West Indies in the first ODI. This century marked his 55th in the format and made him the fastest player to reach 15,000 ODI runs, surpassing Sachin Tendulkar's record. Skipper Shubman Gill also contributed a century (110 runs) as India successfully chased down 296 runs.",
-      "source": "Sky Sports",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdfeqkuaTcoiDIN828NRQ5RVPilyK64rPeyW8ss0z-lDG8x4h_k3Ac9Bxm3d-alya_Bi7SVmhysQFzgLyffEu-aTRlKS9_zFipPHSnsP4AmgWYhNuTZ0LcLsKzSqRdRxX_-3H2uKHmoOqk7cqEQ7GJXoAxFBslcU-rquHdmpWp4WA2mO48i0umxbbrMKxZka1HFIuQIRqn2TauF7byDYg9KeQZG09P3lquj_Jcw9rOp8Gt-QveJpZZfLREexDOYxcHXrlVHXd1bqvnKZNVOCRhSwkQatB0Zi8nNYthTE1nMrmM3PTw",
-      "publishedTime": "Sunday 27 September 2026",
+      "id": "guardian-cricket-rss-aHR0cHM6Ly93d3cu",
+      "title": "‘Ollie makes it sound easy’: Crocombe on fast-track with Test debut in his sights",
+      "summary": "The England seamer, who now has Jimmy Anderson as a county teammate, hopes a red-ball bow is not too far away Henry Crocombe is a cricketer in a hurry. Thoughts of playing for England were far from the fast bowler’s mind at the start of 2026 but he has sinc...",
+      "source": "The Guardian Cricket",
+      "sourceUrl": "https://www.theguardian.com/sport/2026/nov/23/england-cricket-henry-crocombe-ollie-robinson",
+      "url": "https://www.theguardian.com/sport/2026/nov/23/england-cricket-henry-crocombe-ollie-robinson",
+      "publishedTime": "2026-11-23T10:30:42.000Z",
+      "category": "Teams",
+      "timeAgo": "2h ago",
+      "readTime": "3 min read",
+      "imageUrl": "https://i.guim.co.uk/img/media/1eba54259a22ee9bf21206c068ca20f84fc18fc8/495_0_4504_3605/master/4504.jpg?width=140&quality=85&auto=format&fit=max&s=cc784e78a2ba987d15b2e4ca221a3d94",
+      "tags": [
+        "The Guardian Cricket",
+        "Test"
+      ]
+    },
+    {
+      "id": "cricket-australia-rss-aHR0cHM6Ly93d3cu",
+      "title": "Silky touch: Tassie buoyed by skipper, super sub against WA",
+      "summary": "Jordan Silk struck his 14th first-class century on day one, but his greatest strength was also his downfall",
+      "source": "Cricket Australia",
+      "sourceUrl": "https://www.cricket.com.au/news/4613003/match-report-western-australia-tasmania-perth-stadium-sheffield-shield-round-five-teague-wyllie",
+      "url": "https://www.cricket.com.au/news/4613003/match-report-western-australia-tasmania-perth-stadium-sheffield-shield-round-five-teague-wyllie",
+      "publishedTime": "2026-11-23T10:10:00.000Z",
       "category": "Matches",
-      "timeAgo": "2d ago",
-      "readTime": "3 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=800&q=80",
-      "tags": [
-        "Cricket",
-        "India vs West Indies",
-        "ODI",
-        "Virat Kohli",
-        "Shubman Gill",
-        "ODI Records",
-        "Match Report"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdfeqkuaTcoiDIN828NRQ5RVPilyK64rPeyW8ss0z-lDG8x4h_k3Ac9Bxm3d-alya_Bi7SVmhysQFzgLyffEu-aTRlKS9_zFipPHSnsP4AmgWYhNuTZ0LcLsKzSqRdRxX_-3H2uKHmoOqk7cqEQ7GJXoAxFBslcU-rquHdmpWp4WA2mO48i0umxbbrMKxZka1HFIuQIRqn2TauF7byDYg9KeQZG09P3lquj_Jcw9rOp8Gt-QveJpZZfLREexDOYxcHXrlVHXd1bqvnKZNVOCRhSwkQatB0Zi8nNYthTE1nMrmM3PTw"
-    },
-    {
-      "id": "grounded-news-3-1790656593929",
-      "title": "USA National Men's Cricket Team Begins Historic LA28 Journey with USOPC Performance Camp in Colorado Springs",
-      "summary": "The USA Men's National Cricket Team has commenced a significant preparatory performance camp at the United States Olympic & Paralympic Training Center in Colorado Springs. This initiative marks a crucial step in their journey towards competing in the Lima 2027 Pan American Games and the Los Angeles 2028 Olympic Games. Cricket is set to return to the Olympic program for the first time in 128 years.",
-      "source": "ICC",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8law8U3C4CiXIgEbB3p0tBfRE2HXyZPlTdBBtUC5QqZuVleEnpjv3k7xUdMzstQZ-EBkyMlUKUhVtpP442DSF5uFGj4fteEA8abDsi1C7Cx4zDOA1Xgt_lXtw5KbjmqCP8FW7Fx0JWe1-26ZfSiJPiJ1zU7WgyFxOtoVtcSIP-52FhR4QOnRRFwrohc5vGITWlaMm6r0Bdl4pS46A-jLdzFRyYyEpN6PC9GbJ3nseCNwr37_T1u_CkgVOY0Nln4oVoMvu09k=",
-      "publishedTime": "28 September, 2026",
-      "category": "Teams",
-      "timeAgo": "1d ago",
-      "readTime": "3 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=800&q=80",
-      "tags": [
-        "Cricket",
-        "USA Cricket",
-        "LA28 Olympics",
-        "Olympic Games",
-        "Team Preparation"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8law8U3C4CiXIgEbB3p0tBfRE2HXyZPlTdBBtUC5QqZuVleEnpjv3k7xUdMzstQZ-EBkyMlUKUhVtpP442DSF5uFGj4fteEA8abDsi1C7Cx4zDOA1Xgt_lXtw5KbjmqCP8FW7Fx0JWe1-26ZfSiJPiJ1zU7WgyFxOtoVtcSIP-52FhR4QOnRRFwrohc5vGITWlaMm6r0Bdl4pS46A-jLdzFRyYyEpN6PC9GbJ3nseCNwr37_T1u_CkgVOY0Nln4oVoMvu09k="
-    },
-    {
-      "id": "grounded-news-4-1790656593929",
-      "title": "Kevin Pietersen promises to challenge Brendon McCullum as England white-ball head coach eyes world No 1 ranking",
-      "summary": "Former England batsman Kevin Pietersen has joined the England white-ball coaching setup, with the stated aim of challenging head coach Brendon McCullum and guiding the team to the world No. 1 ranking. Pietersen's appointment follows England's recent series-clinching victory over Sri Lanka. He expressed his excitement about being back in the dressing room and contributing to the team's success.",
-      "source": "Sky Sports",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwu5kngaMjuZGbWedKhlLNeJhhYzvulRFyVOSYnHMxyK1eiI8IpV--Mk6S5lPDJgiptQv40mZ21X17iPsT35XWxu1uD4Dt7_GR7kN06aBqieK19tQYWg81vZntz-b33mqxl2rMyD8VdD8GjZUYj12-4HgD06C38iZUtXk9cElFp3tU1lUrRngS9-RytFMY-pJiDj0_KXhqHMnDuMoyTuP0Sj-yihlgMAox-znzWin3G3J7GlixqJDfRLVmUuvJ1gev",
-      "publishedTime": "September 28 2026",
-      "category": "Teams",
-      "timeAgo": "1d ago",
+      "timeAgo": "2h ago",
       "readTime": "2 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/11/23/95974322-6de4-4c72-abfd-aaa144e71cfc/silkytonmr.jpg?width=500",
       "tags": [
-        "Cricket",
-        "England Cricket",
-        "Kevin Pietersen",
-        "Brendon McCullum",
-        "Coaching"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwu5kngaMjuZGbWedKhlLNeJhhYzvulRFyVOSYnHMxyK1eiI8IpV--Mk6S5lPDJgiptQv40mZ21X17iPsT35XWxu1uD4Dt7_GR7kN06aBqieK19tQYWg81vZntz-b33mqxl2rMyD8VdD8GjZUYj12-4HgD06C38iZUtXk9cElFp3tU1lUrRngS9-RytFMY-pJiDj0_KXhqHMnDuMoyTuP0Sj-yihlgMAox-znzWin3G3J7GlixqJDfRLVmUuvJ1gev"
+        "Cricket Australia"
+      ]
     },
     {
-      "id": "grounded-news-5-1790656593929",
-      "title": "County Championship: Leicestershire have eight points reinstated from 27-point deduction for poor pitch blamed on Bollywood film shoot",
-      "summary": "Leicestershire's 27-point deduction in the County Championship, which led to their relegation from Division One, has been partially overturned with eight points reinstated. The Cricket Discipline Panel (CDP) amended the sanction following an appeal, reducing the total deduction to 19 points. The initial penalty was imposed for a substandard pitch at Grace Road.",
-      "source": "Sky Sports",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIbf7qx_tYJXuar9Yj8rgWKJWS4eZhSwgCeCfxuWG3TvT7njvgz_BNQ7uIJADivQczDmlkh7Y6jXsMMOyy4cFDTX4OUqdorDkhP1JX3wDT2xK1W7D3cQMJ6H84coiLxda66R5J6cIMirjBxsdIhk8EkKrKCDPmwk37SPNUyp4DsbkABJRbmpSFFRB3_cHqz_YQYUF0OCgYHG46xLq32-ELv7yl6WpXYV_gHFWpjTLD4zHOyTiXtMer3XxtkDa0Ds5uBceI6WTCd2YfNNIZEjISoTJY",
-      "publishedTime": "September 28 2026",
-      "category": "Breaking News",
-      "timeAgo": "1d ago",
-      "readTime": "2 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=800&q=80",
-      "tags": [
-        "Cricket",
-        "County Championship",
-        "Leicestershire",
-        "Points Deduction"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIbf7qx_tYJXuar9Yj8rgWKJWS4eZhSwgCeCfxuWG3TvT7njvgz_BNQ7uIJADivQczDmlkh7Y6jXsMMOyy4cFDTX4OUqdorDkhP1JX3wDT2xK1W7D3cQMJ6H84coiLxda66R5J6cIMirjBxsdIhk8EkKrKCDPmwk37SPNUyp4DsbkABJRbmpSFFRB3_cHqz_YQYUF0OCgYHG46xLq32-ELv7yl6WpXYV_gHFWpjTLD4zHOyTiXtMer3XxtkDa0Ds5uBceI6WTCd2YfNNIZEjISoTJY"
-    },
-    {
-      "id": "grounded-news-6-1790656593929",
-      "title": "Ravaged by anarchy, West Indies bank on raw talent for ODI series vs India",
-      "summary": "The West Indies cricket team is relying on raw talent as they prepare for their upcoming ODI series against India, despite a history of administrative challenges and a long drought in bilateral series wins against top teams. Captain Shai Hope acknowledged the team's struggles over the past two decades but emphasized the importance of consistency. The team is looking to improve its standing in international cricket.",
-      "source": "The Indian Express",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQED4MGrkep5_1-ukKlnNRt6cmOwNAnlgZGYMLzAKjYW-wwvPb7Ceg8yrKaWIrngz9VEgGGktH4zR3AtFmREoDnV1eyLAA0cE9qcHImVeSZkDWFbsfPjlR7O5HXnVTTYIKPJ-bDqVAPrusFMFCY_flVdkecOyys2w-TBHa0HprHZ8NPekDEdpAbyWkYz3npD66sDydw2B3rXhglSYXGd4SQx3AT41B63o_nNC0I3LcW5UXcJzCrma71eMwcbewGHEfY1DcFGyvYv6YinU0yRCk2T_wLPJW_AmTe-4Vw=",
-      "publishedTime": "Sep 26, 2026",
-      "category": "Teams",
-      "timeAgo": "3d ago",
-      "readTime": "3 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=800&q=80",
-      "tags": [
-        "Cricket",
-        "West Indies Cricket",
-        "India vs West Indies",
-        "ODI Series",
-        "Team Analysis"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQED4MGrkep5_1-ukKlnNRt6cmOwNAnlgZGYMLzAKjYW-wwvPb7Ceg8yrKaWIrngz9VEgGGktH4zR3AtFmREoDnV1eyLAA0cE9qcHImVeSZkDWFbsfPjlR7O5HXnVTTYIKPJ-bDqVAPrusFMFCY_flVdkecOyys2w-TBHa0HprHZ8NPekDEdpAbyWkYz3npD66sDydw2B3rXhglSYXGd4SQx3AT41B63o_nNC0I3LcW5UXcJzCrma71eMwcbewGHEfY1DcFGyvYv6YinU0yRCk2T_wLPJW_AmTe-4Vw="
-    },
-    {
-      "id": "grounded-news-7-1790656593929",
-      "title": "Asian Games 2026: India qualify for semis as match against Afghanistan abandoned without toss",
-      "summary": "India has secured a spot in the semifinals of the Asian Games 2026 after their quarter-final cricket match against Afghanistan was abandoned due to rain, without a single ball being bowled. The Shreyas Iyer-led Indian side will now advance to face Pakistan in the semifinals on Thursday. Iyer expressed his honor in leading the team and the pressure to perform at the top level.",
-      "source": "The Indian Express",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHb9kszP4XkqdZcW8BGqJSzpa9uN4rz_uUU53UUSZffC7wDEqs7JBeptZ4kB8dzu8YuPryBaU7oxLe86Moo3W2SP8wJmfi0Grvg0Oi2c_V2ZlgURba4ARfcIHga7YWPBubO731ZslGtVA6QE5FnNiprcLn2NLmNWyf1fslTgOgwER2NxHH_HOXJUmUnC5FOZjTinti8iNABiUHP13sYKFHhGrpob01jnyqQnAax9XL-wtB_k-UrFrHzZAQNSTbjKNM1DnGMHYnxemrWlKYn2UiiYC8SepDh96z_8w8VNqmkuvckJ0IR2zIGEqsRiClrW-jD",
-      "publishedTime": "Sep 28, 2026",
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "New Zealand and India play out stalemate on stubborn Basin Reserve pitch",
+      "summary": "The result pushed India further away from WTC final contention, while New Zealand slipped to No. 3 on that points table",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/nz-vs-ind-1st-test-new-zealand-and-india-play-out-stalemate-on-unyielding-basin-reserve-pitch-1563651",
+      "url": "https://www.cricinfo.com/story/nz-vs-ind-1st-test-new-zealand-and-india-play-out-stalemate-on-unyielding-basin-reserve-pitch-1563651",
+      "publishedTime": "2026-11-23T10:04:07.000Z",
       "category": "Tournaments",
-      "timeAgo": "1d ago",
-      "readTime": "3 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=800&q=80",
-      "tags": [
-        "Cricket",
-        "Asian Games 2026",
-        "India Cricket",
-        "Afghanistan Cricket",
-        "Match Abandoned"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHb9kszP4XkqdZcW8BGqJSzpa9uN4rz_uUU53UUSZffC7wDEqs7JBeptZ4kB8dzu8YuPryBaU7oxLe86Moo3W2SP8wJmfi0Grvg0Oi2c_V2ZlgURba4ARfcIHga7YWPBubO731ZslGtVA6QE5FnNiprcLn2NLmNWyf1fslTgOgwER2NxHH_HOXJUmUnC5FOZjTinti8iNABiUHP13sYKFHhGrpob01jnyqQnAax9XL-wtB_k-UrFrHzZAQNSTbjKNM1DnGMHYnxemrWlKYn2UiiYC8SepDh96z_8w8VNqmkuvckJ0IR2zIGEqsRiClrW-jD"
-    },
-    {
-      "id": "grounded-news-8-1790656593929",
-      "title": "Ishan Kishan Mammoth 270 Powers East Zone to 708 in Duleep Trophy Final",
-      "summary": "Ishan Kishan delivered a monumental performance, scoring 270 runs to help East Zone post a massive total of 708 in the Duleep Trophy Final. This outstanding batting display highlights his current form in domestic cricket. The innings was a significant contribution to his team's strong position in the match.",
-      "source": "Cricbuzz",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF90BhVMlUc19uVi5tgbg_utvLK_P0Z55mKVhnV-na5YV1o4s8n4001KiZP8MBRR-pdknwtZrDzkYJDxYn1PRSn6OsiRg0dYo0-WjtZ2pgH1s5oOddgOrqaa1Dc3q_hq4MQF7__OaZIt2v4vmGwiw05qvLYpRnd0v1tmZzf30WxIUMW34PususSSBmMsaeyS--Q174EMfH92EYbDDHU5mrQiHFI_yVS_BYDHcJkn7acu8BzmA67r_daKOAW5Tc99Pw=",
-      "publishedTime": "September 2026",
-      "category": "Matches",
-      "timeAgo": "28d ago",
+      "timeAgo": "2h ago",
       "readTime": "2 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/425600/425652.6.jpg",
       "tags": [
-        "Cricket",
-        "Ishan Kishan",
-        "Duleep Trophy",
-        "Domestic Cricket"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF90BhVMlUc19uVi5tgbg_utvLK_P0Z55mKVhnV-na5YV1o4s8n4001KiZP8MBRR-pdknwtZrDzkYJDxYn1PRSn6OsiRg0dYo0-WjtZ2pgH1s5oOddgOrqaa1Dc3q_hq4MQF7__OaZIt2v4vmGwiw05qvLYpRnd0v1tmZzf30WxIUMW34PususSSBmMsaeyS--Q174EMfH92EYbDDHU5mrQiHFI_yVS_BYDHcJkn7acu8BzmA67r_daKOAW5Tc99Pw="
+        "ESPNcricinfo",
+        "India",
+        "New Zealand"
+      ]
     },
     {
-      "id": "grounded-news-9-1790656593929",
-      "title": "BAN vs MAS 4th Quarter Final T20 Match - Live Cricket Score, Full Scorecard, Korogi Sports Park, Nisshin",
-      "summary": "The 4th Quarter Final T20 match of the Asian Games 2026 is set to take place between Bangladesh and Malaysia at the Korogi Sports Park in Nisshin. Bangladesh, as a full ICC member, has directly qualified for the quarterfinals. Malaysia, having played through earlier stages, enters the match with rhythm, making for an intriguing contest.",
-      "source": "The Indian Express",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxS0VdoWPXAuiIr_ActFYck0p9TksblfzxPgvuPm-MNe62AkZ0xHrjrE8f4MWW46egNZ2EEYavvB6OfSdvsneHpz17TVqfaAsU4LqPXcAmmeMrVVoXTom4rqemcOAmSAfmDz9BQUuoiQ==",
-      "publishedTime": "Sep 29 2026",
-      "category": "Matches",
-      "timeAgo": "4h ago",
-      "readTime": "2 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=800&q=80",
-      "tags": [
-        "Cricket",
-        "Asian Games 2026",
-        "Bangladesh Cricket",
-        "Malaysia Cricket",
-        "T20"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxS0VdoWPXAuiIr_ActFYck0p9TksblfzxPgvuPm-MNe62AkZ0xHrjrE8f4MWW46egNZ2EEYavvB6OfSdvsneHpz17TVqfaAsU4LqPXcAmmeMrVVoXTom4rqemcOAmSAfmDz9BQUuoiQ=="
-    },
-    {
-      "id": "grounded-news-10-1790656593929",
-      "title": "Injuries deplete Australia further in South Africa",
-      "summary": "Australia's tour of South Africa has been hit by further injury concerns, with Nathan Ellis and Joel Davies both ruled out of the upcoming third ODI. Ellis suffered a side strain, while Davies sustained a hamstring injury. Five-wicket hero Jack Edwards is also being monitored for a hamstring issue, adding to Australia's challenges as they trail 2-0 in the series.",
-      "source": "ICC",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5z7p4zzlf8ItQqQdWVftD-eVSkxdMTbHTiLSbvVc0LAPDfGCgKUT1aQSHexfdLycm_TCOioWO1-8P0E2QEUMWKj8TAzGnkD8BS6HFC3DdrG0rNPTHb71BSTI_3d9rjiYJcVMb6aVUYCe18hy7oyto5OkwXBV-vE2ccmsiK6hLhjoHh_wmr5wA2gim1bylbnIK3DFYrwDOz_ecS3k0FHfu6UUJtgB45eRwXkTTeF9lyWugS6QHbyxX7BZrxw==",
-      "publishedTime": "29 September, 2026",
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "Last-over MCG finish suggests a series of fine margins",
+      "summary": "Some of Australia's new faces came to the fore at the MCG while England have lost Will Jacks to a series-ending injury",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/aus-vs-eng-2nd-t20i-2026-27-last-over-finish-suggests-australia-vs-england-series-will-be-of-fine-margins-1563642",
+      "url": "https://www.cricinfo.com/story/aus-vs-eng-2nd-t20i-2026-27-last-over-finish-suggests-australia-vs-england-series-will-be-of-fine-margins-1563642",
+      "publishedTime": "2026-11-23T09:29:12.000Z",
       "category": "Breaking News",
-      "timeAgo": "4h ago",
+      "timeAgo": "3h ago",
       "readTime": "2 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/425500/425591.6.jpg",
       "tags": [
-        "Cricket",
-        "Australia Cricket",
-        "South Africa",
-        "ODI Series",
-        "Player Injuries"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5z7p4zzlf8ItQqQdWVftD-eVSkxdMTbHTiLSbvVc0LAPDfGCgKUT1aQSHexfdLycm_TCOioWO1-8P0E2QEUMWKj8TAzGnkD8BS6HFC3DdrG0rNPTHb71BSTI_3d9rjiYJcVMb6aVUYCe18hy7oyto5OkwXBV-vE2ccmsiK6hLhjoHh_wmr5wA2gim1bylbnIK3DFYrwDOz_ecS3k0FHfu6UUJtgB45eRwXkTTeF9lyWugS6QHbyxX7BZrxw=="
+        "ESPNcricinfo"
+      ]
     },
     {
-      "id": "grounded-news-11-1790656593929",
-      "title": "Jemimah Rodrigues to captain Delhi Capitals in WPL 2026",
-      "summary": "Jemimah Rodrigues is expected to be named the new captain of the Delhi Capitals for the Women's Premier League (WPL) 2026 season. She is among 13 players retained by the franchise ahead of the upcoming auction. This move signifies a focus on an Indian core for the team's leadership.",
-      "source": "Cricbuzz",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDRNIe6hQjDtn6iVNyPoq4CF9nrGFCbTWK--bKWWWPq00aP9CuLKQC4Z-YKExygB93qBuLunNrEOOpyrILJbsIZCEVepj1oKrni5F8lDKiytMdqy9nhs8=",
-      "publishedTime": "September 28 2026",
-      "category": "Teams",
-      "timeAgo": "1d ago",
+      "id": "bbc-sport-cricket-rss-aHR0cHM6Ly93d3cu",
+      "title": "Saliva should be used to shine ball again - Gill",
+      "summary": "The India captain calls for the ban on using saliva to shine the ball to be reversed after drawing the first Test against New Zealand in Wellington.",
+      "source": "BBC Sport Cricket",
+      "sourceUrl": "https://www.bbc.co.uk/sport/cricket/articles/c6y80neve594o?at_medium=RSS&at_campaign=rss",
+      "url": "https://www.bbc.co.uk/sport/cricket/articles/c6y80neve594o?at_medium=RSS&at_campaign=rss",
+      "publishedTime": "2026-11-23T08:55:49.000Z",
+      "category": "Matches",
+      "timeAgo": "3h ago",
       "readTime": "2 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/20ed/live/35dffd30-e714-11f1-b502-e94e65986124.jpg",
       "tags": [
-        "Cricket",
-        "Women's Premier League",
-        "WPL 2026",
-        "Delhi Capitals",
-        "Jemimah Rodrigues"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDRNIe6hQjDtn6iVNyPoq4CF9nrGFCbTWK--bKWWWPq00aP9CuLKQC4Z-YKExygB93qBuLunNrEOOpyrILJbsIZCEVepj1oKrni5F8lDKiytMdqy9nhs8="
+        "BBC Sport Cricket"
+      ]
     },
     {
-      "id": "grounded-news-12-1790656593929",
-      "title": "MCC PREPARES FOR NEW EDITION OF LAWS FROM 1 OCTOBER 2026",
-      "summary": "The Marylebone Cricket Club (MCC) is actively preparing for the implementation of a new edition of the Laws of Cricket, set to come into force on October 1, 2026. This new code introduces 73 material changes, including the legalisation of laminated bats and revised regulations for cricket balls. The MCC is undertaking an extensive educational program, including a new Laws of Cricket app in multiple languages, across India to ensure widespread understanding of the updates.",
-      "source": "MCC",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF97yBuvWvfa9z8qvxMHOBbFbo2DP2IBPNbTAahPUE7pooYoFSqtt21D9P1Dw_D56rl8IGWzR_WOOohJJUdYLWRjKS6o8lR0ptSDttx7AkWLxboGxr0u7o7wNgcYOKE0VhEzD8ZiQZmlEfjqAp3yXNr3Nx3x2pqLtqj9AN2pgDETm2A_Dsnsx-SjutCoxNGg5GGPybmh74GksNy47hkgs4z3qWuMZYXmqW0oFl4t74CLr7xgCFlqjb1YezQb2hhw_0wI4v55zifa5ltzWb1VF6YM_oO01GHsicOyrrdzL09pPTke9U6ZHIThjNXVCs336kW3GS4KVjyGYY=",
-      "publishedTime": "28 September 2026",
-      "category": "Breaking News",
-      "timeAgo": "1d ago",
-      "readTime": "3 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
-      "tags": [
-        "Cricket",
-        "Laws of Cricket",
-        "MCC",
-        "Cricket Regulations"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF97yBuvWvfa9z8qvxMHOBbFbo2DP2IBPNbTAahPUE7pooYoFSqtt21D9P1Dw_D56rl8IGWzR_WOOohJJUdYLWRjKS6o8lR0ptSDttx7AkWLxboGxr0u7o7wNgcYOKE0VhEzD8ZiQZmlEfjqAp3yXNr3Nx3x2pqLtqj9AN2pgDETm2A_Dsnsx-SjutCoxNGg5GGPybmh74GksNy47hkgs4z3qWuMZYXmqW0oFl4t74CLr7xgCFlqjb1YezQb2hhw_0wI4v55zifa5ltzWb1VF6YM_oO01GHsicOyrrdzL09pPTke9U6ZHIThjNXVCs336kW3GS4KVjyGYY="
-    },
-    {
-      "id": "grounded-news-13-1790656593929",
-      "title": "Kohli manifests dream finish for India in CWC Final",
-      "summary": "Indian batting icon Virat Kohli has expressed his strong desire to play a match-winning, finishing knock for India in the final of the ICC Men's Cricket World Cup 2027. He emphasized his unwavering motivation to win games for his team and his dream of concluding his World Cup career with a significant individual performance in a victorious final.",
-      "source": "ICC",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFA3SuEIxBgsyx2aPMFRJ1WQc_zP65aNSqm8YlbWyBtmNSr11aE4LjjsOS_FUDni4OesvJwvpx-EtC1NcyK1MYYucMfBrFyMJ5FgMsQ3mPjCmok0piCWdfgY3q-SyCCucdqTlmcb8sYq1fbskju7bxMrkDQrMx6hD5jiCkH42wZYkfG35-BE0-bNOJzMbrV",
-      "publishedTime": "27 September, 2026",
+      "id": "cricket-australia-rss-aHR0cHM6Ly93d3cu",
+      "title": "Smith return falls short, Bulls' bowlers fire late",
+      "summary": "Batters on both sides have struggled to turn starts into big scores across the first two days at the SCG",
+      "source": "Cricket Australia",
+      "sourceUrl": "https://www.cricket.com.au/news/4613002/match-report-new-south-wales-queensland-sheffield-shield-round-five-steve-smith",
+      "url": "https://www.cricket.com.au/news/4613002/match-report-new-south-wales-queensland-sheffield-shield-round-five-steve-smith",
+      "publishedTime": "2026-11-23T08:45:00.000Z",
       "category": "Players",
-      "timeAgo": "2d ago",
+      "timeAgo": "4h ago",
       "readTime": "2 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/11/23/dd65d4a5-8b5c-4ec5-bb5d-427ba2b29d3e/steve-smithnswmatchy.jpg?width=500",
       "tags": [
-        "Cricket",
-        "Virat Kohli",
-        "ICC Cricket World Cup 2027",
-        "India Cricket"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFA3SuEIxBgsyx2aPMFRJ1WQc_zP65aNSqm8YlbWyBtmNSr11aE4LjjsOS_FUDni4OesvJwvpx-EtC1NcyK1MYYucMfBrFyMJ5FgMsQ3mPjCmok0piCWdfgY3q-SyCCucdqTlmcb8sYq1fbskju7bxMrkDQrMx6hD5jiCkH42wZYkfG35-BE0-bNOJzMbrV"
+        "Cricket Australia"
+      ]
     },
     {
-      "id": "grounded-news-14-1790656593929",
-      "title": "Aussie great steps up as bitter Big Bash battle takes first CA casualty",
-      "summary": "Former Australian cricketer David Boon has been appointed as the interim chair of Cricket Australia, following the resignation of Mike Baird. Baird's departure comes amidst a contentious dispute within Australian cricket over the proposed privatization of the Big Bash League. Boon will assume his new role at the governing body's annual general meeting.",
-      "source": "Fox Cricket",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmZ3kUF-b9UD30ojIfHQfvNF3PcFjopGHM9f10JSn_7eS24lVkokSQ4rq4nHXe4SyEX47Pa7EfguWvZ2PBRT-qHYoeZkFdtFuUIfyu9Awk5nAa3WCwcoKih-InWYRsPQiVbrKSXuzwKuLvMm8pvEI5fUhxruWWfNWumTTXMEfV7TP247VpNHIBCdl_4m9FXniDXiLcq3iYcQKBEtWwHhpJvq5UBjqyighGw3eRHdpprbeEvb0tBGxSRby76KPA49Oufn0kLns0yKAsUUYTG1P3uRiVpcjAtkmt73Xt01XzeHbeub023GepvawDJuXubgS5YEjDeNBkXPrEZN4=",
-      "publishedTime": "September 28th, 2026",
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "'We are way past Covid times' - Gill wants saliva ban to be reversed",
+      "summary": "The India captain was not pleased with the quality of the balls after his bowlers could not take eight wickets on the fifth day in Wellington",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/nz-vs-ind-1st-test-shubman-gill-on-leaving-out-mohammed-siraj-and-changing-the-no-saliva-rule-1563667",
+      "url": "https://www.cricinfo.com/story/nz-vs-ind-1st-test-shubman-gill-on-leaving-out-mohammed-siraj-and-changing-the-no-saliva-rule-1563667",
+      "publishedTime": "2026-11-23T08:43:52.000Z",
+      "category": "Players",
+      "timeAgo": "4h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/425600/425616.6.jpg",
+      "tags": [
+        "ESPNcricinfo"
+      ]
+    },
+    {
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "Smith, Konstas frustrated as New South Wales struggle",
+      "summary": "Mitchell Swepson and Michael Neser took five wickets between them to put Queensland in sight of a first-innings lead",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/sheffield-shield-2026-27--steven-smith-sam-konstas-frustrated-as-new-south-wales-struggle-1563654",
+      "url": "https://www.cricinfo.com/story/sheffield-shield-2026-27--steven-smith-sam-konstas-frustrated-as-new-south-wales-struggle-1563654",
+      "publishedTime": "2026-11-23T08:20:13.000Z",
+      "category": "Matches",
+      "timeAgo": "4h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/425600/425660.5.jpg",
+      "tags": [
+        "ESPNcricinfo"
+      ]
+    },
+    {
+      "id": "bbc-sport-cricket-rss-aHR0cHM6Ly93d3cu",
+      "title": "De Villiers claims ball-tampering from first 2018 Test",
+      "summary": "Former South Africa batter AB de Villiers says \"there is absolutely no doubt in my mind\" that Australia were altering the ball from the opening Test in 2018.",
+      "source": "BBC Sport Cricket",
+      "sourceUrl": "https://www.bbc.co.uk/sport/cricket/articles/c607418zlpz4o?at_medium=RSS&at_campaign=rss",
+      "url": "https://www.bbc.co.uk/sport/cricket/articles/c607418zlpz4o?at_medium=RSS&at_campaign=rss",
+      "publishedTime": "2026-11-23T08:08:13.000Z",
+      "category": "Teams",
+      "timeAgo": "4h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/668e/live/70da5030-e70e-11f1-8eab-2f1116919fa3.jpg",
+      "tags": [
+        "BBC Sport Cricket",
+        "Test"
+      ]
+    },
+    {
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "Injury-hit Bangladesh face uphill task against Bavuma-less South Africa",
+      "summary": "Without Mushfiqur and Mahmud, Bangladesh will need a lot to go their way to challenge WTC title-holders South Africa",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/injury-hit-bangladesh-face-uphill-task-against-bavuma-less-south-africa-1563618",
+      "url": "https://www.cricinfo.com/story/injury-hit-bangladesh-face-uphill-task-against-bavuma-less-south-africa-1563618",
+      "publishedTime": "2026-11-23T07:08:45.000Z",
       "category": "Breaking News",
-      "timeAgo": "September 28th, 2026",
+      "timeAgo": "5h ago",
       "readTime": "2 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/425400/425478.5.jpg",
       "tags": [
-        "Cricket",
-        "Cricket Australia",
-        "David Boon",
-        "Big Bash League",
-        "Administration"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmZ3kUF-b9UD30ojIfHQfvNF3PcFjopGHM9f10JSn_7eS24lVkokSQ4rq4nHXe4SyEX47Pa7EfguWvZ2PBRT-qHYoeZkFdtFuUIfyu9Awk5nAa3WCwcoKih-InWYRsPQiVbrKSXuzwKuLvMm8pvEI5fUhxruWWfNWumTTXMEfV7TP247VpNHIBCdl_4m9FXniDXiLcq3iYcQKBEtWwHhpJvq5UBjqyighGw3eRHdpprbeEvb0tBGxSRby76KPA49Oufn0kLns0yKAsUUYTG1P3uRiVpcjAtkmt73Xt01XzeHbeub023GepvawDJuXubgS5YEjDeNBkXPrEZN4="
+        "ESPNcricinfo",
+        "South Africa"
+      ]
     },
     {
-      "id": "grounded-news-15-1790656593929",
-      "title": "ICC to unveil World Cup 2027 schedule on October 1: report",
-      "summary": "The International Cricket Council (ICC) and Cricket South Africa (CSA) are reportedly set to announce the full schedule for the 2027 Men's Cricket World Cup on October 1st. This announcement will mark the one-year countdown to the tournament and is expected to coincide with the release of match tickets. The upcoming edition will feature a new three-stage format designed to enhance competitiveness.",
-      "source": "Geo News",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSxkE1ZWDItpTgHWX7m3XKOX5wpEtOxN94V-rViPpF1yBu87yWS2_htrONRzPwpdSsWmspp5ur0MRoHEdZkrSqw4d5L5mOCoH7D2O0sq79E5OP-yFT5Vo77jGjCP2hVSXfEgpBkaMMgAmplY5gnKzZY9wQ3VikKVSGz1hPTqoRt51ZTNanbsNCZcIfzZIlKuaEo2eOy1w2J2WaeVZeg-GWQxGUCs9ukrOUlh6TkGm_PlIb81w2X_1eQ9PcQLvVp_Rnehe5y8Q=",
-      "publishedTime": "September 28, 2026",
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "De Villiers claims Australia's 2018 ball tampering 'started in Durban'",
+      "summary": "The former South Africa batter said the ball had reversed \"way too early\" in the first Test",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/ab-de-villiers-claims-australias-2018-ball-tampering-started-in-durban-1563656",
+      "url": "https://www.cricinfo.com/story/ab-de-villiers-claims-australias-2018-ball-tampering-started-in-durban-1563656",
+      "publishedTime": "2026-11-23T06:52:15.000Z",
+      "category": "Teams",
+      "timeAgo": "5h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/273800/273857.6.jpg",
+      "tags": [
+        "ESPNcricinfo",
+        "Australia"
+      ]
+    },
+    {
+      "id": "cricket-australia-rss-aHR0cHM6Ly93d3cu",
+      "title": "Australia regain WTC final spot after NZ-India result",
+      "summary": "After India posted 9-720 in their first innings, hosts New Zealand were left to battle through the final day-and-a-bit to survive the Test",
+      "source": "Cricket Australia",
+      "sourceUrl": "https://www.cricket.com.au/news/4613020/new-zealand-india-first-test-series-henry-nicholls-glenn-phillips",
+      "url": "https://www.cricket.com.au/news/4613020/new-zealand-india-first-test-series-henry-nicholls-glenn-phillips",
+      "publishedTime": "2026-11-23T05:46:00.000Z",
+      "category": "Tournaments",
+      "timeAgo": "7h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/11/23/378295f8-438f-48c9-ad10-25e172235061/NZvIndiamr1.jpg?width=500",
+      "tags": [
+        "Cricket Australia",
+        "WTC",
+        "India",
+        "Australia"
+      ]
+    },
+    {
+      "id": "guardian-cricket-rss-aHR0cHM6Ly93d3cu",
+      "title": "‘No doubt’: AB de Villiers makes fresh Australian ball-tampering claim",
+      "summary": "Former South Africa batter claims ball was doctored in first Test ‘It started in Durban, not in Port Elizabeth,’ says De Villiers AB de Villiers claims he is certain Australia tampered with the ball as far back as the first Test of their infamous 2018 serie...",
+      "source": "The Guardian Cricket",
+      "sourceUrl": "https://www.theguardian.com/sport/2026/nov/23/ab-de-villiers-makes-fresh-australian-ball-tampering-claim-sandpapergate-ntwnfb",
+      "url": "https://www.theguardian.com/sport/2026/nov/23/ab-de-villiers-makes-fresh-australian-ball-tampering-claim-sandpapergate-ntwnfb",
+      "publishedTime": "2026-11-23T03:47:22.000Z",
+      "category": "Teams",
+      "timeAgo": "8h ago",
+      "readTime": "3 min read",
+      "imageUrl": "https://i.guim.co.uk/img/media/65d2c84bd2a2707956b8421aaac0c6e8cc5ee3b5/242_0_2915_2333/master/2915.jpg?width=140&quality=85&auto=format&fit=max&s=ce583240f96b7f70672dbe417ffa4817",
+      "tags": [
+        "The Guardian Cricket",
+        "Australia"
+      ]
+    },
+    {
+      "id": "cricket-australia-rss-aHR0cHM6Ly93d3cu",
+      "title": "Bolter from the Blues: Shaw eager to seize Aussie chance",
+      "summary": "Young Blue hoping to capitalise on opportunity he concedes 'came out of nowhere'",
+      "source": "Cricket Australia",
+      "sourceUrl": "https://www.cricket.com.au/news/4612966/lachie-lachlan-shaw-australia-england-t20i-series-nsw-wicketkeeper-batter-catch-fielding-world-cup-olympics-new-look-squad",
+      "url": "https://www.cricket.com.au/news/4612966/lachie-lachlan-shaw-australia-england-t20i-series-nsw-wicketkeeper-batter-catch-fielding-world-cup-olympics-new-look-squad",
+      "publishedTime": "2026-11-23T03:45:00.000Z",
+      "category": "Latest",
+      "timeAgo": "9h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/11/23/c783fb5c-c0e6-4370-bfc6-51746c15508e/shaw_.jpg?width=500",
+      "tags": [
+        "Cricket Australia"
+      ]
+    },
+    {
+      "id": "cricket-australia-rss-aHR0cHM6Ly93d3cu",
+      "title": "Every round five Sheffield Shield squad confirmed",
+      "summary": "All the latest team news and insights as a host of Test stars return to Australia's premier first-class competition",
+      "source": "Cricket Australia",
+      "sourceUrl": "https://www.cricket.com.au/news/4611828/sheffield-shield-round-5-2026-27-all-the-squads-team-news-nsw-sa-victoria-wa-queensland-tasmania",
+      "url": "https://www.cricket.com.au/news/4611828/sheffield-shield-round-5-2026-27-all-the-squads-team-news-nsw-sa-victoria-wa-queensland-tasmania",
+      "publishedTime": "2026-11-23T01:16:00.000Z",
+      "category": "Tournaments",
+      "timeAgo": "11h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/11/22/22f3cb1c-21c4-4bca-9c26-c8d3931dbea6/shield-multi.jpg?width=500",
+      "tags": [
+        "Cricket Australia"
+      ]
+    },
+    {
+      "id": "bbc-sport-cricket-rss-aHR0cHM6Ly93d3cu",
+      "title": "South Africa v Bangladesh - second Test scorecard",
+      "summary": "Latest scorecard from the second Test between South Africa and Bangladesh at Centurion.",
+      "source": "BBC Sport Cricket",
+      "sourceUrl": "https://www.bbc.co.uk/sport/cricket/scorecard/e-237001?at_medium=RSS&at_campaign=rss",
+      "url": "https://www.bbc.co.uk/sport/cricket/scorecard/e-237001?at_medium=RSS&at_campaign=rss",
+      "publishedTime": "2026-11-23T00:00:00.000Z",
+      "category": "Teams",
+      "timeAgo": "12h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f872/live/85fea8e0-e64f-11f1-a094-5fdc692f3e33.png",
+      "tags": [
+        "BBC Sport Cricket",
+        "Test",
+        "South Africa"
+      ]
+    },
+    {
+      "id": "cricket-australia-rss-aHR0cHM6Ly93d3cu",
+      "title": "England's Jacks heading home with broken hand",
+      "summary": "Banton to step up as vice-captain for the tourists, with a fresh face called in for the final T20I",
+      "source": "Cricket Australia",
+      "sourceUrl": "https://www.cricket.com.au/news/4612861/will-jacks-australia-england-t20i-series-broken-hand-mcg-vice-captaincy-tom-banton-scott-currie-replacement-brook",
+      "url": "https://www.cricket.com.au/news/4612861/will-jacks-australia-england-t20i-series-broken-hand-mcg-vice-captaincy-tom-banton-scott-currie-replacement-brook",
+      "publishedTime": "2026-11-22T22:01:24.000Z",
+      "category": "Players",
+      "timeAgo": "14h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/11/22/365503bb-9346-4239-ad1a-4aea107bf07e/Jacks_hand.jpg?width=500",
+      "tags": [
+        "Cricket Australia",
+        "England"
+      ]
+    },
+    {
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "Nawaz's all-round show trumps Tilak's ton as Pakistan A seal win",
+      "summary": "Chasing a competitive 314, India had the personnel to go after the target but were reeling at 129 for 6 with Tilak Varma struggling for fluency",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/asia-cup-rising-stars-ind-vs-pak-nawazs-all-round-show-trumps-tilaks-ton-1563628",
+      "url": "https://www.cricinfo.com/story/asia-cup-rising-stars-ind-vs-pak-nawazs-all-round-show-trumps-tilaks-ton-1563628",
+      "publishedTime": "2026-11-22T19:37:27.000Z",
+      "category": "Teams",
+      "timeAgo": "17h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/424000/424010.5.jpg",
+      "tags": [
+        "ESPNcricinfo",
+        "Pakistan"
+      ]
+    },
+    {
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "'It's quite a smooth transition'- Markram on stepping in for Bavuma",
+      "summary": "Aiden Markram also said he is \"quite hungry to convert starts into big scores\"",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/aiden-markram-says-its-quite-a-smooth-transition-to-be-leading-south-africa-again-1563619",
+      "url": "https://www.cricinfo.com/story/aiden-markram-says-its-quite-a-smooth-transition-to-be-leading-south-africa-again-1563619",
+      "publishedTime": "2026-11-22T13:35:59.000Z",
+      "category": "Latest",
+      "timeAgo": "23h ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/423900/423917.5.jpg",
+      "tags": [
+        "ESPNcricinfo"
+      ]
+    },
+    {
+      "id": "cricket-australia-rss-aHR0cHM6Ly93d3cu",
+      "title": "WBBL|12 finals race: The run home for each club",
+      "summary": "The Sixers and Scorchers are ahead of the pack in WBBL|12, but the middle of the table is congested in the race for finals spots",
+      "source": "Cricket Australia",
+      "sourceUrl": "https://www.cricket.com.au/news/4608476/wbbl12-womens-big-bash-league-run-home-finals-scenarios-sixers-scorches-heat-thunder-strikers-renegades-stars-hurricanes",
+      "url": "https://www.cricket.com.au/news/4608476/wbbl12-womens-big-bash-league-run-home-finals-scenarios-sixers-scorches-heat-thunder-strikers-renegades-stars-hurricanes",
+      "publishedTime": "2026-11-22T11:45:00.000Z",
       "category": "Tournaments",
       "timeAgo": "1d ago",
-      "readTime": "3 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=800&q=80",
+      "readTime": "2 min read",
+      "imageUrl": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/11/19/9d626a0e-4c8e-4f33-a90d-b572a6d4b30e/run-home.jpg?width=500",
       "tags": [
-        "Cricket",
-        "ICC Cricket World Cup 2027",
-        "Tournament Schedule",
-        "Cricket South Africa"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSxkE1ZWDItpTgHWX7m3XKOX5wpEtOxN94V-rViPpF1yBu87yWS2_htrONRzPwpdSsWmspp5ur0MRoHEdZkrSqw4d5L5mOCoH7D2O0sq79E5OP-yFT5Vo77jGjCP2hVSXfEgpBkaMMgAmplY5gnKzZY9wQ3VikKVSGz1hPTqoRt51ZTNanbsNCZcIfzZIlKuaEo2eOy1w2J2WaeVZeg-GWQxGUCs9ukrOUlh6TkGm_PlIb81w2X_1eQ9PcQLvVp_Rnehe5y8Q="
+        "Cricket Australia"
+      ]
     },
     {
-      "id": "grounded-news-16-1790656593929",
-      "title": "India Cricket Schedule September 2026: Full List of Matches",
-      "summary": "India's cricket schedule for September 2026 includes a busy itinerary of six matches across different formats. The team is playing a three-match T20I series against Afghanistan and two One Day Internationals against West Indies. Notably, key players Virat Kohli and Rohit Sharma are returning for the ODI series, while Shreyas Iyer is leading the T20I contingent in the Asian Games.",
-      "source": "CricTracker",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHn6bRK6eAQFBXk4rAwC9YUDcunt8FPmcIYo4PidfDn0Ig-6_iYOOs8E_DX7QugMCjir5oma-gw86oZ7poTpL5M9mxDTnjqR2-zO4gYxU9lcCoWDWupsU9EShtKgyRNvKA9PgfRxgm_6lNRre6UsjVdeF37jJAN2dmaHnFaLktTWryKA3n1Sywdt0maQIlBhzA8_SP_Yzgz4LcFrAw=",
-      "publishedTime": "August 30 2026",
-      "category": "Teams",
-      "timeAgo": "30d ago",
+      "id": "cricket-australia-rss-aHR0cHM6Ly93d3cu",
+      "title": "Lightning strikes Melbourne derby to shake up finals race",
+      "summary": "The Renegades are facing a do-or-die showdown against the Heat following the abandoned derby",
+      "source": "Cricket Australia",
+      "sourceUrl": "https://www.cricket.com.au/news/4612671/melbourne-stars-renegades-derby-wbbl12-womens-big-bash-league-highlights-report-scores-jones-lanning-matthews-flintoff",
+      "url": "https://www.cricket.com.au/news/4612671/melbourne-stars-renegades-derby-wbbl12-womens-big-bash-league-highlights-report-scores-jones-lanning-matthews-flintoff",
+      "publishedTime": "2026-11-22T11:30:00.000Z",
+      "category": "Latest",
+      "timeAgo": "1d ago",
       "readTime": "2 min read",
-      "imageUrl": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/11/22/92fba49c-ed66-402f-a0b7-b03413376e0c/lightning.jpg?width=500",
       "tags": [
-        "Cricket",
-        "India Cricket",
-        "Match Schedule",
-        "T20I",
-        "ODI",
-        "Asian Games 2026"
-      ],
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHn6bRK6eAQFBXk4rAwC9YUDcunt8FPmcIYo4PidfDn0Ig-6_iYOOs8E_DX7QugMCjir5oma-gw86oZ7poTpL5M9mxDTnjqR2-zO4gYxU9lcCoWDWupsU9EShtKgyRNvKA9PgfRxgm_6lNRre6UsjVdeF37jJAN2dmaHnFaLktTWryKA3n1Sywdt0maQIlBhzA8_SP_Yzgz4LcFrAw="
+        "Cricket Australia"
+      ]
+    },
+    {
+      "id": "guardian-cricket-rss-aHR0cHM6Ly93d3cu",
+      "title": "England aim to avoid Gold Coast traps as Will Jacks heads home with injury",
+      "summary": "Harry Brook’s T20 side to play at ground famous in Ashes folklore after setback against below-strength Australia As England’s cricketers arrived on the Gold Coast on Sunday at the start of schoolies week, it was hard not to wonder whether, a year on from th...",
+      "source": "The Guardian Cricket",
+      "sourceUrl": "https://www.theguardian.com/sport/2026/nov/22/england-australia-cricket-t20-gold-coast-will-jacks",
+      "url": "https://www.theguardian.com/sport/2026/nov/22/england-australia-cricket-t20-gold-coast-will-jacks",
+      "publishedTime": "2026-11-22T10:00:24.000Z",
+      "category": "Breaking News",
+      "timeAgo": "1d ago",
+      "readTime": "3 min read",
+      "imageUrl": "https://i.guim.co.uk/img/media/db7fe8b6c93c0dd80197f16fe13499a07805b9d4/234_0_2343_1874/master/2343.jpg?width=140&quality=85&auto=format&fit=max&s=dd6f40b06e9681545958cc95934ba345",
+      "tags": [
+        "The Guardian Cricket",
+        "England"
+      ]
+    },
+    {
+      "id": "bbc-sport-cricket-rss-aHR0cHM6Ly93d3cu",
+      "title": "Injured Jacks out of T20 Australia tour",
+      "summary": "England all-rounder Will Jacks is ruled out of the rest of the tour of Australia with a broken hand.",
+      "source": "BBC Sport Cricket",
+      "sourceUrl": "https://www.bbc.co.uk/sport/cricket/articles/c8p3v1p45360o?at_medium=RSS&at_campaign=rss",
+      "url": "https://www.bbc.co.uk/sport/cricket/articles/c8p3v1p45360o?at_medium=RSS&at_campaign=rss",
+      "publishedTime": "2026-11-22T10:00:04.000Z",
+      "category": "Breaking News",
+      "timeAgo": "1d ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ed0e/live/c327b730-e653-11f1-a563-e14cd8b02601.jpg",
+      "tags": [
+        "BBC Sport Cricket",
+        "T20",
+        "Australia"
+      ]
+    },
+    {
+      "id": "bbc-sport-cricket-rss-aHR0cHM6Ly93d3cu",
+      "title": "Pakistan ease aside Scotland in Emerging Nations Trophy",
+      "summary": "Scotland's hopes of reaching the Emerging Nations Trophy final are all but ended after Pakistan cruise to a nine-wicket victory in Ajman.",
+      "source": "BBC Sport Cricket",
+      "sourceUrl": "https://www.bbc.co.uk/sport/cricket/articles/c933gzye80n7o?at_medium=RSS&at_campaign=rss",
+      "url": "https://www.bbc.co.uk/sport/cricket/articles/c933gzye80n7o?at_medium=RSS&at_campaign=rss",
+      "publishedTime": "2026-11-22T09:56:12.000Z",
+      "category": "Latest",
+      "timeAgo": "1d ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ad65/live/9c494a50-e65a-11f1-8ebd-1d2173202734.jpg",
+      "tags": [
+        "BBC Sport Cricket",
+        "Pakistan"
+      ]
+    },
+    {
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "Pakistan A opt to bat against India A; both teams unchanged",
+      "summary": "Abdul Samad made the decision because he felt the \"pitch looks dry\" in Doha, while Tilak Varma played down the hype by calling the fixture \"just another game\"",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/ind-vs-pak-asia-cup-rising-stars-pakistan-a-opt-to-bat-against-india-a-both-sides-unchanged-1563603",
+      "url": "https://www.cricinfo.com/story/ind-vs-pak-asia-cup-rising-stars-pakistan-a-opt-to-bat-against-india-a-both-sides-unchanged-1563603",
+      "publishedTime": "2026-11-22T09:52:06.000Z",
+      "category": "Teams",
+      "timeAgo": "1d ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/419500/419531.5.jpg",
+      "tags": [
+        "ESPNcricinfo",
+        "India",
+        "Pakistan"
+      ]
+    },
+    {
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "McGrath, Mushangwe star to lift Adelaide Strikers to third",
+      "summary": "Laura Wolvaardt also continued her impressive form to build a total that was out of reach for Brisbane heat",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/tahlia-mcgrath-anesu-mushangwe-star-to-lift-adelaide-strikers-to-third-1563595",
+      "url": "https://www.cricinfo.com/story/tahlia-mcgrath-anesu-mushangwe-star-to-lift-adelaide-strikers-to-third-1563595",
+      "publishedTime": "2026-11-22T08:57:24.000Z",
+      "category": "Latest",
+      "timeAgo": "1d ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/425600/425629.5.jpg",
+      "tags": [
+        "ESPNcricinfo"
+      ]
+    },
+    {
+      "id": "cricket-australia-rss-aHR0cHM6Ly93d3cu",
+      "title": "NZ cling on in face of India's record 9-720",
+      "summary": "New Zealand reached 2-119 at stumps on day four after India declared on a record 9-720 in the first Test in Wellington",
+      "source": "Cricket Australia",
+      "sourceUrl": "https://www.cricket.com.au/news/4612611/new-zealand-india-first-test-wellington-basin-oval-pant-conway-ravindra",
+      "url": "https://www.cricket.com.au/news/4612611/new-zealand-india-first-test-wellington-basin-oval-pant-conway-ravindra",
+      "publishedTime": "2026-11-22T08:52:52.000Z",
+      "category": "Matches",
+      "timeAgo": "1d ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/11/22/7ff63438-9031-4913-90ca-aa6b7120dbf2/conwayravindra.jpg?width=500",
+      "tags": [
+        "Cricket Australia",
+        "India"
+      ]
+    },
+    {
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "Railways T20 debutant Jamshed Alam picks up four wickets in four balls",
+      "summary": "Jamshed Alam becomes the third Indian bowler to take four wickets in four balls in a T20 match, recording the feat in a Syed Mushtaq Ali Trophy match against Saurashtra",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/syed-mushtaq-ali-trophy-railways-t20-debutant-jamshed-alam-picks-up-four-wickets-in-four-balls-1563589",
+      "url": "https://www.cricinfo.com/story/syed-mushtaq-ali-trophy-railways-t20-debutant-jamshed-alam-picks-up-four-wickets-in-four-balls-1563589",
+      "publishedTime": "2026-11-22T08:41:13.000Z",
+      "category": "Teams",
+      "timeAgo": "1d ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/425600/425627.6.jpg",
+      "tags": [
+        "ESPNcricinfo",
+        "T20"
+      ]
+    },
+    {
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "India look for 'eight good balls' on final day's 'war of attrition'",
+      "summary": "Rachin Ravindra hopes New Zealand can bat out the final day by applying themselves while Dhruv Jurel sees it as a matter of eight good balls",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/nz-vs-ind-1st-test-rachin-ravindra-gears-up-for-war-of-attrition-on-final-day-of-wellington-test-1563594",
+      "url": "https://www.cricinfo.com/story/nz-vs-ind-1st-test-rachin-ravindra-gears-up-for-war-of-attrition-on-final-day-of-wellington-test-1563594",
+      "publishedTime": "2026-11-22T08:33:51.000Z",
+      "category": "Teams",
+      "timeAgo": "1d ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/419100/419107.5.jpg",
+      "tags": [
+        "ESPNcricinfo",
+        "India"
+      ]
+    },
+    {
+      "id": "cricket-australia-rss-aHR0cHM6Ly93d3cu",
+      "title": "McGrath shines as Strikers boost finals hopes on the road",
+      "summary": "The Strikers have jumped to third on the WBBL|12 table after scoring a big road win over the Heat",
+      "source": "Cricket Australia",
+      "sourceUrl": "https://www.cricket.com.au/news/4612607/adelaide-strikers-brisbane-heat-wbbl12-womens-big-bash-league-highlights-report-scores-mcgrath-wolvaardt-mushangwe",
+      "url": "https://www.cricket.com.au/news/4612607/adelaide-strikers-brisbane-heat-wbbl12-womens-big-bash-league-highlights-report-scores-mcgrath-wolvaardt-mushangwe",
+      "publishedTime": "2026-11-22T08:22:52.000Z",
+      "category": "Tournaments",
+      "timeAgo": "1d ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/11/22/f9b626f0-78d3-432e-94cc-ba32afd474a0/strikers-win.jpg?width=500",
+      "tags": [
+        "Cricket Australia"
+      ]
+    },
+    {
+      "id": "cricket-australia-rss-aHR0cHM6Ly93d3cu",
+      "title": "Labuschagne out in the 30s at the SCG as Smith returns",
+      "summary": "Steve Smith's return from a neck injury featured a catch, two overs of spin and autographs, while Marnus Labuschagne missed out again",
+      "source": "Cricket Australia",
+      "sourceUrl": "https://www.cricket.com.au/news/4612581/nsw-v-queensland-sheffield-shield-match-report-round-five-highlights-scores-day-one-steve-smith-marnus-labuschagne-sam-konstas-jack-clayton",
+      "url": "https://www.cricket.com.au/news/4612581/nsw-v-queensland-sheffield-shield-match-report-round-five-highlights-scores-day-one-steve-smith-marnus-labuschagne-sam-konstas-jack-clayton",
+      "publishedTime": "2026-11-22T08:00:00.000Z",
+      "category": "Breaking News",
+      "timeAgo": "1d ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://resources.cricket-australia.pulselive.com/photo-resources/2026/11/22/d62c5151-d090-45a8-b924-5012e6cc9c9b/smith-marnus.jpg?width=500",
+      "tags": [
+        "Cricket Australia"
+      ]
+    },
+    {
+      "id": "espncricinfo-rss-aHR0cHM6Ly93d3cu",
+      "title": "Crowd gets behind Smith on return to action as Queensland keep him in the field",
+      "summary": "The former Australia captain spent the day in the slips but also bowled a couple of overs as he returned to action at a time of heightened tensions",
+      "source": "ESPNcricinfo",
+      "sourceUrl": "https://www.cricinfo.com/story/steven-smith-gets-support-of-the-crowd-amid-sandpaper-row-as-queensland-keep-him-in-the-field-1563587",
+      "url": "https://www.cricinfo.com/story/steven-smith-gets-support-of-the-crowd-amid-sandpaper-row-as-queensland-keep-him-in-the-field-1563587",
+      "publishedTime": "2026-11-22T07:56:04.000Z",
+      "category": "Players",
+      "timeAgo": "1d ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://p.imgci.com/db/PICTURES/CMS/425600/425605.5.jpg",
+      "tags": [
+        "ESPNcricinfo"
+      ]
+    },
+    {
+      "id": "bbc-sport-cricket-rss-aHR0cHM6Ly93d3cu",
+      "title": "Lightning prevents Stars-Renegades result - WBBL scorecard",
+      "summary": "Latest scorecard from the Women's Big Bash League match between Melbourne Stars and Melbourne Renegades at Melbourne's Junction Oval.",
+      "source": "BBC Sport Cricket",
+      "sourceUrl": "https://www.bbc.co.uk/sport/cricket/scorecard/e-242446?at_medium=RSS&at_campaign=rss",
+      "url": "https://www.bbc.co.uk/sport/cricket/scorecard/e-242446?at_medium=RSS&at_campaign=rss",
+      "publishedTime": "2026-11-22T00:00:00.000Z",
+      "category": "Tournaments",
+      "timeAgo": "1d ago",
+      "readTime": "2 min read",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/755c/live/6d251850-e298-11f1-a094-5fdc692f3e33.png",
+      "tags": [
+        "BBC Sport Cricket"
+      ]
+    },
+    {
+      "id": "guardian-cricket-rss-aHR0cHM6Ly93d3cu",
+      "title": "‘I didn’t know’: former Australia Test coach Darren Lehmann denies any knowledge of sandpaper use",
+      "summary": "Lehmann’s version of events of 2018 tour remain unchanged ‘We’ve just got to try to move on’ from ball tampering saga Darren Lehmann has denied knowledge of a plan to use sandpaper to alter the ball during Australia’s Test tour of South Africa in 2018, cont...",
+      "source": "The Guardian Cricket",
+      "sourceUrl": "https://www.theguardian.com/sport/2026/nov/22/i-didnt-know-former-australian-test-coach-darren-lehmann-denies-any-knowledge-of-sandpaper-use",
+      "url": "https://www.theguardian.com/sport/2026/nov/22/i-didnt-know-former-australian-test-coach-darren-lehmann-denies-any-knowledge-of-sandpaper-use",
+      "publishedTime": "2026-11-21T22:18:14.000Z",
+      "category": "Teams",
+      "timeAgo": "1d ago",
+      "readTime": "3 min read",
+      "imageUrl": "https://i.guim.co.uk/img/media/c6c103d183b09c6d2bedf741541b0e8d4bea3ec8/237_0_1555_1244/master/1555.jpg?width=140&quality=85&auto=format&fit=max&s=5250c31a07c5e229aa5e3794d45d4cac",
+      "tags": [
+        "The Guardian Cricket",
+        "Test",
+        "Australia"
+      ]
     }
   ]
 }

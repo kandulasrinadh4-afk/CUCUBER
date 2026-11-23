@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   Radio,
   Search,
-  Sparkles,
   ChevronRight,
   AlertCircle,
   Clock,
   CheckCircle2,
   Filter,
-  Flame,
-  Zap,
   Bell,
   ExternalLink,
+  RefreshCw,
+  FileText,
 } from 'lucide-react';
 import { MatchData, UserProfile } from '../types';
+import { isSafeHttpUrl, getCricketDataStatus } from '../services/cricketDataService';
 import { TeamLogo } from './TeamLogo';
 
 interface MatchesViewProps {
@@ -49,13 +49,24 @@ const MatchCard: React.FC<{
         }`}
       >
         <span
-          className={`font-medium truncate max-w-[220px] ${
+          className={`font-medium truncate max-w-[200px] ${
             isDark ? 'text-slate-400' : 'text-slate-700 font-bold'
           }`}
         >
           {match.tournament}
         </span>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 shrink-0">
+          {(match.matchType || match.category) && (
+            <span
+              className={`px-2 py-0.5 rounded-md text-[10px] font-mono font-bold ${
+                isDark
+                  ? 'bg-slate-800 text-cyan-300 border border-slate-700'
+                  : 'bg-slate-100 text-slate-700 border border-slate-200'
+              }`}
+            >
+              {match.matchType || match.category}
+            </span>
+          )}
           {isLive && (
             <span className="px-2 py-0.5 rounded-full bg-red-500/20 text-red-500 border border-red-500/30 text-[10px] font-bold flex items-center gap-1 font-mono">
               <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping" />
@@ -203,10 +214,10 @@ const MatchCard: React.FC<{
           </div>
         )}
 
-        {/* Grounding Source Attribution */}
-        {match.sourceUrl && (
+        {/* Official Provider Source Attribution */}
+        {isSafeHttpUrl(match.sourceUrl) && (
           <div className="pt-1 flex items-center justify-between text-[11px] font-mono border-t border-slate-500/10">
-            <span className={isDark ? 'text-slate-500' : 'text-slate-600 font-medium'}>Data:</span>
+            <span className={isDark ? 'text-slate-500' : 'text-slate-600 font-medium'}>Feed:</span>
             <a
               href={match.sourceUrl}
               target="_blank"
@@ -214,7 +225,7 @@ const MatchCard: React.FC<{
               onClick={(e) => e.stopPropagation()}
               className="text-cyan-500 hover:underline flex items-center gap-1 font-bold"
             >
-              <span>Verified from web</span>
+              <span>Official cricket feed</span>
               <ExternalLink className="w-2.5 h-2.5" />
             </a>
           </div>
@@ -235,8 +246,8 @@ const MatchCard: React.FC<{
               : 'bg-cyan-100 hover:bg-cyan-200 text-cyan-950 border border-cyan-300 font-extrabold shadow-2xs'
           }`}
         >
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>AI Catch-Up</span>
+          <FileText className="w-3.5 h-3.5" />
+          <span>Match Brief</span>
         </button>
 
         <button
@@ -357,8 +368,8 @@ const LiveMatchCardSkeleton: React.FC<{ isDark: boolean }> = ({ isDark }) => {
             isDark ? 'bg-slate-800 text-slate-400 border border-slate-700' : 'bg-slate-100 text-slate-500 border border-slate-200'
           }`}
         >
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>AI Catch-Up</span>
+          <FileText className="w-3.5 h-3.5" />
+          <span>Match Brief</span>
         </button>
 
         <button
@@ -575,8 +586,8 @@ const RecentResultCardSkeleton: React.FC<{ isDark: boolean }> = ({ isDark }) => 
             isDark ? 'bg-slate-800 text-slate-400 border border-slate-700' : 'bg-slate-100 text-slate-500 border border-slate-200'
           }`}
         >
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>AI Catch-Up</span>
+          <FileText className="w-3.5 h-3.5" />
+          <span>Match Brief</span>
         </button>
         <button
           disabled
@@ -606,70 +617,62 @@ export const MatchesView: React.FC<MatchesViewProps> = ({
 
   const isDark = user.theme === 'dark';
 
-  const liveMatchesList = matches.filter((m) => {
-    if (m.status !== 'LIVE' && m.status !== 'INTERRUPTED') return false;
-    if (selectedTournament !== 'All' && !m.tournament.toLowerCase().includes(selectedTournament.toLowerCase())) {
-      return false;
+  const matchesFilterCriterion = (m: MatchData): boolean => {
+    if (selectedTournament !== 'All') {
+      const target = selectedTournament.toLowerCase();
+      const matchesSeries = (m.tournament || '').toLowerCase() === target;
+      const matchesCategory = (m.category || '').toLowerCase() === target;
+      const matchesFormat = (m.matchType || '').toLowerCase() === target;
+      if (!matchesSeries && !matchesCategory && !matchesFormat) {
+        return false;
+      }
     }
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
-      const matchText = `${m.teamA.name} ${m.teamB.name} ${m.tournament} ${m.venue}`.toLowerCase();
+      const matchText = `${m.teamA.name} ${m.teamA.shortName} ${m.teamB.name} ${m.teamB.shortName} ${m.tournament} ${m.venue} ${m.matchType || ''}`.toLowerCase();
       if (!matchText.includes(q)) return false;
     }
     return true;
-  });
+  };
 
-  const upcomingMatchesList = matches.filter((m) => {
-    if (m.status !== 'UPCOMING') return false;
-    if (selectedTournament !== 'All' && !m.tournament.toLowerCase().includes(selectedTournament.toLowerCase())) {
-      return false;
-    }
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
-      const matchText = `${m.teamA.name} ${m.teamB.name} ${m.tournament} ${m.venue}`.toLowerCase();
-      if (!matchText.includes(q)) return false;
-    }
-    return true;
-  });
-
-  const recentMatchesList = matches.filter((m) => {
-    if (m.status !== 'RECENT') return false;
-    if (selectedTournament !== 'All' && !m.tournament.toLowerCase().includes(selectedTournament.toLowerCase())) {
-      return false;
-    }
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
-      const matchText = `${m.teamA.name} ${m.teamB.name} ${m.tournament} ${m.venue}`.toLowerCase();
-      if (!matchText.includes(q)) return false;
-    }
-    return true;
-  });
+  const liveMatchesList = matches.filter(
+    (m) => (m.status === 'LIVE' || m.status === 'INTERRUPTED') && matchesFilterCriterion(m)
+  );
+  const upcomingMatchesList = matches.filter(
+    (m) => m.status === 'UPCOMING' && matchesFilterCriterion(m)
+  );
+  const recentMatchesList = matches.filter(
+    (m) => m.status === 'RECENT' && matchesFilterCriterion(m)
+  );
 
   const liveCount = matches.filter((m) => m.status === 'LIVE' || m.status === 'INTERRUPTED').length;
   const upcomingCount = matches.filter((m) => m.status === 'UPCOMING').length;
   const recentCount = matches.filter((m) => m.status === 'RECENT').length;
 
-  const tournaments = ['All', 'T20 Series', 'ODI Series', 'Test Series'];
+  const tournaments = useMemo(() => {
+    const chips: string[] = ['All'];
+    const seen = new Set<string>(['all']);
+    const pushUnique = (val?: string) => {
+      const clean = (val || '').trim();
+      if (!clean || seen.has(clean.toLowerCase())) return;
+      seen.add(clean.toLowerCase());
+      chips.push(clean);
+    };
+    matches.forEach((m) => {
+      pushUnique(m.category);
+      pushUnique(m.matchType);
+    });
+    matches.forEach((m) => {
+      pushUnique(m.tournament);
+    });
+    return chips;
+  }, [matches]);
 
   const filteredMatches = matches.filter((m) => {
-    // Status filter
     if (filter === 'LIVE' && m.status !== 'LIVE' && m.status !== 'INTERRUPTED') return false;
     if (filter === 'UPCOMING' && m.status !== 'UPCOMING') return false;
     if (filter === 'RECENT' && m.status !== 'RECENT') return false;
-
-    // Tournament filter
-    if (selectedTournament !== 'All' && !m.tournament.toLowerCase().includes(selectedTournament.toLowerCase())) {
-      return false;
-    }
-
-    // Search query
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
-      const matchText = `${m.teamA.name} ${m.teamB.name} ${m.tournament} ${m.venue}`.toLowerCase();
-      if (!matchText.includes(q)) return false;
-    }
-
-    return true;
+    return matchesFilterCriterion(m);
   });
 
   return (
@@ -684,17 +687,37 @@ export const MatchesView: React.FC<MatchesViewProps> = ({
           <h1 className="text-2xl font-extrabold tracking-tight">Cricket Fixtures & Scores</h1>
         </div>
 
-        <div className={`flex items-center gap-2 font-mono text-xs ${isDark ? 'text-slate-400' : 'text-slate-700 font-bold'}`}>
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-          <span>Real-time ball feed active</span>
+        <div className="flex items-center gap-3">
+          <div className={`flex items-center gap-2 font-mono text-xs ${isDark ? 'text-slate-400' : 'text-slate-700 font-bold'}`}>
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+            <span>Sportmonks Feed</span>
+          </div>
+          {onRefresh && (
+            <button
+              onClick={onRefresh}
+              disabled={isLoading}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border transition-colors ${
+                isDark
+                  ? 'bg-slate-800/80 border-slate-700 text-cyan-300 hover:bg-slate-800'
+                  : 'bg-white border-slate-300 text-slate-800 hover:bg-slate-100 shadow-2xs'
+              } ${isLoading ? 'opacity-60 cursor-not-allowed' : ''}`}
+            >
+              <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin' : ''}`} />
+              <span>{isLoading ? 'Syncing...' : 'Refresh'}</span>
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Real-time Search Grounding Sync State (when awaiting matches or refreshing) */}
+      {/* Sportmonks & Secondary Provider Sync / Status State */}
       {matches.length === 0 && (
         <div
           className={`p-3.5 rounded-2xl border flex items-center justify-between gap-3 text-xs ${
-            isDark
+            getCricketDataStatus().lastError
+              ? isDark
+                ? 'bg-amber-950/30 border-amber-500/30 text-amber-200'
+                : 'bg-amber-50 border-amber-300 text-amber-900 font-medium'
+              : isDark
               ? 'bg-cyan-950/30 border-cyan-500/20 text-cyan-300'
               : 'bg-cyan-50 border-cyan-200 text-cyan-950 font-medium'
           }`}
@@ -703,8 +726,9 @@ export const MatchesView: React.FC<MatchesViewProps> = ({
             <Radio className="w-4 h-4 shrink-0 text-cyan-500 animate-pulse" />
             <span>
               {isLoading
-                ? 'Syncing live cricket fixtures via Gemini + Google Search Grounding...'
-                : 'Awaiting verified match fixtures from Gemini Google Search Grounding. Polling every 2 minutes.'}
+                ? 'Syncing live cricket fixtures from Sportmonks Cricket API...'
+                : getCricketDataStatus().lastError ||
+                  'No verified fixtures returned yet from Sportmonks Cricket API. Polling automatically.'}
             </span>
           </div>
           {onRefresh && (
@@ -853,10 +877,28 @@ export const MatchesView: React.FC<MatchesViewProps> = ({
                     />
                   ))}
                 </div>
-              ) : (
+              ) : isLoading && matches.length === 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <LiveMatchCardSkeleton isDark={isDark} />
                   <LiveMatchCardSkeleton isDark={isDark} />
+                </div>
+              ) : (
+                <div
+                  className={`p-5 rounded-2xl border text-xs flex items-center justify-between ${
+                    isDark
+                      ? 'bg-[#091b2e]/60 border-slate-800 text-slate-400'
+                      : 'bg-white border-slate-200 text-slate-600'
+                  }`}
+                >
+                  <span>No live matches currently in progress for the selected filter.</span>
+                  {selectedTournament !== 'All' && (
+                    <button
+                      onClick={() => setSelectedTournament('All')}
+                      className="text-cyan-500 font-bold hover:underline shrink-0 ml-3"
+                    >
+                      Reset Filter
+                    </button>
+                  )}
                 </div>
               )}
             </div>
@@ -895,11 +937,21 @@ export const MatchesView: React.FC<MatchesViewProps> = ({
                     />
                   ))}
                 </div>
-              ) : (
+              ) : isLoading && matches.length === 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                   <UpcomingMatchCardSkeleton isDark={isDark} />
                   <UpcomingMatchCardSkeleton isDark={isDark} />
                   <UpcomingMatchCardSkeleton isDark={isDark} />
+                </div>
+              ) : (
+                <div
+                  className={`p-5 rounded-2xl border text-xs ${
+                    isDark
+                      ? 'bg-[#091b2e]/60 border-slate-800 text-slate-400'
+                      : 'bg-white border-slate-200 text-slate-600'
+                  }`}
+                >
+                  No upcoming scheduled fixtures in the current window.
                 </div>
               )}
             </div>
@@ -938,11 +990,21 @@ export const MatchesView: React.FC<MatchesViewProps> = ({
                     />
                   ))}
                 </div>
-              ) : (
+              ) : isLoading && matches.length === 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                   <RecentResultCardSkeleton isDark={isDark} />
                   <RecentResultCardSkeleton isDark={isDark} />
                   <RecentResultCardSkeleton isDark={isDark} />
+                </div>
+              ) : (
+                <div
+                  className={`p-5 rounded-2xl border text-xs ${
+                    isDark
+                      ? 'bg-[#091b2e]/60 border-slate-800 text-slate-400'
+                      : 'bg-white border-slate-200 text-slate-600'
+                  }`}
+                >
+                  No completed match results in the current window.
                 </div>
               )}
             </div>

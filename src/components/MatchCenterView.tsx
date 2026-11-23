@@ -1,34 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   ArrowLeft,
-  Sparkles,
   Share2,
   AlertCircle,
   Bell,
   CheckCircle2,
-  TrendingUp,
   Search,
-  Zap,
-  Bot,
-  PlayCircle,
-  Volume2,
-  Flame,
   ExternalLink,
   RefreshCw,
   Clock,
-  Info,
   Trophy,
   Award,
   MapPin,
   Calendar,
-  Users,
-  ShieldCheck,
   Layers,
+  FileText,
+  Check,
 } from 'lucide-react';
 import { MatchData, UserProfile, InningsScorecard } from '../types';
 import { TeamLogo } from './TeamLogo';
 import { LiveMatchPulse } from './LiveMatchPulse';
-import { fetchMatchById, hasDetailedScorecard, mergeMatchSafely } from '../services/cricketDataService';
+import {
+  fetchMatchById,
+  fetchMatchScorecard,
+  hasDetailedScorecard,
+  isSafeHttpUrl,
+  mergeMatchSafely,
+} from '../services/cricketDataService';
 
 interface MatchCenterViewProps {
   match: MatchData;
@@ -37,6 +35,22 @@ interface MatchCenterViewProps {
   onMatchUpdate?: (match: MatchData) => void;
   user: UserProfile;
 }
+
+const formatOrdinal = (n: number): string => {
+  const abs = Math.abs(Math.trunc(n));
+  const mod100 = abs % 100;
+  if (mod100 >= 11 && mod100 <= 13) return `${abs}th`;
+  switch (abs % 10) {
+    case 1:
+      return `${abs}st`;
+    case 2:
+      return `${abs}nd`;
+    case 3:
+      return `${abs}rd`;
+    default:
+      return `${abs}th`;
+  }
+};
 
 export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
   match,
@@ -57,16 +71,19 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
   const [rainSubscribed, setRainSubscribed] = useState(false);
   const [simulatedResumeAlert, setSimulatedResumeAlert] = useState(false);
 
-  const [aiInsight, setAiInsight] = useState<{
-    insight?: string;
-    winProbability?: { teamA: number; teamB: number };
-    keyMatchup?: string;
-  } | null>(null);
-  const [loadingInsight, setLoadingInsight] = useState(false);
+  const [scorecardNotice, setScorecardNotice] = useState<string | null>(null);
+  const [shareCopied, setShareCopied] = useState<boolean>(false);
+
+  const latestMatchRef = useRef<MatchData>(currentMatch);
+  latestMatchRef.current = currentMatch;
+  const activeRequestIdRef = useRef<number>(0);
 
   const isDark = user.theme === 'dark';
 
   const loadDetails = async (forceRefresh: boolean = false) => {
+    const targetMatchId = match.id;
+    const reqId = ++activeRequestIdRef.current;
+
     if (forceRefresh) {
       setIsManualRefreshing(true);
     } else {
@@ -74,33 +91,65 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
     }
 
     try {
-      const detailed = await fetchMatchById(match.id, forceRefresh);
-      if (detailed) {
-        // Only replace currentMatch when the newly fetched match actually contains valid detailed data
-        if (hasDetailedScorecard(detailed)) {
-          setCurrentMatch(detailed);
-          onMatchUpdate?.(detailed);
-          setDetailsError(null);
-        } else if (!hasDetailedScorecard(currentMatch)) {
-          // If currentMatch does not have details either, take detailed
-          setCurrentMatch(detailed);
-          onMatchUpdate?.(detailed);
-          setDetailsError(null);
+      const scRes = await fetchMatchScorecard(targetMatchId, forceRefresh);
+      if (reqId !== activeRequestIdRef.current) return;
+
+      if (scRes.scorecardAvailable && scRes.match && hasDetailedScorecard(scRes.match)) {
+        latestMatchRef.current = scRes.match;
+        setCurrentMatch(scRes.match);
+        onMatchUpdate?.(scRes.match);
+        setDetailsError(null);
+        setScorecardNotice(
+          scRes.partial ? 'Partial scorecard available from provider; remaining entries awaiting update.' : null
+        );
+        return;
+      }
+
+      // Dedicated scorecard endpoint returned non-200 or unavailable (e.g., upcoming / not yet published)
+      let candidateMatch: MatchData | null = scRes.match;
+      const shouldFallbackDetail =
+        !candidateMatch &&
+        scRes.code !== 'PROVIDER_NOT_CONFIGURED' &&
+        scRes.code !== 'RATE_LIMITED' &&
+        scRes.code !== 'NOT_FOUND';
+
+      if (shouldFallbackDetail) {
+        candidateMatch = await fetchMatchById(targetMatchId, forceRefresh);
+        if (reqId !== activeRequestIdRef.current) return;
+      }
+
+      const currentAfterAwait = latestMatchRef.current;
+      let resolvedMatch = currentAfterAwait;
+
+      if (candidateMatch) {
+        if (hasDetailedScorecard(candidateMatch) || !hasDetailedScorecard(currentAfterAwait)) {
+          resolvedMatch = candidateMatch;
         } else {
-          // currentMatch already has detailed scorecard, but detailed response had partial data:
-          // Preserve the detailed scorecard data and merge safe fields only
-          const merged = mergeMatchSafely(currentMatch, detailed);
-          setCurrentMatch(merged);
-          onMatchUpdate?.(merged);
-          setDetailsError(null);
+          resolvedMatch = mergeMatchSafely(currentAfterAwait, candidateMatch);
+        }
+
+        if (resolvedMatch !== currentAfterAwait) {
+          latestMatchRef.current = resolvedMatch;
+          setCurrentMatch(resolvedMatch);
+          onMatchUpdate?.(resolvedMatch);
         }
       }
+
+      if (!hasDetailedScorecard(resolvedMatch)) {
+        setScorecardNotice(scRes.error || null);
+      } else {
+        setScorecardNotice(null);
+      }
+      setDetailsError(null);
     } catch (err: any) {
+      if (reqId !== activeRequestIdRef.current) return;
       console.warn('Could not fetch match details:', err);
-      setDetailsError('Live scorecard is temporarily syncing. Displaying latest match overview.');
+      setDetailsError('Live scorecard is temporarily unavailable. Displaying latest match overview.');
     } finally {
-      setIsLoadingDetails(false);
-      setIsManualRefreshing(false);
+      if (reqId === activeRequestIdRef.current) {
+        setIsLoadingDetails(false);
+        setIsManualRefreshing(false);
+      }
     }
   };
 
@@ -109,17 +158,22 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
   useEffect(() => {
     if (!match) return;
 
-    if (match.id !== currentMatch.id) {
+    const latest = latestMatchRef.current;
+    if (match.id !== latest.id) {
+      latestMatchRef.current = match;
       setCurrentMatch(match);
       return;
     }
 
     if (hasDetailedScorecard(match)) {
+      latestMatchRef.current = match;
       setCurrentMatch(match);
-    } else if (hasDetailedScorecard(currentMatch)) {
-      // Safe background fixture update: update lightweight/live summary fields only, never overwrite detailed scorecard
-      setCurrentMatch((prev) => mergeMatchSafely(prev, match));
+    } else if (hasDetailedScorecard(latest)) {
+      const merged = mergeMatchSafely(latest, match);
+      latestMatchRef.current = merged;
+      setCurrentMatch(merged);
     } else {
+      latestMatchRef.current = match;
       setCurrentMatch(match);
     }
   }, [match]);
@@ -127,14 +181,17 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
   useEffect(() => {
     let isMounted = true;
 
-    // Do not reset currentMatch to the lightweight match prop when a detailed scorecard has already been loaded for this match
-    if (currentMatch.id !== match.id) {
+    const latest = latestMatchRef.current;
+    if (latest.id !== match.id) {
+      latestMatchRef.current = match;
       setCurrentMatch(match);
-      setSelectedInningsView('all');
-    } else if (!hasDetailedScorecard(currentMatch) && hasDetailedScorecard(match)) {
+    } else if (!hasDetailedScorecard(latest) && hasDetailedScorecard(match)) {
+      latestMatchRef.current = match;
       setCurrentMatch(match);
     }
+    setSelectedInningsView('all');
     setDetailsError(null);
+    setScorecardNotice(null);
 
     loadDetails(false);
 
@@ -144,35 +201,15 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
         if (isMounted) {
           loadDetails(false);
         }
-      }, 60000);
+      }, 45000);
     }
 
     return () => {
       isMounted = false;
+      activeRequestIdRef.current += 1;
       if (interval) clearInterval(interval);
     };
   }, [match.id]);
-
-  const fetchMatchInsight = async () => {
-    setLoadingInsight(true);
-    try {
-      const res = await fetch('/api/gemini/match-insights', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ matchState: currentMatch }),
-      });
-      const data = await res.json();
-      setAiInsight(data);
-    } catch (err) {
-      setAiInsight({
-        insight: 'Pitch is favoring pace with variable bounce in recent overs.',
-        winProbability: { teamA: 64, teamB: 36 },
-        keyMatchup: `${currentMatch.teamA.shortName} vs ${currentMatch.teamB.shortName}`,
-      });
-    } finally {
-      setLoadingInsight(false);
-    }
-  };
 
   const filteredCommentary = (currentMatch.commentary || []).filter((c) => {
     if (commentaryFilter === 'boundaries' && !c.isBoundary && !c.isSix) return false;
@@ -192,6 +229,31 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
     setTimeout(() => {
       setSimulatedResumeAlert(true);
     }, 2500);
+  };
+
+  const handleShareMatch = async () => {
+    const scorePart =
+      currentMatch.teamA.score && currentMatch.teamA.score !== 'TBA'
+        ? ` (${currentMatch.teamA.name} ${currentMatch.teamA.score} vs ${currentMatch.teamB.name} ${currentMatch.teamB.score || 'TBA'})`
+        : '';
+    const text = `${currentMatch.teamA.name} vs ${currentMatch.teamB.name}${scorePart} — ${currentMatch.tournament}. ${currentMatch.statusText || ''}`.trim();
+    try {
+      if (typeof navigator !== 'undefined' && navigator.share) {
+        await navigator.share({
+          title: `${currentMatch.teamA.shortName} vs ${currentMatch.teamB.shortName} • CUCUBER`,
+          text,
+          url: window.location.href,
+        });
+        return;
+      }
+      if (typeof navigator !== 'undefined' && navigator.clipboard) {
+        await navigator.clipboard.writeText(`${text}\n${window.location.href}`);
+        setShareCopied(true);
+        setTimeout(() => setShareCopied(false), 2000);
+      }
+    } catch {
+      // Ignore user-cancelled share dialog
+    }
   };
 
   const formatStat = (val: any): string => {
@@ -343,15 +405,22 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
             onClick={() => onOpenCatchUp(currentMatch)}
             className="px-3 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 shadow-md shadow-cyan-500/20"
           >
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>AI Catch-Up</span>
+            <FileText className="w-3.5 h-3.5" />
+            <span>Match Brief</span>
           </button>
           <button
-            className={`p-2 rounded-xl border transition-colors ${
-              isDark ? 'bg-slate-800/80 border-slate-700 text-slate-300' : 'bg-white border-slate-200 text-slate-700'
+            onClick={handleShareMatch}
+            title={shareCopied ? 'Copied match summary' : 'Share match summary'}
+            className={`p-2 rounded-xl border transition-colors flex items-center gap-1 text-xs font-bold ${
+              shareCopied
+                ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-500'
+                : isDark
+                ? 'bg-slate-800/80 border-slate-700 text-slate-300 hover:text-white'
+                : 'bg-white border-slate-200 text-slate-700 hover:text-slate-950'
             }`}
           >
-            <Share2 className="w-4 h-4" />
+            {shareCopied ? <Check className="w-4 h-4" /> : <Share2 className="w-4 h-4" />}
+            {shareCopied && <span className="hidden sm:inline">Copied</span>}
           </button>
         </div>
       </div>
@@ -489,11 +558,11 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
           </div>
         </div>
 
-        {/* Freshness Timestamp & Google Search Grounding Sources */}
+        {/* Freshness Timestamp & Provider Data Attribution */}
         <div className="mt-4 pt-3 border-t border-slate-500/15 flex flex-col sm:flex-row items-center justify-between text-xs font-mono gap-2">
           <div className="flex items-center gap-2">
             <span className={isDark ? 'text-slate-400' : 'text-slate-600'}>
-              Grounding: Google Search verified
+              Feed: {currentMatch.provider === 'cricketdata' ? 'CricketData Secondary API' : 'Sportmonks Cricket API'}
             </span>
             {currentMatch.lastUpdated && (
               <span className="text-[10px] text-slate-500 flex items-center gap-1">
@@ -502,14 +571,14 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
               </span>
             )}
           </div>
-          {currentMatch.sourceUrl && (
+          {isSafeHttpUrl(currentMatch.sourceUrl) && (
             <a
               href={currentMatch.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-cyan-500 hover:underline flex items-center gap-1 font-bold"
             >
-              <span>Verified source</span>
+              <span>Provider source</span>
               <ExternalLink className="w-3 h-3" />
             </a>
           )}
@@ -556,7 +625,7 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
             { id: 'scorecard', label: 'Scorecard' },
             { id: 'commentary', label: 'Commentary' },
             { id: 'pulse', label: '⚡ Fan Pulse' },
-            { id: 'alerts', label: 'AI Insights' },
+            { id: 'alerts', label: 'Match Alerts' },
           ] as const
         ).map((t) => (
           <button
@@ -621,15 +690,15 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                 <span className="text-[10px] uppercase font-mono text-slate-400 block mb-1">
                   Result
                 </span>
-                <p className="font-bold text-sm text-cyan-400">
+                <p className={`font-bold text-sm ${isDark ? 'text-cyan-400' : 'text-cyan-800'}`}>
                   {currentMatch.result || currentMatch.statusText || 'In Progress'}
                 </p>
                 {currentMatch.winner && (
-                  <p className="text-xs text-slate-300 mt-1">
-                    <span className="text-slate-400">Winner:</span>{' '}
-                    <strong className="text-white">{currentMatch.winner}</strong>
+                  <p className={`text-xs mt-1 ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
+                    <span className={isDark ? 'text-slate-400' : 'text-slate-500'}>Winner:</span>{' '}
+                    <strong className={isDark ? 'text-white' : 'text-slate-900'}>{currentMatch.winner}</strong>
                     {currentMatch.margin && (
-                      <span className="text-cyan-400 ml-1">({currentMatch.margin})</span>
+                      <span className={`ml-1 ${isDark ? 'text-cyan-400' : 'text-cyan-700 font-semibold'}`}>({currentMatch.margin})</span>
                     )}
                   </p>
                 )}
@@ -641,15 +710,15 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                   isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'
                 }`}
               >
-                <span className="text-[10px] uppercase font-mono text-slate-400 block mb-1">
+                <span className={`text-[10px] uppercase font-mono block mb-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                   Venue & Ground
                 </span>
-                <p className="font-bold text-xs text-white flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                <p className={`font-bold text-xs flex items-center gap-1.5 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                  <MapPin className={`w-3.5 h-3.5 shrink-0 ${isDark ? 'text-cyan-400' : 'text-cyan-700'}`} />
                   <span>{currentMatch.venue || 'Stadium Ground'}</span>
                 </p>
                 {(currentMatch.city || currentMatch.country) && (
-                  <p className="text-[11px] text-slate-400 mt-1 pl-5">
+                  <p className={`text-[11px] mt-1 pl-5 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                     {[currentMatch.city, currentMatch.country].filter(Boolean).join(', ')}
                   </p>
                 )}
@@ -661,10 +730,10 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                   isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'
                 }`}
               >
-                <span className="text-[10px] uppercase font-mono text-slate-400 block mb-1">
+                <span className={`text-[10px] uppercase font-mono block mb-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                   Toss
                 </span>
-                <p className="font-medium text-xs text-slate-200">
+                <p className={`font-medium text-xs ${isDark ? 'text-slate-200' : 'text-slate-800'}`}>
                   {currentMatch.toss ||
                     (currentMatch.tossWinner
                       ? `${currentMatch.tossWinner} won the toss and elected to ${
@@ -766,30 +835,30 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                     >
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="font-bold text-sm text-white">{batter.name}</span>
-                          <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-800 text-slate-300">
+                          <span className={`font-bold text-sm ${isDark ? 'text-white' : 'text-slate-900'}`}>{batter.name}</span>
+                          <span className={`text-[10px] font-mono px-1.5 py-0.2 rounded ${isDark ? 'bg-slate-800 text-slate-300' : 'bg-slate-200 text-slate-700 font-bold'}`}>
                             {batter.teamShort}
                           </span>
                         </div>
                         <span
                           className={`text-[11px] font-mono ${
                             batter.isNotOut || (batter.dismissal && batter.dismissal.toLowerCase().includes('not out'))
-                              ? 'text-emerald-400 font-bold'
-                              : 'text-slate-400'
+                              ? isDark ? 'text-emerald-400 font-bold' : 'text-emerald-700 font-bold'
+                              : isDark ? 'text-slate-400' : 'text-slate-600'
                           }`}
                         >
                           {formatDismissal(batter)}
                         </span>
                       </div>
                       <div className="flex items-center gap-4 font-mono text-xs">
-                        <span className="text-cyan-400 font-bold text-sm">
+                        <span className={`font-bold text-sm ${isDark ? 'text-cyan-400' : 'text-cyan-700'}`}>
                           {formatStat(batter.runs)}{' '}
                           <span className="text-slate-500 text-xs">({formatStat(batter.balls)}b)</span>
                         </span>
-                        <span className="text-slate-400 text-[11px]">
+                        <span className={`text-[11px] ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                           4s:{formatStat(batter.fours)} 6s:{formatStat(batter.sixes)}
                         </span>
-                        <span className="text-slate-300 text-[11px]">SR:{formatStrikeRate(batter)}</span>
+                        <span className={`text-[11px] ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>SR:{formatStrikeRate(batter)}</span>
                       </div>
                     </div>
                   ))}
@@ -797,8 +866,8 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
               ) : (
                 <p className="text-xs text-slate-400 py-2 font-mono">
                   {isLoadingDetails
-                    ? 'Retrieving verified batting figures from Google Search Grounding...'
-                    : 'Batting statistics are recorded in the Scorecard tab.'}
+                    ? 'Retrieving verified batting figures from Sportmonks Cricket API...'
+                    : scorecardNotice || 'Batting statistics are recorded in the Scorecard tab when available.'}
                 </p>
               )
             ) : currentMatch.currentInnings.batters.length > 0 ? (
@@ -829,8 +898,8 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
             ) : (
               <p className="text-xs text-slate-400 py-2 font-mono">
                 {isLoadingDetails
-                  ? 'Retrieving verified live batting figures from Google Search Grounding...'
-                  : 'Batting lineup active. Open Scorecard for full figures.'}
+                  ? 'Retrieving live batting figures from Sportmonks Cricket API...'
+                  : scorecardNotice || 'Batting figures will appear when provided by the live scorecard feed.'}
               </p>
             )}
           </div>
@@ -866,20 +935,20 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                       }`}
                     >
                       <div className="flex items-center gap-2">
-                        <span className="font-bold text-sm text-white">{bowler.name}</span>
-                        <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-800 text-slate-300">
+                        <span className={`font-bold text-sm ${isDark ? 'text-white' : 'text-slate-900'}`}>{bowler.name}</span>
+                        <span className={`text-[10px] font-mono px-1.5 py-0.2 rounded ${isDark ? 'bg-slate-800 text-slate-300' : 'bg-slate-200 text-slate-700 font-bold'}`}>
                           {bowler.teamShort}
                         </span>
                       </div>
                       <div className="flex items-center gap-4 font-mono text-xs">
-                        <span className="text-slate-300">
+                        <span className={isDark ? 'text-slate-300' : 'text-slate-700'}>
                           {formatStat(bowler.overs)} ov ({formatStat(bowler.runs)}r -{' '}
-                          <strong className="text-amber-400">{formatStat(bowler.wickets)}w</strong>)
+                          <strong className={isDark ? 'text-amber-400' : 'text-amber-700'}>{formatStat(bowler.wickets)}w</strong>)
                         </span>
-                        <span className="text-cyan-400 font-bold">
+                        <span className={`font-bold ${isDark ? 'text-cyan-400' : 'text-cyan-700'}`}>
                           Econ: {formatEconomy(bowler)}
                         </span>
-                        <span className="text-slate-400 text-[11px] hidden sm:inline">
+                        <span className={`text-[11px] hidden sm:inline ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                           M:{formatStat(bowler.maidens)}
                         </span>
                       </div>
@@ -889,8 +958,8 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
               ) : (
                 <p className="text-xs text-slate-400 py-2 font-mono">
                   {isLoadingDetails
-                    ? 'Retrieving verified bowling figures from Google Search Grounding...'
-                    : 'Detailed bowling performance available in the Scorecard tab.'}
+                    ? 'Retrieving verified bowling figures from Sportmonks Cricket API...'
+                    : scorecardNotice || 'Detailed bowling performance appears in the Scorecard tab when available.'}
                 </p>
               )
             ) : currentMatch.currentInnings.bowlers.length > 0 ? (
@@ -909,8 +978,8 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
             ) : (
               <p className="text-xs text-slate-400 py-2 font-mono">
                 {isLoadingDetails
-                  ? 'Retrieving live bowler data from Google Search Grounding...'
-                  : 'Bowler performance currently active in Scorecard.'}
+                  ? 'Retrieving live bowler data from Sportmonks Cricket API...'
+                  : scorecardNotice || 'Bowler figures will appear once available from the live feed.'}
               </p>
             )}
           </div>
@@ -941,8 +1010,8 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                             : 'bg-slate-50 border-slate-200 text-slate-800'
                         }`}
                       >
-                        <strong className="text-cyan-400">{p.batters}</strong>:{' '}
-                        <span className="font-bold text-white">{formatStat(p.runs)} runs</span>{' '}
+                        <strong className={isDark ? 'text-cyan-400' : 'text-cyan-700'}>{p.batters}</strong>:{' '}
+                        <span className={`font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>{formatStat(p.runs)} runs</span>{' '}
                         {p.balls ? `(${p.balls}b)` : ''}
                       </span>
                     ))}
@@ -951,7 +1020,7 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
               )}
 
               {allFallOfWickets.length > 0 && (
-                <div className="space-y-1.5 pt-2 border-t border-slate-800/60">
+                <div className={`space-y-1.5 pt-2 border-t ${isDark ? 'border-slate-800/60' : 'border-slate-200'}`}>
                   <span className="text-[11px] font-mono text-slate-400 block font-bold">
                     Fall of Wickets:
                   </span>
@@ -965,7 +1034,7 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                             : 'bg-slate-50 border-slate-200 text-slate-700'
                         }`}
                       >
-                        <strong className="text-amber-400">{f.score}</strong> ({f.batter},{' '}
+                        <strong className={isDark ? 'text-amber-400' : 'text-amber-700'}>{f.score}</strong> ({f.batter},{' '}
                         {f.over} ov)
                       </span>
                     ))}
@@ -974,42 +1043,6 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
               )}
             </div>
           )}
-
-          {/* Tactical AI Insight Card */}
-          <div
-            className={`p-5 rounded-2xl border transition-all ${
-              isDark ? 'bg-slate-900 border-cyan-500/30' : 'bg-cyan-50/50 border-cyan-200'
-            }`}
-          >
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center gap-2 text-cyan-400 text-xs font-bold font-mono">
-                <Bot className="w-4 h-4" />
-                <span>Tactical Match AI</span>
-              </div>
-              <button
-                onClick={fetchMatchInsight}
-                disabled={loadingInsight}
-                className="text-[11px] font-bold text-cyan-400 hover:underline"
-              >
-                {loadingInsight ? 'Analyzing...' : 'Refresh AI Analysis'}
-              </button>
-            </div>
-
-            {aiInsight ? (
-              <div className="space-y-3 text-xs">
-                <p className="leading-relaxed font-medium text-slate-300">{aiInsight.insight}</p>
-                {aiInsight.keyMatchup && (
-                  <div className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 font-mono">
-                    <strong>Key Battle:</strong> {aiInsight.keyMatchup}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <p className="text-xs text-slate-400">
-                Click refresh to run Gemini tactical analysis on pitch conditions and player matchups.
-              </p>
-            )}
-          </div>
         </div>
       )}
 
@@ -1057,16 +1090,16 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                 isDark ? 'bg-[#091b2e] border-slate-800' : 'bg-white border-slate-200'
               }`}
             >
-              <Calendar className="w-8 h-8 text-cyan-400 mx-auto mb-3 animate-pulse" />
-              <h4 className="font-bold text-sm text-white mb-1">Match Scheduled</h4>
-              <p className="text-xs text-slate-400 max-w-md mx-auto mb-4">
+              <Calendar className={`w-8 h-8 mx-auto mb-3 animate-pulse ${isDark ? 'text-cyan-400' : 'text-cyan-700'}`} />
+              <h4 className={`font-bold text-sm mb-1 ${isDark ? 'text-white' : 'text-slate-900'}`}>Match Scheduled</h4>
+              <p className={`text-xs max-w-md mx-auto mb-4 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                 {currentMatch.startTime
                   ? `Scheduled to commence on ${new Date(currentMatch.startTime).toLocaleString()}.`
                   : 'Fixture scheduled to start shortly.'}{' '}
                 Full batting and bowling scorecards with verified figures will populate as soon as players
                 take the field.
               </p>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-mono">
+              <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border text-xs font-mono ${isDark ? 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300' : 'bg-cyan-50 border-cyan-200 text-cyan-800'}`}>
                 <MapPin className="w-3.5 h-3.5" />
                 <span>{currentMatch.venue}</span>
               </div>
@@ -1078,26 +1111,26 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                 {/* Innings Card Container */}
                 <div
                   className={`rounded-2xl border overflow-hidden ${
-                    isDark ? 'bg-[#091b2e] border-slate-800' : 'bg-white border-slate-200'
+                    isDark ? 'bg-[#091b2e] border-slate-800' : 'bg-white border-slate-200 shadow-xs'
                   }`}
                 >
                   {/* Innings Header Banner */}
-                  <div className="p-4 bg-slate-800/60 border-b border-slate-800 font-bold text-xs flex justify-between items-center">
+                  <div className={`p-4 border-b font-bold text-xs flex justify-between items-center ${isDark ? 'bg-slate-800/60 border-slate-800' : 'bg-slate-100 border-slate-200'}`}>
                     <div className="flex items-center gap-2">
-                      <span className="font-mono text-cyan-400 text-xs font-extrabold px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20">
-                        {inn.inningsNumber ? `${inn.inningsNumber}st Innings` : `Innings ${innIdx + 1}`}
+                      <span className={`font-mono text-xs font-extrabold px-2 py-0.5 rounded border ${isDark ? 'text-cyan-400 bg-cyan-500/10 border-cyan-500/20' : 'text-cyan-800 bg-cyan-100 border-cyan-300'}`}>
+                        {inn.inningsNumber ? `${formatOrdinal(inn.inningsNumber)} Innings` : `Innings ${innIdx + 1}`}
                       </span>
-                      <span className="text-sm font-extrabold text-white">
+                      <span className={`text-sm font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
                         {inn.teamName} Batting
                       </span>
                     </div>
                     <div className="flex items-center gap-3 font-mono">
-                      <span className="text-sm font-black text-cyan-400">{inn.score}</span>
+                      <span className={`text-sm font-black ${isDark ? 'text-cyan-400' : 'text-cyan-700'}`}>{inn.score}</span>
                       {inn.overs && (
-                        <span className="text-xs text-slate-400">({inn.overs} ov)</span>
+                        <span className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>({inn.overs} ov)</span>
                       )}
                       {inn.runRate !== undefined && inn.runRate !== null && (
-                        <span className="text-[11px] text-slate-400 hidden sm:inline">
+                        <span className={`text-[11px] hidden sm:inline ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                           RR: {formatStat(inn.runRate)}
                         </span>
                       )}
@@ -1108,7 +1141,7 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                   {inn.batters.length > 0 ? (
                     <div className="overflow-x-auto">
                       <table className="w-full text-left text-xs font-mono">
-                        <thead className="bg-slate-900/60 text-slate-400 text-[10px] uppercase">
+                        <thead className={`text-[10px] uppercase ${isDark ? 'bg-slate-900/60 text-slate-400' : 'bg-slate-50 text-slate-600 border-b border-slate-200'}`}>
                           <tr>
                             <th className="p-3">Batter</th>
                             <th className="p-3 text-right">R</th>
@@ -1118,30 +1151,30 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                             <th className="p-3 text-right">SR</th>
                           </tr>
                         </thead>
-                        <tbody className="divide-y divide-slate-800/50">
+                        <tbody className={`divide-y ${isDark ? 'divide-slate-800/50' : 'divide-slate-200'}`}>
                           {inn.batters.map((b, bIdx) => (
-                            <tr key={bIdx} className="hover:bg-slate-800/30 transition-colors">
+                            <tr key={bIdx} className={`transition-colors ${isDark ? 'hover:bg-slate-800/30' : 'hover:bg-slate-50'}`}>
                               <td className="p-3">
-                                <span className="font-bold font-sans text-white">
+                                <span className={`font-bold font-sans ${isDark ? 'text-white' : 'text-slate-900'}`}>
                                   {b.name} {b.isStriker ? '*' : ''}
                                 </span>
                                 <span
                                   className={`block text-[10px] font-sans mt-0.5 ${
                                     b.isNotOut || (b.dismissal && b.dismissal.toLowerCase().includes('not out'))
-                                      ? 'text-emerald-400 font-bold'
-                                      : 'text-slate-400'
+                                      ? isDark ? 'text-emerald-400 font-bold' : 'text-emerald-700 font-bold'
+                                      : isDark ? 'text-slate-400' : 'text-slate-600'
                                   }`}
                                 >
                                   {formatDismissal(b)}
                                 </span>
                               </td>
-                              <td className="p-3 text-right font-bold text-cyan-400 text-sm">
+                              <td className={`p-3 text-right font-bold text-sm ${isDark ? 'text-cyan-400' : 'text-cyan-700'}`}>
                                 {formatStat(b.runs)}
                               </td>
-                              <td className="p-3 text-right text-slate-300">{formatStat(b.balls)}</td>
-                              <td className="p-3 text-right text-slate-400">{formatStat(b.fours)}</td>
-                              <td className="p-3 text-right text-slate-400">{formatStat(b.sixes)}</td>
-                              <td className="p-3 text-right text-slate-300">
+                              <td className={`p-3 text-right ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>{formatStat(b.balls)}</td>
+                              <td className={`p-3 text-right ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{formatStat(b.fours)}</td>
+                              <td className={`p-3 text-right ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{formatStat(b.sixes)}</td>
+                              <td className={`p-3 text-right ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
                                 {formatStrikeRate(b)}
                               </td>
                             </tr>
@@ -1152,22 +1185,22 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                   ) : (
                     <div className="p-6 text-center text-xs text-slate-400 font-mono">
                       {isLoadingDetails
-                        ? 'Retrieving verified batting figures from Google Search Grounding...'
-                        : 'Innings has not commenced or no batting figures recorded yet.'}
+                        ? 'Retrieving verified batting figures from Sportmonks Cricket API...'
+                        : scorecardNotice || 'Innings has not commenced or no batting figures recorded yet.'}
                     </div>
                   )}
 
                   {/* Extras Row */}
-                  <div className="p-3.5 bg-slate-900/40 border-t border-slate-800 font-mono text-xs flex flex-wrap justify-between items-center text-slate-300 gap-2">
-                    <span className="font-bold text-slate-400 text-[11px] uppercase tracking-wider">
+                  <div className={`p-3.5 border-t font-mono text-xs flex flex-wrap justify-between items-center gap-2 ${isDark ? 'bg-slate-900/40 border-slate-800 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'}`}>
+                    <span className={`font-bold text-[11px] uppercase tracking-wider ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                       Extras
                     </span>
                     <div className="flex items-center gap-2">
-                      <span className="font-bold text-white">
+                      <span className={`font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
                         Total: {inn.extras?.total !== null && inn.extras?.total !== undefined ? inn.extras.total : '—'}
                       </span>
                       {inn.extras && (
-                        <span className="text-slate-400 text-[11px]">
+                        <span className={`text-[11px] ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                           (wd {formatStat(inn.extras.wides)}, nb {formatStat(inn.extras.noBalls)}, b {formatStat(inn.extras.byes)}, lb {formatStat(inn.extras.legByes)}, pen {formatStat(inn.extras.penalty)})
                         </span>
                       )}
@@ -1175,16 +1208,16 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                   </div>
 
                   {/* Total Innings Score Row */}
-                  <div className="p-3.5 bg-slate-900/70 border-t border-slate-800 font-mono text-xs flex flex-wrap justify-between items-center text-slate-300 gap-2">
-                    <span className="font-bold uppercase tracking-wider text-slate-400 text-[11px]">
+                  <div className={`p-3.5 border-t font-mono text-xs flex flex-wrap justify-between items-center gap-2 ${isDark ? 'bg-slate-900/70 border-slate-800 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-800'}`}>
+                    <span className={`font-bold uppercase tracking-wider text-[11px] ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                       Total ({inn.overs || '0'} ov)
                     </span>
                     <div className="flex items-center gap-3 font-bold">
-                      <span className="text-cyan-400 text-sm">
+                      <span className={`text-sm ${isDark ? 'text-cyan-400' : 'text-cyan-700'}`}>
                         {inn.score || `${formatStat(inn.runs)}/${formatStat(inn.wickets)}`}
                       </span>
                       {inn.runRate !== undefined && inn.runRate !== null && (
-                        <span className="text-slate-400 text-xs font-normal">
+                        <span className={`text-xs font-normal ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                           (RR: {formatStat(inn.runRate)})
                         </span>
                       )}
@@ -1193,11 +1226,11 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
 
                   {/* Yet to Bat (if available) */}
                   {inn.yetToBat && inn.yetToBat.length > 0 && (
-                    <div className="p-3 bg-slate-900/20 border-t border-slate-800/80 font-mono text-[11px]">
-                      <span className="font-bold text-slate-400 block mb-1">Yet to Bat:</span>
-                      <div className="flex flex-wrap gap-1.5 text-slate-300">
+                    <div className={`p-3 border-t font-mono text-[11px] ${isDark ? 'bg-slate-900/20 border-slate-800/80' : 'bg-white border-slate-200'}`}>
+                      <span className={`font-bold block mb-1 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Yet to Bat:</span>
+                      <div className={`flex flex-wrap gap-1.5 ${isDark ? 'text-slate-300' : 'text-slate-800'}`}>
                         {inn.yetToBat.map((player, pIdx) => (
-                          <span key={pIdx} className="bg-slate-800/60 px-2 py-0.5 rounded text-xs">
+                          <span key={pIdx} className={`px-2 py-0.5 rounded text-xs ${isDark ? 'bg-slate-800/60' : 'bg-slate-100 border border-slate-200'}`}>
                             {player}
                           </span>
                         ))}
@@ -1207,12 +1240,12 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
 
                   {/* Fall of Wickets (if available) */}
                   {inn.fallOfWickets && inn.fallOfWickets.length > 0 && (
-                    <div className="p-3 bg-slate-900/30 border-t border-slate-800/80 font-mono text-[11px]">
-                      <span className="font-bold text-slate-400 block mb-1">Fall of Wickets:</span>
-                      <div className="flex flex-wrap gap-2 text-slate-300">
+                    <div className={`p-3 border-t font-mono text-[11px] ${isDark ? 'bg-slate-900/30 border-slate-800/80' : 'bg-slate-50/70 border-slate-200'}`}>
+                      <span className={`font-bold block mb-1 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Fall of Wickets:</span>
+                      <div className={`flex flex-wrap gap-2 ${isDark ? 'text-slate-300' : 'text-slate-800'}`}>
                         {inn.fallOfWickets.map((f, fi) => (
-                          <span key={fi} className="bg-slate-800/60 px-2 py-0.5 rounded">
-                            <strong className="text-amber-400">{f.score}</strong> ({f.batter},{' '}
+                          <span key={fi} className={`px-2 py-0.5 rounded ${isDark ? 'bg-slate-800/60' : 'bg-white border border-slate-200'}`}>
+                            <strong className={isDark ? 'text-amber-400' : 'text-amber-700'}>{f.score}</strong> ({f.batter},{' '}
                             {f.over} ov)
                           </span>
                         ))}
@@ -1222,12 +1255,12 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
 
                   {/* Partnerships (if available) */}
                   {inn.partnerships && inn.partnerships.length > 0 && (
-                    <div className="p-3 bg-slate-900/20 border-t border-slate-800/80 font-mono text-[11px]">
-                      <span className="font-bold text-slate-400 block mb-1">Partnerships:</span>
-                      <div className="flex flex-wrap gap-2 text-slate-300">
+                    <div className={`p-3 border-t font-mono text-[11px] ${isDark ? 'bg-slate-900/20 border-slate-800/80' : 'bg-white border-slate-200'}`}>
+                      <span className={`font-bold block mb-1 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Partnerships:</span>
+                      <div className={`flex flex-wrap gap-2 ${isDark ? 'text-slate-300' : 'text-slate-800'}`}>
                         {inn.partnerships.map((p, pi) => (
-                          <span key={pi} className="bg-slate-800/60 px-2 py-0.5 rounded">
-                            <strong className="text-cyan-400">{p.batters}</strong>: {formatStat(p.runs)} runs{' '}
+                          <span key={pi} className={`px-2 py-0.5 rounded ${isDark ? 'bg-slate-800/60' : 'bg-slate-100 border border-slate-200'}`}>
+                            <strong className={isDark ? 'text-cyan-400' : 'text-cyan-700'}>{p.batters}</strong>: {formatStat(p.runs)} runs{' '}
                             {p.balls ? `(${p.balls}b)` : ''}
                           </span>
                         ))}
@@ -1239,12 +1272,12 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                 {/* Bowling Table for this Innings */}
                 <div
                   className={`rounded-2xl border overflow-hidden ${
-                    isDark ? 'bg-[#091b2e] border-slate-800' : 'bg-white border-slate-200'
+                    isDark ? 'bg-[#091b2e] border-slate-800' : 'bg-white border-slate-200 shadow-xs'
                   }`}
                 >
-                  <div className="p-4 bg-slate-800/40 border-b border-slate-800 font-bold text-xs flex justify-between items-center">
+                  <div className={`p-4 border-b font-bold text-xs flex justify-between items-center ${isDark ? 'bg-slate-800/40 border-slate-800 text-white' : 'bg-slate-100 border-slate-200 text-slate-900'}`}>
                     <span>Bowling Attack vs {inn.teamName}</span>
-                    <span className="text-[10px] text-slate-400 font-mono">
+                    <span className={`text-[10px] font-mono ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                       {inn.bowlers.length} Bowlers Bowled
                     </span>
                   </div>
@@ -1252,7 +1285,7 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                   {inn.bowlers.length > 0 ? (
                     <div className="overflow-x-auto">
                       <table className="w-full text-left text-xs font-mono">
-                        <thead className="bg-slate-900/60 text-slate-400 text-[10px] uppercase">
+                        <thead className={`text-[10px] uppercase ${isDark ? 'bg-slate-900/60 text-slate-400' : 'bg-slate-50 text-slate-600 border-b border-slate-200'}`}>
                           <tr>
                             <th className="p-3">Bowler</th>
                             <th className="p-3 text-right">O</th>
@@ -1264,25 +1297,25 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                             <th className="p-3 text-right hidden sm:table-cell">NB</th>
                           </tr>
                         </thead>
-                        <tbody className="divide-y divide-slate-800/50">
+                        <tbody className={`divide-y ${isDark ? 'divide-slate-800/50' : 'divide-slate-200'}`}>
                           {inn.bowlers.map((bw, idx) => (
-                            <tr key={idx} className="hover:bg-slate-800/30 transition-colors">
-                              <td className="p-3 font-bold font-sans text-white">
+                            <tr key={idx} className={`transition-colors ${isDark ? 'hover:bg-slate-800/30' : 'hover:bg-slate-50'}`}>
+                              <td className={`p-3 font-bold font-sans ${isDark ? 'text-white' : 'text-slate-900'}`}>
                                 {bw.name} {bw.isBowling ? '*' : ''}
                               </td>
-                              <td className="p-3 text-right text-slate-300">{formatStat(bw.overs)}</td>
-                              <td className="p-3 text-right text-slate-400">{formatStat(bw.maidens)}</td>
-                              <td className="p-3 text-right text-slate-300">{formatStat(bw.runs)}</td>
-                              <td className="p-3 text-right font-bold text-amber-400">
+                              <td className={`p-3 text-right ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>{formatStat(bw.overs)}</td>
+                              <td className={`p-3 text-right ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{formatStat(bw.maidens)}</td>
+                              <td className={`p-3 text-right ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>{formatStat(bw.runs)}</td>
+                              <td className={`p-3 text-right font-bold ${isDark ? 'text-amber-400' : 'text-amber-700'}`}>
                                 {formatStat(bw.wickets)}
                               </td>
-                              <td className="p-3 text-right text-cyan-400 font-bold">
+                              <td className={`p-3 text-right font-bold ${isDark ? 'text-cyan-400' : 'text-cyan-700'}`}>
                                 {formatEconomy(bw)}
                               </td>
-                              <td className="p-3 text-right text-slate-400 hidden sm:table-cell">
+                              <td className={`p-3 text-right hidden sm:table-cell ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                                 {formatStat(bw.wides)}
                               </td>
-                              <td className="p-3 text-right text-slate-400 hidden sm:table-cell">
+                              <td className={`p-3 text-right hidden sm:table-cell ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                                 {formatStat(bw.noBalls)}
                               </td>
                             </tr>
@@ -1293,8 +1326,8 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                   ) : (
                     <div className="p-6 text-center text-xs text-slate-400 font-mono">
                       {isLoadingDetails
-                        ? 'Retrieving verified bowling figures from Google Search Grounding...'
-                        : 'Bowling figures will appear once play starts.'}
+                        ? 'Retrieving verified bowling figures from Sportmonks Cricket API...'
+                        : scorecardNotice || 'Bowling figures are not yet available from the data provider.'}
                     </div>
                   )}
                 </div>
@@ -1322,9 +1355,11 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                   key={f.id}
                   onClick={() => setCommentaryFilter(f.id)}
                   className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition-all ${
-                    commentaryFilter === f.id
+                  commentaryFilter === f.id
                       ? 'bg-cyan-500 text-slate-950 border-cyan-400'
-                      : 'bg-slate-800/60 text-slate-400 border-slate-700 hover:text-white'
+                      : isDark
+                      ? 'bg-slate-800/60 text-slate-400 border-slate-700 hover:text-white'
+                      : 'bg-slate-100 text-slate-700 border-slate-200 hover:text-slate-950'
                   }`}
                 >
                   {f.label}
@@ -1340,7 +1375,7 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                 onChange={(e) => setCommentarySearch(e.target.value)}
                 placeholder="Search ball over..."
                 className={`w-full sm:w-48 pl-8 pr-3 py-1.5 text-xs rounded-xl border focus:outline-none focus:ring-1 focus:ring-cyan-400 ${
-                  isDark ? 'bg-slate-800 border-slate-700 text-white' : 'bg-white border-slate-300'
+                  isDark ? 'bg-slate-800 border-slate-700 text-white' : 'bg-white border-slate-300 text-slate-900'
                 }`}
               />
             </div>
@@ -1354,9 +1389,9 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                   key={ball.id}
                   className={`p-4 rounded-2xl border transition-all flex items-start gap-3 ${
                     ball.isWicket
-                      ? 'bg-red-950/20 border-red-500/40 text-red-100'
+                      ? isDark ? 'bg-red-950/20 border-red-500/40 text-red-100' : 'bg-red-50 border-red-200 text-red-950'
                       : ball.isSix
-                      ? 'bg-amber-950/20 border-amber-500/40 text-amber-100'
+                      ? isDark ? 'bg-amber-950/20 border-amber-500/40 text-amber-100' : 'bg-amber-50 border-amber-200 text-amber-950'
                       : isDark
                       ? 'bg-[#091b2e] border-slate-800 text-white'
                       : 'bg-white border-slate-200 text-slate-900'
@@ -1364,7 +1399,7 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                 >
                   {/* Over badge */}
                   <div className="flex flex-col items-center shrink-0">
-                    <span className="font-mono font-bold text-sm text-cyan-400">{ball.overNumber}</span>
+                    <span className={`font-mono font-bold text-sm ${isDark ? 'text-cyan-400' : 'text-cyan-700'}`}>{ball.overNumber}</span>
                     <span
                       className={`mt-1 px-2 py-0.5 rounded-full text-[10px] font-black font-mono ${
                         ball.isWicket
@@ -1373,7 +1408,7 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
                           ? 'bg-amber-500 text-slate-950'
                           : ball.isBoundary
                           ? 'bg-cyan-500 text-slate-950'
-                          : 'bg-slate-800 text-slate-400'
+                          : isDark ? 'bg-slate-800 text-slate-400' : 'bg-slate-200 text-slate-700'
                       }`}
                     >
                       {ball.isWicket ? 'W' : ball.runs}
@@ -1395,7 +1430,9 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
             ) : (
               <div className="p-8 text-center text-xs text-slate-400 font-mono">
                 {currentMatch.status === 'UPCOMING'
-                  ? 'Ball-by-ball commentary will start once the match begins.'
+                  ? 'Ball-by-ball commentary will appear once the match begins (when included in your Sportmonks plan).'
+                  : (currentMatch.commentary || []).length === 0
+                  ? 'Ball-by-ball updates are unavailable for this match or not included in the current provider plan.'
                   : 'No commentary events match your current filter.'}
               </div>
             )}
@@ -1410,7 +1447,7 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
         </div>
       )}
 
-      {/* Tab 4: AI Insights */}
+      {/* Tab 4: Match Alerts */}
       {activeTab === 'alerts' && (
         <div className="space-y-4 animate-fadeIn">
           <div
@@ -1419,10 +1456,10 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
             }`}
           >
             <h3 className="text-base font-bold mb-2 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-cyan-400" />
+              <Bell className="w-4 h-4 text-cyan-400" />
               <span>Configure Live Alerts for this Match</span>
             </h3>
-            <p className="text-xs text-slate-400 mb-4">
+            <p className={`text-xs mb-4 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
               Customize event triggers specifically for {currentMatch.teamA.shortName} vs {currentMatch.teamB.shortName}.
             </p>
 
@@ -1435,16 +1472,20 @@ export const MatchCenterView: React.FC<MatchCenterViewProps> = ({
               ].map((al, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center justify-between p-3 rounded-xl bg-slate-800/40 border border-slate-700/50"
+                  className={`flex items-center justify-between p-3 rounded-xl border ${
+                    isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-slate-50 border-slate-200'
+                  }`}
                 >
                   <div>
                     <span className="font-bold block">{al.title}</span>
-                    <span className="text-slate-400 text-[11px]">{al.desc}</span>
+                    <span className={`text-[11px] ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{al.desc}</span>
                   </div>
                   <input
                     type="checkbox"
                     defaultChecked
-                    className="w-4 h-4 rounded text-cyan-500 focus:ring-cyan-400 bg-slate-900 border-slate-700"
+                    className={`w-4 h-4 rounded text-cyan-500 focus:ring-cyan-400 ${
+                      isDark ? 'bg-slate-900 border-slate-700' : 'bg-white border-slate-300'
+                    }`}
                   />
                 </div>
               ))}

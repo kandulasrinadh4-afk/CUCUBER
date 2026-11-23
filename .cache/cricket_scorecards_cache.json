@@ -1,114 +1,186 @@
 {
-  "ind-wi-1st-odi-2026-09-27": {
+  "sm-71029": {
+    "timestamp": 1795437978055,
+    "provider": "sportmonks",
     "data": {
-      "id": "ind-wi-1st-odi-2026-09-27",
-      "tournament": "West Indies tour of India, 2026",
-      "title": "India vs West Indies • Greenfield International Stadium",
+      "id": "sm-71029",
+      "matchId": "sm-71029",
+      "provider": "sportmonks",
+      "providerMatchId": "71029",
+      "tournament": "Twenty20 International",
+      "category": "International",
+      "title": "1st T20I • Melbourne Cricket Ground",
+      "matchType": "T20I",
+      "date": "2026-11-21",
+      "venue": "Melbourne Cricket Ground",
+      "city": "Jolimont,  Melbourne, Victoria",
+      "country": null,
       "status": "RECENT",
-      "startTime": null,
-      "venue": "Greenfield International Stadium",
+      "startTime": "2026-11-21T08:15:00.000000Z",
       "homeTeam": {
-        "name": "India",
-        "shortName": "IND",
-        "score": "300/2",
-        "wickets": 2,
-        "overs": "41.4",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
+        "name": "Australia",
+        "shortName": "AUS",
+        "score": "191/7",
+        "wickets": 7,
+        "overs": "19.5",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png"
       },
       "awayTeam": {
-        "name": "West Indies",
-        "shortName": "WI",
-        "score": "295/7",
-        "wickets": 7,
-        "overs": "50.0",
-        "logo": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=120&q=80"
+        "name": "England",
+        "shortName": "ENG",
+        "score": "187/9",
+        "wickets": 9,
+        "overs": "20",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png"
       },
-      "target": 296,
+      "target": null,
       "requiredRuns": null,
       "requiredBalls": null,
-      "runRate": null,
-      "result": "India won by 8 wickets",
-      "statusText": "Match Ended ( 1st ODI ) India beat West Indies by 8 wickets.",
+      "runRate": 9.63,
+      "result": "Australia won by 3 wickets (with 1 ball remaining)",
+      "winner": "Australia",
+      "tossWinner": "Australia",
+      "tossDecision": "bowl",
+      "playerOfMatch": "Nikhil Chaudhary",
+      "statusText": "Australia won by 3 wickets (with 1 ball remaining)",
       "sources": [
         {
-          "title": "outlookindia.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMjHGffuL_B_hY6S0KFZqCXHjAouKPA9-CaFGeMe5musLhG19YIsDaLhceZYimpph8sKlBCUlhThu10Dxf-BXefoKml-2rKqZtrggUDJwv9rUnGRWriMma5yc1Osnr3NNLmtT5eNhewxRH8VmBU2LzP5GGqxKOXiwEo4sUHoObUoRTxqzgyJlVQUbExd0BTwyJrsgrtW-1ewBKYbH_HOMGyYKSgwPHwWEiF3jYF3ZoNfxvsJzwUPAmAQspxdlzHA=="
-        },
-        {
-          "title": "indianexpress.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdmXyyzmm8n8ydDygjnkhel0aLDr-pZBG0Z2F60d0F2M-6xIEgzdqEksq2UVLhIhN9rYLKyNTOvfu6HNopg_uWY-0DFxG1fwYMvxXlg0c4aWLbKa9SUY3N5rpl49V2covpwrbEqJxX1vnMYLIhdlRfh1PjE_WJ3O9sNUR6WYZp5pVvRLlkvXHxAq2wCh-sPISn9tbNGHNkJVz0c4d1Mnsj9q3ynyLYfJPi9iliBf9zc9nQiiCoTlVOr6GNkJCpcx85meM="
-        },
-        {
-          "title": "newsbytesapp.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKoMe--f7EhjqlLHPLYWh_KJ5mTpPysj5_fnGTGYJH5mps1eVRmeYz6IHnuRuzSBDrs4pZ_AkS5YAnpxdepT4t0oEEa4unCP8DXf0y9E_00gEDne1O0R6ir0k55BOT0YouWz2i8J6jIpqVFAtxzaEykz0x_mgzidW9I7-pz2O8Y8vUjTVAt1YFbjCwKdNvEvX4RdA="
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
         }
       ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMjHGffuL_B_hY6S0KFZqCXHjAouKPA9-CaFGeMe5musLhG19YIsDaLhceZYimpph8sKlBCUlhThu10Dxf-BXefoKml-2rKqZtrggUDJwv9rUnGRWriMma5yc1Osnr3NNLmtT5eNhewxRH8VmBU2LzP5GGqxKOXiwEo4sUHoObUoRTxqzgyJlVQUbExd0BTwyJrsgrtW-1ewBKYbH_HOMGyYKSgwPHwWEiF3jYF3ZoNfxvsJzwUPAmAQspxdlzHA==",
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": true,
       "teamA": {
-        "name": "India",
-        "shortName": "IND",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "300/2",
-        "overs": "41.4"
+        "name": "Australia",
+        "shortName": "AUS",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png",
+        "score": "191/7",
+        "overs": "19.5"
       },
       "teamB": {
-        "name": "West Indies",
-        "shortName": "WI",
-        "logo": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=120&q=80",
-        "score": "295/7",
-        "overs": "50.0"
+        "name": "England",
+        "shortName": "ENG",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png",
+        "score": "187/9",
+        "overs": "20"
       },
-      "recentBalls": [],
+      "crr": 9.63,
+      "recentBalls": [
+        "1",
+        "1",
+        "0",
+        "6",
+        "2",
+        "0",
+        "2",
+        "4"
+      ],
       "currentInnings": {
         "inningsNumber": 2,
-        "teamName": "India",
-        "teamShort": "IND",
-        "score": "300/2",
-        "runs": 300,
-        "wickets": 2,
-        "overs": "41.4",
-        "runRate": 7.2,
+        "teamName": "Australia",
+        "teamShort": "AUS",
+        "score": "191/7",
+        "runs": 191,
+        "wickets": 7,
+        "overs": "19.5",
+        "runRate": 9.63,
         "batters": [
           {
-            "name": "Rohit Sharma",
-            "runs": 32,
-            "balls": 35,
-            "fours": 2,
-            "sixes": 3,
-            "sr": 91.43,
-            "isStriker": false,
-            "isNotOut": false,
-            "dismissal": "c Andrew b Joseph"
-          },
-          {
-            "name": "Shubman Gill",
-            "runs": 110,
-            "balls": 108,
-            "fours": 13,
+            "name": "Mitchell Marsh",
+            "runs": 37,
+            "balls": 32,
+            "fours": 3,
             "sixes": 1,
-            "sr": 101.85,
+            "sr": 116,
             "isStriker": false,
             "isNotOut": false,
-            "dismissal": "c Andrew b Chase"
+            "dismissal": "c Liam Dawson b Sam Curran"
           },
           {
-            "name": "Virat Kohli",
-            "runs": 139,
-            "balls": 88,
-            "fours": 10,
-            "sixes": 9,
-            "sr": 157.95,
+            "name": "Jake Fraser-McGurk",
+            "runs": 1,
+            "balls": 3,
+            "fours": 0,
+            "sixes": 0,
+            "sr": 33,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "b Liam Dawson"
+          },
+          {
+            "name": "Sam Harper",
+            "runs": 32,
+            "balls": 15,
+            "fours": 3,
+            "sixes": 2,
+            "sr": 213,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Will Jacks b Henry Crocombe"
+          },
+          {
+            "name": "Nikhil Chaudhary",
+            "runs": 66,
+            "balls": 38,
+            "fours": 6,
+            "sixes": 2,
+            "sr": 174,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Aneurin Donald b Jamie Overton"
+          },
+          {
+            "name": "Tim David",
+            "runs": 20,
+            "balls": 13,
+            "fours": 1,
+            "sixes": 1,
+            "sr": 154,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Jamie Overton b Adil Rashid"
+          },
+          {
+            "name": "Lachlan Shaw",
+            "runs": 5,
+            "balls": 3,
+            "fours": 1,
+            "sixes": 0,
+            "sr": 167,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Adil Rashid b Will Jacks"
+          },
+          {
+            "name": "Joel Davies",
+            "runs": 1,
+            "balls": 2,
+            "fours": 0,
+            "sixes": 0,
+            "sr": 50,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Aneurin Donald b Will Jacks"
+          },
+          {
+            "name": "Jack Edwards",
+            "runs": 25,
+            "balls": 11,
+            "fours": 1,
+            "sixes": 2,
+            "sr": 227,
             "isStriker": true,
             "isNotOut": true,
             "dismissal": "NOT OUT"
           },
           {
-            "name": "Ruturaj Gaikwad",
-            "runs": 13,
-            "balls": 19,
+            "name": "Ben Dwarshuis",
+            "runs": 1,
+            "balls": 2,
             "fours": 0,
             "sixes": 0,
-            "sr": 68.42,
+            "sr": 50,
             "isStriker": false,
             "isNotOut": true,
             "dismissal": "NOT OUT"
@@ -116,189 +188,1167 @@
         ],
         "bowlers": [
           {
-            "name": "Jayden Seales",
-            "overs": 7,
+            "name": "Liam Dawson",
+            "overs": 4,
             "maidens": 0,
-            "runs": 32,
-            "wickets": 0,
-            "economy": 4.57,
+            "runs": 30,
+            "wickets": 1,
+            "economy": 7.5,
             "wides": 1,
             "noBalls": 0,
             "isBowling": false
           },
           {
-            "name": "Matthew Forde",
-            "overs": 5,
+            "name": "Henry Crocombe",
+            "overs": 2.2,
             "maidens": 0,
-            "runs": 39,
-            "wickets": 0,
-            "economy": 7.8,
+            "runs": 20,
+            "wickets": 1,
+            "economy": 8.57,
+            "wides": 0,
+            "noBalls": 0,
+            "isBowling": false
+          },
+          {
+            "name": "Jamie Overton",
+            "overs": 3,
+            "maidens": 0,
+            "runs": 44,
+            "wickets": 1,
+            "economy": 14.67,
             "wides": 1,
             "noBalls": 0,
             "isBowling": false
           },
           {
-            "name": "Alzarri Joseph",
-            "overs": 9,
-            "maidens": 1,
-            "runs": 81,
+            "name": "Sam Curran",
+            "overs": 3.5,
+            "maidens": 0,
+            "runs": 37,
             "wickets": 1,
-            "economy": 9,
+            "economy": 9.65,
+            "wides": 0,
+            "noBalls": 0,
+            "isBowling": true
+          },
+          {
+            "name": "Will Jacks",
+            "overs": 2.4,
+            "maidens": 0,
+            "runs": 29,
+            "wickets": 2,
+            "economy": 10.88,
             "wides": 0,
             "noBalls": 0,
             "isBowling": false
           },
           {
-            "name": "Gudakesh Motie",
-            "overs": 10,
+            "name": "Adil Rashid",
+            "overs": 4,
             "maidens": 0,
-            "runs": 66,
-            "wickets": 0,
-            "economy": 6.6,
-            "wides": 0,
-            "noBalls": 0,
-            "isBowling": false
-          },
-          {
-            "name": "Roston Chase",
-            "overs": 10,
-            "maidens": 0,
-            "runs": 64,
+            "runs": 30,
             "wickets": 1,
-            "economy": 6.4,
+            "economy": 7.5,
             "wides": 0,
-            "noBalls": 0,
-            "isBowling": false
-          },
-          {
-            "name": "Keacy Carty",
-            "overs": 0.4,
-            "maidens": 0,
-            "runs": 17,
-            "wickets": 0,
-            "economy": 25.5,
-            "wides": 3,
             "noBalls": 0,
             "isBowling": false
           }
         ],
         "fallOfWickets": [
           {
-            "batter": "Rohit Sharma",
-            "score": "74-1",
-            "over": "11.6",
+            "batter": "Jake Fraser-McGurk",
+            "score": "3/1",
+            "over": "0.6",
             "wicketNumber": 1
           },
           {
-            "batter": "Shubman Gill",
-            "score": "225-2",
-            "over": "33.6",
+            "batter": "Sam Harper",
+            "score": "53/2",
+            "over": "5.6",
             "wicketNumber": 2
+          },
+          {
+            "batter": "Mitchell Marsh",
+            "score": "95/3",
+            "over": "10.6",
+            "wicketNumber": 3
+          },
+          {
+            "batter": "Tim David",
+            "score": "143/4",
+            "over": "15.5",
+            "wicketNumber": 4
+          },
+          {
+            "batter": "Lachlan Shaw",
+            "score": "148/5",
+            "over": "16.2",
+            "wicketNumber": 5
+          },
+          {
+            "batter": "Joel Davies",
+            "score": "156/6",
+            "over": "16.6",
+            "wicketNumber": 6
+          },
+          {
+            "batter": "Nikhil Chaudhary",
+            "score": "168/7",
+            "over": "17.6",
+            "wicketNumber": 7
           }
         ],
-        "partnerships": [],
+        "partnerships": [
+          {
+            "batters": "Mitchell Marsh & Mitchell Marsh",
+            "runs": 3,
+            "balls": 6
+          },
+          {
+            "batters": "Mitchell Marsh & Mitchell Marsh",
+            "runs": 50,
+            "balls": 31
+          },
+          {
+            "batters": "Mitchell Marsh & Mitchell Marsh",
+            "runs": 42,
+            "balls": 30
+          },
+          {
+            "batters": "Nikhil Chaudhary & Tim David",
+            "runs": 48,
+            "balls": 30
+          },
+          {
+            "batters": "Lachlan Shaw & Lachlan Shaw",
+            "runs": 5,
+            "balls": 3
+          },
+          {
+            "batters": "Joel Davies & Joel Davies",
+            "runs": 8,
+            "balls": 4
+          },
+          {
+            "batters": "Joel Davies & Nikhil Chaudhary",
+            "runs": 12,
+            "balls": 6
+          },
+          {
+            "batters": "Jack Edwards & Jack Edwards",
+            "runs": 23,
+            "balls": 11
+          }
+        ],
         "yetToBat": [
-          "KL Rahul",
-          "Naman Dhir",
-          "Ravindra Jadeja",
-          "Nitish Kumar Reddy",
-          "Gurnoor Brar",
-          "Kuldeep Yadav",
-          "Prasidh Krishna"
+          "Adam Zampa",
+          "Riley Meredith"
         ],
         "extras": {
-          "wides": 5,
+          "wides": 2,
           "noBalls": 0,
           "byes": 0,
           "legByes": 1,
           "penalty": 0,
-          "total": 6,
-          "details": "b 0, lb 1, w 5, nb 0"
+          "total": 3,
+          "details": "b 0, lb 1, w 2, nb 0, p 0"
         }
       },
-      "commentary": [],
-      "matchId": "ind-wi-1st-odi-2026-09-27",
-      "matchType": "ODI",
-      "city": "Thiruvananthapuram",
-      "country": "India",
-      "winner": "India",
-      "margin": "8 wickets",
-      "tossWinner": "India",
-      "tossDecision": "bowl",
-      "toss": "India won the toss and elected to bowl",
-      "playerOfMatch": "Kuldeep Yadav",
-      "matchSummary": "India began their three-match ODI series against West Indies with a commanding eight-wicket victory at the Sports Hub International Cricket Stadium in Thiruvananthapuram. West Indies posted 295/7 in 50 overs, with Justin Greaves scoring a maiden ODI century (101) and John Campbell contributing 62. Kuldeep Yadav was India's standout bowler, claiming 4/40. In reply, India chased down 296 in just 41.4 overs, powered by centuries from captain Shubman Gill (110) and Virat Kohli (139*).",
-      "umpires": "Jayaraman Madanagopal (IND), Sam Nogajski (AUS), Sharfuddoula Saikat (BAN)",
-      "lastUpdated": "2026-09-29T09:35:56.091Z",
-      "crr": 7.2,
+      "commentary": [
+        {
+          "id": "sm-ball-12036159",
+          "overNumber": "19.5",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Sam Curran to Jack Edwards, FOUR",
+          "bowler": "Sam Curran",
+          "batter": "Jack Edwards",
+          "timestamp": "11:43:13 AM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12036158",
+          "overNumber": "19.4",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Jack Edwards, 2 Runs",
+          "bowler": "Sam Curran",
+          "batter": "Jack Edwards",
+          "timestamp": "11:43:08 AM"
+        },
+        {
+          "id": "sm-ball-12036138",
+          "overNumber": "19.3",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Jack Edwards, No Run",
+          "bowler": "Sam Curran",
+          "batter": "Jack Edwards",
+          "timestamp": "11:39:58 AM"
+        },
+        {
+          "id": "sm-ball-12036137",
+          "overNumber": "19.2",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Jack Edwards, 2 Runs",
+          "bowler": "Sam Curran",
+          "batter": "Jack Edwards",
+          "timestamp": "11:39:54 AM"
+        },
+        {
+          "id": "sm-ball-12036126",
+          "overNumber": "19.1",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Sam Curran to Jack Edwards, SIX",
+          "bowler": "Sam Curran",
+          "batter": "Jack Edwards",
+          "timestamp": "11:37:52 AM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12036118",
+          "overNumber": "18.6",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Henry Crocombe to Ben Dwarshuis, No Run",
+          "bowler": "Henry Crocombe",
+          "batter": "Ben Dwarshuis",
+          "timestamp": "11:50:32 AM"
+        },
+        {
+          "id": "sm-ball-12036110",
+          "overNumber": "18.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Henry Crocombe to Jack Edwards, 1 Run",
+          "bowler": "Henry Crocombe",
+          "batter": "Jack Edwards",
+          "timestamp": "11:50:22 AM"
+        },
+        {
+          "id": "sm-ball-12036085",
+          "overNumber": "18.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Will Jacks to Ben Dwarshuis, 1 Run",
+          "bowler": "Will Jacks",
+          "batter": "Ben Dwarshuis",
+          "timestamp": "11:30:03 AM"
+        },
+        {
+          "id": "sm-ball-12036084",
+          "overNumber": "18.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Will Jacks to Jack Edwards, 1 Run",
+          "bowler": "Will Jacks",
+          "batter": "Jack Edwards",
+          "timestamp": "11:29:53 AM"
+        },
+        {
+          "id": "sm-ball-12036083",
+          "overNumber": "18.2",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Will Jacks to Jack Edwards, SIX",
+          "bowler": "Will Jacks",
+          "batter": "Jack Edwards",
+          "timestamp": "11:29:49 AM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12036082",
+          "overNumber": "18.1",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Will Jacks to Jack Edwards, No Run",
+          "bowler": "Will Jacks",
+          "batter": "Jack Edwards",
+          "timestamp": "11:29:44 AM"
+        },
+        {
+          "id": "sm-ball-12036075",
+          "overNumber": "17.6",
+          "runs": 0,
+          "isWicket": true,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Jamie Overton to Nikhil Chaudhary, Catch Out",
+          "bowler": "Jamie Overton",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:27:00 AM",
+          "tag": "Wicket"
+        },
+        {
+          "id": "sm-ball-12036056",
+          "overNumber": "17.5",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Jamie Overton to Nikhil Chaudhary, FOUR",
+          "bowler": "Jamie Overton",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:24:38 AM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12036055",
+          "overNumber": "17.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Jamie Overton to Jack Edwards, 1 Run",
+          "bowler": "Jamie Overton",
+          "batter": "Jack Edwards",
+          "timestamp": "11:24:19 AM"
+        },
+        {
+          "id": "sm-ball-12036054",
+          "overNumber": "17.3",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Jamie Overton to Jack Edwards, 2 Runs",
+          "bowler": "Jamie Overton",
+          "batter": "Jack Edwards",
+          "timestamp": "11:24:15 AM"
+        },
+        {
+          "id": "sm-ball-12036049",
+          "overNumber": "17.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Jamie Overton to Nikhil Chaudhary, 1 Run",
+          "bowler": "Jamie Overton",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:23:11 AM"
+        },
+        {
+          "id": "sm-ball-12036048",
+          "overNumber": "17.1",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Jamie Overton to Nikhil Chaudhary, FOUR",
+          "bowler": "Jamie Overton",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:23:02 AM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12036046",
+          "overNumber": "16.6",
+          "runs": 0,
+          "isWicket": true,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Will Jacks to Joel Davies, Catch Out",
+          "bowler": "Will Jacks",
+          "batter": "Joel Davies",
+          "timestamp": "11:22:40 AM",
+          "tag": "Wicket"
+        },
+        {
+          "id": "sm-ball-12036045",
+          "overNumber": "16.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Will Jacks to Nikhil Chaudhary, 1 Run",
+          "bowler": "Will Jacks",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:22:17 AM"
+        },
+        {
+          "id": "sm-ball-12036037",
+          "overNumber": "16.4",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Will Jacks to Nikhil Chaudhary, SIX",
+          "bowler": "Will Jacks",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:19:22 AM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12036036",
+          "overNumber": "16.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Will Jacks to Joel Davies, 1 Run",
+          "bowler": "Will Jacks",
+          "batter": "Joel Davies",
+          "timestamp": "11:19:17 AM"
+        },
+        {
+          "id": "sm-ball-12036034",
+          "overNumber": "16.2",
+          "runs": 0,
+          "isWicket": true,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Will Jacks to Lachlan Shaw, Catch Out",
+          "bowler": "Will Jacks",
+          "batter": "Lachlan Shaw",
+          "timestamp": "11:19:02 AM",
+          "tag": "Wicket"
+        },
+        {
+          "id": "sm-ball-12036031",
+          "overNumber": "16.1",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Will Jacks to Lachlan Shaw, FOUR",
+          "bowler": "Will Jacks",
+          "batter": "Lachlan Shaw",
+          "timestamp": "11:18:43 AM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12036028",
+          "overNumber": "15.6",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Lachlan Shaw, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Lachlan Shaw",
+          "timestamp": "11:18:19 AM"
+        },
+        {
+          "id": "sm-ball-12036013",
+          "overNumber": "15.5",
+          "runs": 0,
+          "isWicket": true,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Tim David, Catch Out",
+          "bowler": "Adil Rashid",
+          "batter": "Tim David",
+          "timestamp": "11:15:34 AM",
+          "tag": "Wicket"
+        },
+        {
+          "id": "sm-ball-12036012",
+          "overNumber": "15.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:14:59 AM"
+        },
+        {
+          "id": "sm-ball-12036011",
+          "overNumber": "15.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Tim David, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Tim David",
+          "timestamp": "11:14:57 AM"
+        },
+        {
+          "id": "sm-ball-12036010",
+          "overNumber": "15.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:14:53 AM"
+        },
+        {
+          "id": "sm-ball-12036009",
+          "overNumber": "15.1",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, FOUR",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:14:48 AM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12035998",
+          "overNumber": "14.6",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Sam Curran to Tim David, FOUR",
+          "bowler": "Sam Curran",
+          "batter": "Tim David",
+          "timestamp": "11:12:03 AM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12035997",
+          "overNumber": "14.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Nikhil Chaudhary, 1 Run",
+          "bowler": "Sam Curran",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:11:54 AM"
+        },
+        {
+          "id": "sm-ball-12035996",
+          "overNumber": "14.4",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Nikhil Chaudhary, No Run",
+          "bowler": "Sam Curran",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:11:34 AM"
+        },
+        {
+          "id": "sm-ball-12035995",
+          "overNumber": "14.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Tim David, 1 Run",
+          "bowler": "Sam Curran",
+          "batter": "Tim David",
+          "timestamp": "11:11:11 AM"
+        },
+        {
+          "id": "sm-ball-12035986",
+          "overNumber": "14.2",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Tim David, 2 Runs",
+          "bowler": "Sam Curran",
+          "batter": "Tim David",
+          "timestamp": "11:08:30 AM"
+        },
+        {
+          "id": "sm-ball-12035982",
+          "overNumber": "14.1",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Nikhil Chaudhary, 1 Run",
+          "bowler": "Sam Curran",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:06:08 AM"
+        },
+        {
+          "id": "sm-ball-12035980",
+          "overNumber": "13.6",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Liam Dawson to Nikhil Chaudhary, 1 Run",
+          "bowler": "Liam Dawson",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:05:42 AM"
+        },
+        {
+          "id": "sm-ball-12035979",
+          "overNumber": "13.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Liam Dawson to Tim David, 1 Run",
+          "bowler": "Liam Dawson",
+          "batter": "Tim David",
+          "timestamp": "11:05:39 AM"
+        },
+        {
+          "id": "sm-ball-12035967",
+          "overNumber": "13.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Liam Dawson to Tim David, 1 Wide",
+          "bowler": "Liam Dawson",
+          "batter": "Tim David",
+          "timestamp": "11:02:49 AM"
+        },
+        {
+          "id": "sm-ball-12035968",
+          "overNumber": "13.4",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Liam Dawson to Tim David, SIX",
+          "bowler": "Liam Dawson",
+          "batter": "Tim David",
+          "timestamp": "11:02:54 AM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12035966",
+          "overNumber": "13.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Liam Dawson to Nikhil Chaudhary, 1 Run",
+          "bowler": "Liam Dawson",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:02:44 AM"
+        },
+        {
+          "id": "sm-ball-12035965",
+          "overNumber": "13.2",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Liam Dawson to Nikhil Chaudhary, No Run",
+          "bowler": "Liam Dawson",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:02:39 AM"
+        },
+        {
+          "id": "sm-ball-12035958",
+          "overNumber": "13.1",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Liam Dawson to Tim David, 1 Run",
+          "bowler": "Liam Dawson",
+          "batter": "Tim David",
+          "timestamp": "11:01:00 AM"
+        },
+        {
+          "id": "sm-ball-12035957",
+          "overNumber": "12.6",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Jamie Overton to Nikhil Chaudhary, 2 Runs",
+          "bowler": "Jamie Overton",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:00:41 AM"
+        },
+        {
+          "id": "sm-ball-12035956",
+          "overNumber": "12.5",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Jamie Overton to Nikhil Chaudhary, SIX",
+          "bowler": "Jamie Overton",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "11:00:36 AM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12035947",
+          "overNumber": "12.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Jamie Overton to Tim David, 1 Run",
+          "bowler": "Jamie Overton",
+          "batter": "Tim David",
+          "timestamp": "10:58:14 AM"
+        },
+        {
+          "id": "sm-ball-12035946",
+          "overNumber": "12.3",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Jamie Overton to Tim David, No Run",
+          "bowler": "Jamie Overton",
+          "batter": "Tim David",
+          "timestamp": "10:57:22 AM"
+        },
+        {
+          "id": "sm-ball-12035945",
+          "overNumber": "12.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Jamie Overton to Nikhil Chaudhary, 1 Run",
+          "bowler": "Jamie Overton",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:57:10 AM"
+        },
+        {
+          "id": "sm-ball-12035944",
+          "overNumber": "12.1",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Jamie Overton to Tim David, 1 Run",
+          "bowler": "Jamie Overton",
+          "batter": "Tim David",
+          "timestamp": "10:57:07 AM"
+        },
+        {
+          "id": "sm-ball-12035937",
+          "overNumber": "11.6",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Tim David, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Tim David",
+          "timestamp": "10:55:47 AM"
+        },
+        {
+          "id": "sm-ball-12035936",
+          "overNumber": "11.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:55:44 AM"
+        },
+        {
+          "id": "sm-ball-12035934",
+          "overNumber": "11.4",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, FOUR",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:55:24 AM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12035933",
+          "overNumber": "11.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Tim David, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Tim David",
+          "timestamp": "10:55:19 AM"
+        },
+        {
+          "id": "sm-ball-12035932",
+          "overNumber": "11.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:55:16 AM"
+        },
+        {
+          "id": "sm-ball-12035931",
+          "overNumber": "11.1",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, 2 Runs",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:55:12 AM"
+        },
+        {
+          "id": "sm-ball-12035921",
+          "overNumber": "10.6",
+          "runs": 0,
+          "isWicket": true,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Mitchell Marsh, Catch Out",
+          "bowler": "Sam Curran",
+          "batter": "Mitchell Marsh",
+          "timestamp": "10:53:16 AM",
+          "tag": "Wicket"
+        },
+        {
+          "id": "sm-ball-12035909",
+          "overNumber": "10.5",
+          "runs": 3,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Nikhil Chaudhary, 3 Runs",
+          "bowler": "Sam Curran",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:49:44 AM"
+        },
+        {
+          "id": "sm-ball-12035908",
+          "overNumber": "10.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Mitchell Marsh, 1 Run",
+          "bowler": "Sam Curran",
+          "batter": "Mitchell Marsh",
+          "timestamp": "10:49:41 AM"
+        },
+        {
+          "id": "sm-ball-12035907",
+          "overNumber": "10.3",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Sam Curran to Mitchell Marsh, FOUR",
+          "bowler": "Sam Curran",
+          "batter": "Mitchell Marsh",
+          "timestamp": "10:49:32 AM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12035906",
+          "overNumber": "10.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Nikhil Chaudhary, 1 Run",
+          "bowler": "Sam Curran",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:49:28 AM"
+        },
+        {
+          "id": "sm-ball-12035905",
+          "overNumber": "10.1",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Sam Curran to Nikhil Chaudhary, No Run",
+          "bowler": "Sam Curran",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:49:25 AM"
+        },
+        {
+          "id": "sm-ball-12035904",
+          "overNumber": "9.6",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:49:01 AM"
+        },
+        {
+          "id": "sm-ball-12035903",
+          "overNumber": "9.5",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, 2 Runs",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:48:59 AM"
+        },
+        {
+          "id": "sm-ball-12035902",
+          "overNumber": "9.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Mitchell Marsh, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Mitchell Marsh",
+          "timestamp": "10:48:55 AM"
+        },
+        {
+          "id": "sm-ball-12035886",
+          "overNumber": "9.3",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Mitchell Marsh, 2 Runs",
+          "bowler": "Adil Rashid",
+          "batter": "Mitchell Marsh",
+          "timestamp": "10:43:47 AM"
+        },
+        {
+          "id": "sm-ball-12035885",
+          "overNumber": "9.2",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Mitchell Marsh, No Run",
+          "bowler": "Adil Rashid",
+          "batter": "Mitchell Marsh",
+          "timestamp": "10:43:43 AM"
+        },
+        {
+          "id": "sm-ball-12035884",
+          "overNumber": "9.1",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Mitchell Marsh, 2 Runs",
+          "bowler": "Adil Rashid",
+          "batter": "Mitchell Marsh",
+          "timestamp": "10:43:39 AM"
+        },
+        {
+          "id": "sm-ball-12035881",
+          "overNumber": "8.6",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Liam Dawson to Nikhil Chaudhary, 2 Runs",
+          "bowler": "Liam Dawson",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:42:17 AM"
+        },
+        {
+          "id": "sm-ball-12035880",
+          "overNumber": "8.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Liam Dawson to Mitchell Marsh, 1 Run",
+          "bowler": "Liam Dawson",
+          "batter": "Mitchell Marsh",
+          "timestamp": "10:41:51 AM"
+        },
+        {
+          "id": "sm-ball-12035875",
+          "overNumber": "8.4",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Liam Dawson to Mitchell Marsh, No Run",
+          "bowler": "Liam Dawson",
+          "batter": "Mitchell Marsh",
+          "timestamp": "10:41:04 AM"
+        },
+        {
+          "id": "sm-ball-12035874",
+          "overNumber": "8.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Liam Dawson to Nikhil Chaudhary, 1 Run",
+          "bowler": "Liam Dawson",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:40:59 AM"
+        },
+        {
+          "id": "sm-ball-12035872",
+          "overNumber": "8.2",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Liam Dawson to Nikhil Chaudhary, FOUR",
+          "bowler": "Liam Dawson",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:40:15 AM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12035868",
+          "overNumber": "8.1",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Liam Dawson to Nikhil Chaudhary, FOUR",
+          "bowler": "Liam Dawson",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:39:26 AM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12035866",
+          "overNumber": "7.6",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:39:05 AM"
+        },
+        {
+          "id": "sm-ball-12035859",
+          "overNumber": "7.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Mitchell Marsh, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Mitchell Marsh",
+          "timestamp": "10:37:33 AM"
+        },
+        {
+          "id": "sm-ball-12035858",
+          "overNumber": "7.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:37:12 AM"
+        },
+        {
+          "id": "sm-ball-12035857",
+          "overNumber": "7.3",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, No Run",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:37:07 AM"
+        },
+        {
+          "id": "sm-ball-12035856",
+          "overNumber": "7.2",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Nikhil Chaudhary, No Run",
+          "bowler": "Adil Rashid",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:37:05 AM"
+        },
+        {
+          "id": "sm-ball-12035855",
+          "overNumber": "7.1",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Adil Rashid to Mitchell Marsh, 1 Run",
+          "bowler": "Adil Rashid",
+          "batter": "Mitchell Marsh",
+          "timestamp": "10:37:00 AM"
+        },
+        {
+          "id": "sm-ball-12035848",
+          "overNumber": "6.6",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Will Jacks to Nikhil Chaudhary, 2 Runs",
+          "bowler": "Will Jacks",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:34:48 AM"
+        },
+        {
+          "id": "sm-ball-12035847",
+          "overNumber": "6.5",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Will Jacks to Nikhil Chaudhary, No Run",
+          "bowler": "Will Jacks",
+          "batter": "Nikhil Chaudhary",
+          "timestamp": "10:34:04 AM"
+        }
+      ],
       "innings": [
         {
           "inningsNumber": 1,
-          "teamName": "West Indies",
-          "teamShort": "WI",
-          "score": "295/7",
-          "runs": 295,
-          "wickets": 7,
-          "overs": "50.0",
-          "runRate": 5.9,
+          "teamName": "England",
+          "teamShort": "ENG",
+          "score": "187/9",
+          "runs": 187,
+          "wickets": 9,
+          "overs": "20",
+          "runRate": 9.35,
           "batters": [
             {
-              "name": "John Campbell",
-              "runs": 62,
-              "balls": 60,
-              "fours": 6,
-              "sixes": 3,
-              "sr": 103.33,
-              "isStriker": false,
-              "isNotOut": false,
-              "dismissal": "c Krishna b Yadav"
-            },
-            {
-              "name": "Justin Greaves",
-              "runs": 101,
-              "balls": 108,
-              "fours": 12,
-              "sixes": 0,
-              "sr": 93.52,
-              "isStriker": false,
-              "isNotOut": false,
-              "dismissal": "lbw b Yadav"
-            },
-            {
-              "name": "Keacy Carty",
-              "runs": 13,
-              "balls": 31,
-              "fours": 0,
-              "sixes": 0,
-              "sr": 41.94,
-              "isStriker": false,
-              "isNotOut": false,
-              "dismissal": "c Gill b Krishna"
-            },
-            {
-              "name": "Shai Hope",
-              "runs": 12,
-              "balls": 11,
-              "fours": 1,
-              "sixes": 0,
-              "sr": 109.09,
-              "isStriker": false,
-              "isNotOut": false,
-              "dismissal": "c Jadeja b Yadav"
-            },
-            {
-              "name": "Amir Jangoo",
-              "runs": 58,
-              "balls": 43,
-              "fours": 7,
-              "sixes": 1,
-              "sr": 134.88,
-              "isStriker": false,
-              "isNotOut": true,
-              "dismissal": "NOT OUT"
-            },
-            {
-              "name": "Jewel Andrew",
+              "name": "Philip Salt",
               "runs": 0,
               "balls": 1,
               "fours": 0,
@@ -306,37 +1356,103 @@
               "sr": 0,
               "isStriker": false,
               "isNotOut": false,
-              "dismissal": "c Rohit b Yadav"
+              "dismissal": "c Mitchell Marsh b Joel Davies"
             },
             {
-              "name": "Roston Chase",
-              "runs": 24,
-              "balls": 32,
-              "fours": 3,
+              "name": "Aneurin Donald",
+              "runs": 10,
+              "balls": 7,
+              "fours": 2,
               "sixes": 0,
-              "sr": 75,
+              "sr": 143,
               "isStriker": false,
               "isNotOut": false,
-              "dismissal": "b Krishna"
+              "dismissal": "c Mitchell Marsh b Jack Edwards"
             },
             {
-              "name": "Matthew Forde",
-              "runs": 7,
-              "balls": 12,
-              "fours": 0,
-              "sixes": 0,
-              "sr": 58.33,
+              "name": "Harry Brook",
+              "runs": 65,
+              "balls": 28,
+              "fours": 4,
+              "sixes": 6,
+              "sr": 232,
               "isStriker": false,
               "isNotOut": false,
-              "dismissal": "c Dhir b Reddy"
+              "dismissal": "c Sam Harper b Nikhil Chaudhary"
             },
             {
-              "name": "Gudakesh Motie",
-              "runs": 4,
-              "balls": 4,
+              "name": "Tom Banton",
+              "runs": 39,
+              "balls": 22,
+              "fours": 5,
+              "sixes": 1,
+              "sr": 177,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Lachlan Shaw b Ben Dwarshuis"
+            },
+            {
+              "name": "Sam Curran",
+              "runs": 21,
+              "balls": 20,
+              "fours": 1,
+              "sixes": 0,
+              "sr": 105,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Lachlan Shaw b Nikhil Chaudhary"
+            },
+            {
+              "name": "Will Jacks",
+              "runs": 3,
+              "balls": 3,
               "fours": 0,
               "sixes": 0,
               "sr": 100,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "lbw b Adam Zampa"
+            },
+            {
+              "name": "Jordan Cox",
+              "runs": 27,
+              "balls": 20,
+              "fours": 4,
+              "sixes": 0,
+              "sr": 135,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Joel Davies b Riley Meredith"
+            },
+            {
+              "name": "Liam Dawson",
+              "runs": 17,
+              "balls": 14,
+              "fours": 1,
+              "sixes": 0,
+              "sr": 121,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "run out (Sam Harper)"
+            },
+            {
+              "name": "Jamie Overton",
+              "runs": 2,
+              "balls": 4,
+              "fours": 0,
+              "sixes": 0,
+              "sr": 50,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "b Jack Edwards"
+            },
+            {
+              "name": "Adil Rashid",
+              "runs": 0,
+              "balls": 1,
+              "fours": 0,
+              "sixes": 0,
+              "sr": 0,
               "isStriker": false,
               "isNotOut": true,
               "dismissal": "NOT OUT"
@@ -344,67 +1460,67 @@
           ],
           "bowlers": [
             {
-              "name": "Prasidh Krishna",
-              "overs": 10,
+              "name": "Joel Davies",
+              "overs": 3,
               "maidens": 0,
-              "runs": 60,
-              "wickets": 2,
-              "economy": 6,
+              "runs": 22,
+              "wickets": 1,
+              "economy": 7.33,
               "wides": 0,
               "noBalls": 0,
               "isBowling": false
             },
             {
-              "name": "Nitish Kumar Reddy",
-              "overs": 9,
+              "name": "Riley Meredith",
+              "overs": 4,
               "maidens": 0,
-              "runs": 81,
+              "runs": 49,
               "wickets": 1,
+              "economy": 12.25,
+              "wides": 0,
+              "noBalls": 0,
+              "isBowling": false
+            },
+            {
+              "name": "Jack Edwards",
+              "overs": 3,
+              "maidens": 0,
+              "runs": 27,
+              "wickets": 2,
               "economy": 9,
               "wides": 0,
               "noBalls": 0,
               "isBowling": false
             },
             {
-              "name": "Gurnoor Singh Brar",
-              "overs": 5,
+              "name": "Ben Dwarshuis",
+              "overs": 2,
               "maidens": 0,
-              "runs": 30,
-              "wickets": 0,
-              "economy": 6,
+              "runs": 23,
+              "wickets": 1,
+              "economy": 11.5,
+              "wides": 1,
+              "noBalls": 0,
+              "isBowling": false
+            },
+            {
+              "name": "Adam Zampa",
+              "overs": 4,
+              "maidens": 0,
+              "runs": 43,
+              "wickets": 1,
+              "economy": 10.75,
               "wides": 0,
               "noBalls": 0,
               "isBowling": false
             },
             {
-              "name": "Ravindra Jadeja",
-              "overs": 10,
+              "name": "Nikhil Chaudhary",
+              "overs": 4,
               "maidens": 0,
-              "runs": 54,
-              "wickets": 0,
-              "economy": 5.4,
-              "wides": 0,
-              "noBalls": 0,
-              "isBowling": false
-            },
-            {
-              "name": "Naman Dhir",
-              "overs": 6,
-              "maidens": 0,
-              "runs": 39,
-              "wickets": 0,
-              "economy": 6.5,
-              "wides": 0,
-              "noBalls": 0,
-              "isBowling": false
-            },
-            {
-              "name": "Kuldeep Yadav",
-              "overs": 10,
-              "maidens": 1,
-              "runs": 40,
-              "wickets": 4,
-              "economy": 4,
+              "runs": 21,
+              "wickets": 2,
+              "economy": 5.25,
               "wides": 0,
               "noBalls": 0,
               "isBowling": false
@@ -412,110 +1528,225 @@
           ],
           "fallOfWickets": [
             {
-              "batter": "John Campbell",
-              "score": "135-1",
-              "over": "19.2",
+              "batter": "Philip Salt",
+              "score": "0/1",
+              "over": "0.1",
               "wicketNumber": 1
             },
             {
-              "batter": "Keacy Carty",
-              "score": "176-2",
-              "over": "30.1",
+              "batter": "Aneurin Donald",
+              "score": "13/2",
+              "over": "2.1",
               "wicketNumber": 2
             },
             {
-              "batter": "Shai Hope",
-              "score": "195-3",
-              "over": "33.5",
+              "batter": "Harry Brook",
+              "score": "110/3",
+              "over": "8.6",
               "wicketNumber": 3
             },
             {
-              "batter": "Justin Greaves",
-              "score": "198-4",
-              "over": "35.3",
+              "batter": "Tom Banton",
+              "score": "117/4",
+              "over": "9.5",
               "wicketNumber": 4
             },
             {
-              "batter": "Jewel Andrew",
-              "score": "198-5",
-              "over": "35.4",
+              "batter": "Will Jacks",
+              "score": "123/5",
+              "over": "11.1",
               "wicketNumber": 5
             },
             {
-              "batter": "Roston Chase",
-              "score": "250-6",
-              "over": "44.6",
+              "batter": "Sam Curran",
+              "score": "150/6",
+              "over": "15.1",
               "wicketNumber": 6
             },
             {
-              "batter": "Matthew Forde",
-              "score": "288-7",
-              "over": "49.1",
+              "batter": "Jordan Cox",
+              "score": "180/7",
+              "over": "18.4",
               "wicketNumber": 7
+            },
+            {
+              "batter": "Jamie Overton",
+              "score": "185/8",
+              "over": "19.4",
+              "wicketNumber": 8
+            },
+            {
+              "batter": "Liam Dawson",
+              "score": "187/9",
+              "over": "19.6",
+              "wicketNumber": 9
             }
           ],
-          "partnerships": [],
-          "yetToBat": [],
+          "partnerships": [
+            {
+              "batters": "Aneurin Donald & Philip Salt",
+              "runs": 0,
+              "balls": 1
+            },
+            {
+              "batters": "Aneurin Donald & Harry Brook",
+              "runs": 13,
+              "balls": 12
+            },
+            {
+              "batters": "Tom Banton & Tom Banton",
+              "runs": 97,
+              "balls": 41
+            },
+            {
+              "batters": "Tom Banton & Tom Banton",
+              "runs": 7,
+              "balls": 6
+            },
+            {
+              "batters": "Will Jacks & Will Jacks",
+              "runs": 6,
+              "balls": 8
+            },
+            {
+              "batters": "Jordan Cox & Jordan Cox",
+              "runs": 27,
+              "balls": 24
+            },
+            {
+              "batters": "Jordan Cox & Liam Dawson",
+              "runs": 30,
+              "balls": 21
+            },
+            {
+              "batters": "Jamie Overton & Jamie Overton",
+              "runs": 5,
+              "balls": 6
+            },
+            {
+              "batters": "Adil Rashid & Liam Dawson",
+              "runs": 2,
+              "balls": 2
+            }
+          ],
+          "yetToBat": [
+            "Henry Crocombe"
+          ],
           "extras": {
-            "wides": 5,
+            "wides": 1,
             "noBalls": 0,
-            "byes": 0,
+            "byes": 1,
             "legByes": 1,
             "penalty": 0,
-            "total": 6,
-            "details": "b 0, lb 1, w 5, nb 0"
+            "total": 3,
+            "details": "b 1, lb 1, w 1, nb 0, p 0"
           }
         },
         {
           "inningsNumber": 2,
-          "teamName": "India",
-          "teamShort": "IND",
-          "score": "300/2",
-          "runs": 300,
-          "wickets": 2,
-          "overs": "41.4",
-          "runRate": 7.2,
+          "teamName": "Australia",
+          "teamShort": "AUS",
+          "score": "191/7",
+          "runs": 191,
+          "wickets": 7,
+          "overs": "19.5",
+          "runRate": 9.63,
           "batters": [
             {
-              "name": "Rohit Sharma",
-              "runs": 32,
-              "balls": 35,
-              "fours": 2,
-              "sixes": 3,
-              "sr": 91.43,
-              "isStriker": false,
-              "isNotOut": false,
-              "dismissal": "c Andrew b Joseph"
-            },
-            {
-              "name": "Shubman Gill",
-              "runs": 110,
-              "balls": 108,
-              "fours": 13,
+              "name": "Mitchell Marsh",
+              "runs": 37,
+              "balls": 32,
+              "fours": 3,
               "sixes": 1,
-              "sr": 101.85,
+              "sr": 116,
               "isStriker": false,
               "isNotOut": false,
-              "dismissal": "c Andrew b Chase"
+              "dismissal": "c Liam Dawson b Sam Curran"
             },
             {
-              "name": "Virat Kohli",
-              "runs": 139,
-              "balls": 88,
-              "fours": 10,
-              "sixes": 9,
-              "sr": 157.95,
+              "name": "Jake Fraser-McGurk",
+              "runs": 1,
+              "balls": 3,
+              "fours": 0,
+              "sixes": 0,
+              "sr": 33,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "b Liam Dawson"
+            },
+            {
+              "name": "Sam Harper",
+              "runs": 32,
+              "balls": 15,
+              "fours": 3,
+              "sixes": 2,
+              "sr": 213,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Will Jacks b Henry Crocombe"
+            },
+            {
+              "name": "Nikhil Chaudhary",
+              "runs": 66,
+              "balls": 38,
+              "fours": 6,
+              "sixes": 2,
+              "sr": 174,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Aneurin Donald b Jamie Overton"
+            },
+            {
+              "name": "Tim David",
+              "runs": 20,
+              "balls": 13,
+              "fours": 1,
+              "sixes": 1,
+              "sr": 154,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Jamie Overton b Adil Rashid"
+            },
+            {
+              "name": "Lachlan Shaw",
+              "runs": 5,
+              "balls": 3,
+              "fours": 1,
+              "sixes": 0,
+              "sr": 167,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Adil Rashid b Will Jacks"
+            },
+            {
+              "name": "Joel Davies",
+              "runs": 1,
+              "balls": 2,
+              "fours": 0,
+              "sixes": 0,
+              "sr": 50,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Aneurin Donald b Will Jacks"
+            },
+            {
+              "name": "Jack Edwards",
+              "runs": 25,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 2,
+              "sr": 227,
               "isStriker": true,
               "isNotOut": true,
               "dismissal": "NOT OUT"
             },
             {
-              "name": "Ruturaj Gaikwad",
-              "runs": 13,
-              "balls": 19,
+              "name": "Ben Dwarshuis",
+              "runs": 1,
+              "balls": 2,
               "fours": 0,
               "sixes": 0,
-              "sr": 68.42,
+              "sr": 50,
               "isStriker": false,
               "isNotOut": true,
               "dismissal": "NOT OUT"
@@ -523,32 +1754,1637 @@
           ],
           "bowlers": [
             {
-              "name": "Jayden Seales",
-              "overs": 7,
+              "name": "Liam Dawson",
+              "overs": 4,
               "maidens": 0,
-              "runs": 32,
-              "wickets": 0,
-              "economy": 4.57,
+              "runs": 30,
+              "wickets": 1,
+              "economy": 7.5,
               "wides": 1,
               "noBalls": 0,
               "isBowling": false
             },
             {
-              "name": "Matthew Forde",
-              "overs": 5,
+              "name": "Henry Crocombe",
+              "overs": 2.2,
+              "maidens": 0,
+              "runs": 20,
+              "wickets": 1,
+              "economy": 8.57,
+              "wides": 0,
+              "noBalls": 0,
+              "isBowling": false
+            },
+            {
+              "name": "Jamie Overton",
+              "overs": 3,
+              "maidens": 0,
+              "runs": 44,
+              "wickets": 1,
+              "economy": 14.67,
+              "wides": 1,
+              "noBalls": 0,
+              "isBowling": false
+            },
+            {
+              "name": "Sam Curran",
+              "overs": 3.5,
+              "maidens": 0,
+              "runs": 37,
+              "wickets": 1,
+              "economy": 9.65,
+              "wides": 0,
+              "noBalls": 0,
+              "isBowling": true
+            },
+            {
+              "name": "Will Jacks",
+              "overs": 2.4,
+              "maidens": 0,
+              "runs": 29,
+              "wickets": 2,
+              "economy": 10.88,
+              "wides": 0,
+              "noBalls": 0,
+              "isBowling": false
+            },
+            {
+              "name": "Adil Rashid",
+              "overs": 4,
+              "maidens": 0,
+              "runs": 30,
+              "wickets": 1,
+              "economy": 7.5,
+              "wides": 0,
+              "noBalls": 0,
+              "isBowling": false
+            }
+          ],
+          "fallOfWickets": [
+            {
+              "batter": "Jake Fraser-McGurk",
+              "score": "3/1",
+              "over": "0.6",
+              "wicketNumber": 1
+            },
+            {
+              "batter": "Sam Harper",
+              "score": "53/2",
+              "over": "5.6",
+              "wicketNumber": 2
+            },
+            {
+              "batter": "Mitchell Marsh",
+              "score": "95/3",
+              "over": "10.6",
+              "wicketNumber": 3
+            },
+            {
+              "batter": "Tim David",
+              "score": "143/4",
+              "over": "15.5",
+              "wicketNumber": 4
+            },
+            {
+              "batter": "Lachlan Shaw",
+              "score": "148/5",
+              "over": "16.2",
+              "wicketNumber": 5
+            },
+            {
+              "batter": "Joel Davies",
+              "score": "156/6",
+              "over": "16.6",
+              "wicketNumber": 6
+            },
+            {
+              "batter": "Nikhil Chaudhary",
+              "score": "168/7",
+              "over": "17.6",
+              "wicketNumber": 7
+            }
+          ],
+          "partnerships": [
+            {
+              "batters": "Mitchell Marsh & Mitchell Marsh",
+              "runs": 3,
+              "balls": 6
+            },
+            {
+              "batters": "Mitchell Marsh & Mitchell Marsh",
+              "runs": 50,
+              "balls": 31
+            },
+            {
+              "batters": "Mitchell Marsh & Mitchell Marsh",
+              "runs": 42,
+              "balls": 30
+            },
+            {
+              "batters": "Nikhil Chaudhary & Tim David",
+              "runs": 48,
+              "balls": 30
+            },
+            {
+              "batters": "Lachlan Shaw & Lachlan Shaw",
+              "runs": 5,
+              "balls": 3
+            },
+            {
+              "batters": "Joel Davies & Joel Davies",
+              "runs": 8,
+              "balls": 4
+            },
+            {
+              "batters": "Joel Davies & Nikhil Chaudhary",
+              "runs": 12,
+              "balls": 6
+            },
+            {
+              "batters": "Jack Edwards & Jack Edwards",
+              "runs": 23,
+              "balls": 11
+            }
+          ],
+          "yetToBat": [
+            "Adam Zampa",
+            "Riley Meredith"
+          ],
+          "extras": {
+            "wides": 2,
+            "noBalls": 0,
+            "byes": 0,
+            "legByes": 1,
+            "penalty": 0,
+            "total": 3,
+            "details": "b 0, lb 1, w 2, nb 0, p 0"
+          }
+        }
+      ],
+      "lastUpdated": "2026-11-23T12:46:18.055Z",
+      "toss": "Australia won the toss and elected to bowl",
+      "matchSummary": "Australia won by 3 wickets (with 1 ball remaining)",
+      "umpires": "Donovan Koch, Sam Nogajski"
+    }
+  },
+  "sm-72065": {
+    "timestamp": 1795437978731,
+    "provider": "sportmonks",
+    "data": {
+      "id": "sm-72065",
+      "matchId": "sm-72065",
+      "provider": "sportmonks",
+      "providerMatchId": "72065",
+      "tournament": "CSA T20 Challenge",
+      "category": "Franchise",
+      "title": "Final • Newlands",
+      "matchType": "T20",
+      "date": "2026-11-14",
+      "venue": "Newlands",
+      "city": "Cape Town",
+      "country": null,
+      "status": "RECENT",
+      "startTime": "2026-11-14T16:30:00.000000Z",
+      "homeTeam": {
+        "name": "Warriors",
+        "shortName": "WAR",
+        "score": "219/4",
+        "wickets": 4,
+        "overs": "20",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/31/63.png"
+      },
+      "awayTeam": {
+        "name": "Lions",
+        "shortName": "HL",
+        "score": "183/7",
+        "wickets": 7,
+        "overs": "20",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/0/64.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": 9.15,
+      "result": "Warriors won by 36 runs",
+      "winner": "Warriors",
+      "tossWinner": "Lions",
+      "tossDecision": "bowl",
+      "playerOfMatch": null,
+      "statusText": "Warriors won by 36 runs",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": true,
+      "teamA": {
+        "name": "Warriors",
+        "shortName": "WAR",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/31/63.png",
+        "score": "219/4",
+        "overs": "20"
+      },
+      "teamB": {
+        "name": "Lions",
+        "shortName": "HL",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/0/64.png",
+        "score": "183/7",
+        "overs": "20"
+      },
+      "crr": 9.15,
+      "recentBalls": [
+        "4",
+        "1",
+        "1",
+        "1",
+        "0",
+        "1",
+        "0",
+        "1"
+      ],
+      "currentInnings": {
+        "inningsNumber": 2,
+        "teamName": "Lions",
+        "teamShort": "HL",
+        "score": "183/7",
+        "runs": 183,
+        "wickets": 7,
+        "overs": "20",
+        "runRate": 9.15,
+        "batters": [
+          {
+            "name": "Onkgomoditse Richard Seletswane",
+            "runs": 6,
+            "balls": 8,
+            "fours": 0,
+            "sixes": 0,
+            "sr": 75,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Modiri Litheko b Beuran Hendricks"
+          },
+          {
+            "name": "Bjorn Fortuin",
+            "runs": 9,
+            "balls": 9,
+            "fours": 1,
+            "sixes": 0,
+            "sr": 100,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Modiri Litheko b Beuran Hendricks"
+          },
+          {
+            "name": "Rassie van der Dussen",
+            "runs": 2,
+            "balls": 4,
+            "fours": 0,
+            "sixes": 0,
+            "sr": 50,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Modiri Litheko b Beuran Hendricks"
+          },
+          {
+            "name": "Connor Esterhuizen",
+            "runs": 34,
+            "balls": 23,
+            "fours": 3,
+            "sixes": 1,
+            "sr": 148,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Patrick Kruger b Andile Mokgakane"
+          },
+          {
+            "name": "Mitchell Van Buuren",
+            "runs": 72,
+            "balls": 46,
+            "fours": 8,
+            "sixes": 2,
+            "sr": 157,
+            "isStriker": false,
+            "isNotOut": true,
+            "dismissal": "NOT OUT"
+          },
+          {
+            "name": "Delano Potgieter",
+            "runs": 30,
+            "balls": 12,
+            "fours": 1,
+            "sixes": 4,
+            "sr": 250,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Sibonelo Makhanya b Senuran Muthusamy"
+          },
+          {
+            "name": "Morteza Manack",
+            "runs": 2,
+            "balls": 3,
+            "fours": 0,
+            "sixes": 0,
+            "sr": 67,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Patrick Kruger b Kerwin Mungroo"
+          },
+          {
+            "name": "Nqabayomzi Peter",
+            "runs": 7,
+            "balls": 8,
+            "fours": 1,
+            "sixes": 0,
+            "sr": 88,
+            "isStriker": false,
+            "isNotOut": false,
+            "dismissal": "c Tristan Stubbs b Kerwin Mungroo"
+          },
+          {
+            "name": "Gerald Coetzee",
+            "runs": 16,
+            "balls": 7,
+            "fours": 2,
+            "sixes": 1,
+            "sr": 229,
+            "isStriker": false,
+            "isNotOut": true,
+            "dismissal": "NOT OUT"
+          }
+        ],
+        "bowlers": [
+          {
+            "name": "Beuran Hendricks",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 31,
+            "wickets": 3,
+            "economy": 7.75,
+            "wides": 0,
+            "noBalls": 0,
+            "isBowling": false
+          },
+          {
+            "name": "Kerwin Mungroo",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 29,
+            "wickets": 2,
+            "economy": 7.25,
+            "wides": 0,
+            "noBalls": 0,
+            "isBowling": false
+          },
+          {
+            "name": "Matthew Boast",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 35,
+            "wickets": 0,
+            "economy": 8.75,
+            "wides": 1,
+            "noBalls": 0,
+            "isBowling": true
+          },
+          {
+            "name": "Senuran Muthusamy",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 41,
+            "wickets": 1,
+            "economy": 10.25,
+            "wides": 1,
+            "noBalls": 0,
+            "isBowling": false
+          },
+          {
+            "name": "Andile Mokgakane",
+            "overs": 3,
+            "maidens": 0,
+            "runs": 37,
+            "wickets": 1,
+            "economy": 12.33,
+            "wides": 2,
+            "noBalls": 0,
+            "isBowling": false
+          },
+          {
+            "name": "Tristan Stubbs",
+            "overs": 1,
+            "maidens": 0,
+            "runs": 9,
+            "wickets": 0,
+            "economy": 9,
+            "wides": 0,
+            "noBalls": 0,
+            "isBowling": false
+          }
+        ],
+        "fallOfWickets": [
+          {
+            "batter": "Bjorn Fortuin",
+            "score": "15/1",
+            "over": "2.2",
+            "wicketNumber": 1
+          },
+          {
+            "batter": "Onkgomoditse Richard Seletswane",
+            "score": "16/2",
+            "over": "2.6",
+            "wicketNumber": 2
+          },
+          {
+            "batter": "Rassie van der Dussen",
+            "score": "25/3",
+            "over": "4.4",
+            "wicketNumber": 3
+          },
+          {
+            "batter": "Connor Esterhuizen",
+            "score": "83/4",
+            "over": "10.5",
+            "wicketNumber": 4
+          },
+          {
+            "batter": "Delano Potgieter",
+            "score": "138/5",
+            "over": "14.5",
+            "wicketNumber": 5
+          },
+          {
+            "batter": "Morteza Manack",
+            "score": "143/6",
+            "over": "15.4",
+            "wicketNumber": 6
+          },
+          {
+            "batter": "Nqabayomzi Peter",
+            "score": "163/7",
+            "over": "17.6",
+            "wicketNumber": 7
+          }
+        ],
+        "partnerships": [
+          {
+            "batters": "Onkgomoditse Richard Seletswane & Onkgomoditse Richard Seletswane",
+            "runs": 15,
+            "balls": 14
+          },
+          {
+            "batters": "Onkgomoditse Richard Seletswane & Rassie van der Dussen",
+            "runs": 1,
+            "balls": 4
+          },
+          {
+            "batters": "Connor Esterhuizen & Rassie van der Dussen",
+            "runs": 9,
+            "balls": 10
+          },
+          {
+            "batters": "Connor Esterhuizen & Mitchell Van Buuren",
+            "runs": 58,
+            "balls": 38
+          },
+          {
+            "batters": "Delano Potgieter & Delano Potgieter",
+            "runs": 55,
+            "balls": 25
+          },
+          {
+            "batters": "Morteza Manack & Morteza Manack",
+            "runs": 5,
+            "balls": 5
+          },
+          {
+            "batters": "Nqabayomzi Peter & Nqabayomzi Peter",
+            "runs": 20,
+            "balls": 14
+          },
+          {
+            "batters": "Mitchell Van Buuren & Nqabayomzi Peter",
+            "runs": 20,
+            "balls": 13
+          }
+        ],
+        "yetToBat": [
+          "Codi Yusuf",
+          "Siya Plaatjie"
+        ],
+        "extras": {
+          "wides": 4,
+          "noBalls": 0,
+          "byes": 0,
+          "legByes": 1,
+          "penalty": 0,
+          "total": 5,
+          "details": "b 0, lb 1, w 4, nb 0, p 0"
+        }
+      },
+      "commentary": [
+        {
+          "id": "sm-ball-12015508",
+          "overNumber": "19.6",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, 1 Wide",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:50:50 PM"
+        },
+        {
+          "id": "sm-ball-12015509",
+          "overNumber": "19.6",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, No Run",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:52:52 PM"
+        },
+        {
+          "id": "sm-ball-12015507",
+          "overNumber": "19.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Gerald Coetzee, 1 Run",
+          "bowler": "Matthew Boast",
+          "batter": "Gerald Coetzee",
+          "timestamp": "7:50:39 PM"
+        },
+        {
+          "id": "sm-ball-12015506",
+          "overNumber": "19.4",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Gerald Coetzee, No Run",
+          "bowler": "Matthew Boast",
+          "batter": "Gerald Coetzee",
+          "timestamp": "7:50:01 PM"
+        },
+        {
+          "id": "sm-ball-12015505",
+          "overNumber": "19.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, 1 Run",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:49:04 PM"
+        },
+        {
+          "id": "sm-ball-12015504",
+          "overNumber": "19.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Gerald Coetzee, 1 Run",
+          "bowler": "Matthew Boast",
+          "batter": "Gerald Coetzee",
+          "timestamp": "7:48:48 PM"
+        },
+        {
+          "id": "sm-ball-12015503",
+          "overNumber": "19.1",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, 1 Run",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:48:02 PM"
+        },
+        {
+          "id": "sm-ball-12015502",
+          "overNumber": "18.6",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Beuran Hendricks to Gerald Coetzee, FOUR",
+          "bowler": "Beuran Hendricks",
+          "batter": "Gerald Coetzee",
+          "timestamp": "7:46:36 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015501",
+          "overNumber": "18.5",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Beuran Hendricks to Gerald Coetzee, SIX",
+          "bowler": "Beuran Hendricks",
+          "batter": "Gerald Coetzee",
+          "timestamp": "7:45:03 PM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12015500",
+          "overNumber": "18.4",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Beuran Hendricks to Gerald Coetzee, No Run",
+          "bowler": "Beuran Hendricks",
+          "batter": "Gerald Coetzee",
+          "timestamp": "7:44:20 PM"
+        },
+        {
+          "id": "sm-ball-12015499",
+          "overNumber": "18.3",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Beuran Hendricks to Gerald Coetzee, FOUR",
+          "bowler": "Beuran Hendricks",
+          "batter": "Gerald Coetzee",
+          "timestamp": "7:43:47 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015498",
+          "overNumber": "18.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Beuran Hendricks to Mitchell Van Buuren, 1 Run",
+          "bowler": "Beuran Hendricks",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:43:15 PM"
+        },
+        {
+          "id": "sm-ball-12015497",
+          "overNumber": "18.1",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Beuran Hendricks to Mitchell Van Buuren, No Run",
+          "bowler": "Beuran Hendricks",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:42:48 PM"
+        },
+        {
+          "id": "sm-ball-12015496",
+          "overNumber": "17.6",
+          "runs": 0,
+          "isWicket": true,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Kerwin Mungroo to Nqabayomzi Peter, Catch Out",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Nqabayomzi Peter",
+          "timestamp": "7:41:33 PM",
+          "tag": "Wicket"
+        },
+        {
+          "id": "sm-ball-12015495",
+          "overNumber": "17.5",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Kerwin Mungroo to Nqabayomzi Peter, No Run",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Nqabayomzi Peter",
+          "timestamp": "7:40:02 PM"
+        },
+        {
+          "id": "sm-ball-12015494",
+          "overNumber": "17.4",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Kerwin Mungroo to Nqabayomzi Peter, No Run",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Nqabayomzi Peter",
+          "timestamp": "7:39:59 PM"
+        },
+        {
+          "id": "sm-ball-12015493",
+          "overNumber": "17.3",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Kerwin Mungroo to Mitchell Van Buuren, 1 Leg Bye",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:39:38 PM"
+        },
+        {
+          "id": "sm-ball-12015492",
+          "overNumber": "17.2",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Kerwin Mungroo to Mitchell Van Buuren, FOUR",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:38:05 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015491",
+          "overNumber": "17.1",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Kerwin Mungroo to Mitchell Van Buuren, SIX",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:38:02 PM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12015490",
+          "overNumber": "16.6",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Nqabayomzi Peter, FOUR",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Nqabayomzi Peter",
+          "timestamp": "7:36:41 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015489",
+          "overNumber": "16.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Mitchell Van Buuren, 1 Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:36:36 PM"
+        },
+        {
+          "id": "sm-ball-12015488",
+          "overNumber": "16.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Nqabayomzi Peter, 1 Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Nqabayomzi Peter",
+          "timestamp": "7:35:36 PM"
+        },
+        {
+          "id": "sm-ball-12015487",
+          "overNumber": "16.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Mitchell Van Buuren, 1 Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:34:57 PM"
+        },
+        {
+          "id": "sm-ball-12015486",
+          "overNumber": "16.2",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Mitchell Van Buuren, No Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:34:43 PM"
+        },
+        {
+          "id": "sm-ball-12015485",
+          "overNumber": "16.1",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Nqabayomzi Peter, 1 Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Nqabayomzi Peter",
+          "timestamp": "7:34:39 PM"
+        },
+        {
+          "id": "sm-ball-12015484",
+          "overNumber": "15.6",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Kerwin Mungroo to Nqabayomzi Peter, 1 Run",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Nqabayomzi Peter",
+          "timestamp": "7:33:31 PM"
+        },
+        {
+          "id": "sm-ball-12015483",
+          "overNumber": "15.5",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Kerwin Mungroo to Nqabayomzi Peter, No Run",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Nqabayomzi Peter",
+          "timestamp": "7:32:47 PM"
+        },
+        {
+          "id": "sm-ball-12015482",
+          "overNumber": "15.4",
+          "runs": 0,
+          "isWicket": true,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Kerwin Mungroo to Morteza Manack, Catch Out",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Morteza Manack",
+          "timestamp": "7:31:40 PM",
+          "tag": "Wicket"
+        },
+        {
+          "id": "sm-ball-12015481",
+          "overNumber": "15.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Kerwin Mungroo to Mitchell Van Buuren, 1 Run",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:29:42 PM"
+        },
+        {
+          "id": "sm-ball-12015480",
+          "overNumber": "15.2",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Kerwin Mungroo to Mitchell Van Buuren, 2 Runs",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:29:38 PM"
+        },
+        {
+          "id": "sm-ball-12015479",
+          "overNumber": "15.1",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Kerwin Mungroo to Morteza Manack, 1 Run",
+          "bowler": "Kerwin Mungroo",
+          "batter": "Morteza Manack",
+          "timestamp": "7:29:36 PM"
+        },
+        {
+          "id": "sm-ball-12015478",
+          "overNumber": "14.6",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Morteza Manack, 1 Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Morteza Manack",
+          "timestamp": "7:27:13 PM"
+        },
+        {
+          "id": "sm-ball-12015477",
+          "overNumber": "14.5",
+          "runs": 0,
+          "isWicket": true,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Delano Potgieter, Catch Out",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:26:34 PM",
+          "tag": "Wicket"
+        },
+        {
+          "id": "sm-ball-12015476",
+          "overNumber": "14.4",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Senuran Muthusamy to Delano Potgieter, SIX",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:25:29 PM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12015475",
+          "overNumber": "14.3",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Delano Potgieter, No Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:25:26 PM"
+        },
+        {
+          "id": "sm-ball-12015473",
+          "overNumber": "14.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Delano Potgieter, 1 Wide",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:23:49 PM"
+        },
+        {
+          "id": "sm-ball-12015474",
+          "overNumber": "14.2",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Senuran Muthusamy to Delano Potgieter, SIX",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:23:54 PM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12015472",
+          "overNumber": "14.1",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Mitchell Van Buuren, 1 Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:23:43 PM"
+        },
+        {
+          "id": "sm-ball-12015471",
+          "overNumber": "13.6",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Andile Mokgakane to Delano Potgieter, FOUR",
+          "bowler": "Andile Mokgakane",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:22:29 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015470",
+          "overNumber": "13.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Mitchell Van Buuren, 1 Run",
+          "bowler": "Andile Mokgakane",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:21:04 PM"
+        },
+        {
+          "id": "sm-ball-12015469",
+          "overNumber": "13.4",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Andile Mokgakane to Mitchell Van Buuren, FOUR",
+          "bowler": "Andile Mokgakane",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:20:36 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015468",
+          "overNumber": "13.3",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Mitchell Van Buuren, 2 Runs",
+          "bowler": "Andile Mokgakane",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:19:58 PM"
+        },
+        {
+          "id": "sm-ball-12015467",
+          "overNumber": "13.2",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Andile Mokgakane to Mitchell Van Buuren, FOUR",
+          "bowler": "Andile Mokgakane",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:19:48 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015466",
+          "overNumber": "13.1",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Andile Mokgakane to Mitchell Van Buuren, FOUR",
+          "bowler": "Andile Mokgakane",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:19:45 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015465",
+          "overNumber": "12.6",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, 1 Run",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:17:52 PM"
+        },
+        {
+          "id": "sm-ball-12015464",
+          "overNumber": "12.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Delano Potgieter, 1 Run",
+          "bowler": "Matthew Boast",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:17:17 PM"
+        },
+        {
+          "id": "sm-ball-12015463",
+          "overNumber": "12.4",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Matthew Boast to Delano Potgieter, SIX",
+          "bowler": "Matthew Boast",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:16:36 PM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12015462",
+          "overNumber": "12.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, 1 Run",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:15:59 PM"
+        },
+        {
+          "id": "sm-ball-12015461",
+          "overNumber": "12.2",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, FOUR",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:14:58 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015460",
+          "overNumber": "12.1",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, No Run",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:14:19 PM"
+        },
+        {
+          "id": "sm-ball-12015459",
+          "overNumber": "11.6",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Tristan Stubbs to Delano Potgieter, No Run",
+          "bowler": "Tristan Stubbs",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:13:55 PM"
+        },
+        {
+          "id": "sm-ball-12015458",
+          "overNumber": "11.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Tristan Stubbs to Mitchell Van Buuren, 1 Run",
+          "bowler": "Tristan Stubbs",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:13:52 PM"
+        },
+        {
+          "id": "sm-ball-12015457",
+          "overNumber": "11.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Tristan Stubbs to Delano Potgieter, 1 Run",
+          "bowler": "Tristan Stubbs",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:13:51 PM"
+        },
+        {
+          "id": "sm-ball-12015456",
+          "overNumber": "11.3",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Tristan Stubbs to Delano Potgieter, No Run",
+          "bowler": "Tristan Stubbs",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:12:14 PM"
+        },
+        {
+          "id": "sm-ball-12015455",
+          "overNumber": "11.2",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Tristan Stubbs to Delano Potgieter, SIX",
+          "bowler": "Tristan Stubbs",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:12:12 PM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12015454",
+          "overNumber": "11.1",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Tristan Stubbs to Mitchell Van Buuren, 1 Run",
+          "bowler": "Tristan Stubbs",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:12:09 PM"
+        },
+        {
+          "id": "sm-ball-12015453",
+          "overNumber": "10.6",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Delano Potgieter, No Run",
+          "bowler": "Andile Mokgakane",
+          "batter": "Delano Potgieter",
+          "timestamp": "7:11:56 PM"
+        },
+        {
+          "id": "sm-ball-12015452",
+          "overNumber": "10.5",
+          "runs": 0,
+          "isWicket": true,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Connor Esterhuizen, Catch Out",
+          "bowler": "Andile Mokgakane",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "7:11:41 PM",
+          "tag": "Wicket"
+        },
+        {
+          "id": "sm-ball-12015451",
+          "overNumber": "10.4",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Connor Esterhuizen, No Run",
+          "bowler": "Andile Mokgakane",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "7:07:29 PM"
+        },
+        {
+          "id": "sm-ball-12015450",
+          "overNumber": "10.3",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Mitchell Van Buuren, 1 Run",
+          "bowler": "Andile Mokgakane",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:06:58 PM"
+        },
+        {
+          "id": "sm-ball-12015449",
+          "overNumber": "10.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Connor Esterhuizen, 1 Run",
+          "bowler": "Andile Mokgakane",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "7:06:48 PM"
+        },
+        {
+          "id": "sm-ball-12015448",
+          "overNumber": "10.1",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Andile Mokgakane to Connor Esterhuizen, FOUR",
+          "bowler": "Andile Mokgakane",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "7:06:19 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015447",
+          "overNumber": "9.6",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Connor Esterhuizen, 1 Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "7:04:41 PM"
+        },
+        {
+          "id": "sm-ball-12015446",
+          "overNumber": "9.5",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Mitchell Van Buuren, 1 Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:04:39 PM"
+        },
+        {
+          "id": "sm-ball-12015445",
+          "overNumber": "9.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Connor Esterhuizen, 1 Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "7:04:38 PM"
+        },
+        {
+          "id": "sm-ball-12015444",
+          "overNumber": "9.3",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Connor Esterhuizen, FOUR",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "7:03:59 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015443",
+          "overNumber": "9.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Mitchell Van Buuren, 1 Run",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:03:57 PM"
+        },
+        {
+          "id": "sm-ball-12015442",
+          "overNumber": "9.1",
+          "runs": 4,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": false,
+          "description": "Senuran Muthusamy to Mitchell Van Buuren, FOUR",
+          "bowler": "Senuran Muthusamy",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "7:02:30 PM",
+          "tag": "Four"
+        },
+        {
+          "id": "sm-ball-12015515",
+          "overNumber": "8.6",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, 1 Run",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "8:02:24 PM"
+        },
+        {
+          "id": "sm-ball-12015514",
+          "overNumber": "8.5",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, No Run",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "8:02:20 PM"
+        },
+        {
+          "id": "sm-ball-12015513",
+          "overNumber": "8.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Connor Esterhuizen, 1 Run",
+          "bowler": "Matthew Boast",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "8:02:17 PM"
+        },
+        {
+          "id": "sm-ball-12015512",
+          "overNumber": "8.3",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Matthew Boast to Connor Esterhuizen, SIX",
+          "bowler": "Matthew Boast",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "8:02:13 PM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12015511",
+          "overNumber": "8.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, 1 Run",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "8:02:09 PM"
+        },
+        {
+          "id": "sm-ball-12015510",
+          "overNumber": "8.1",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Matthew Boast to Mitchell Van Buuren, 2 Runs",
+          "bowler": "Matthew Boast",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "8:02:05 PM"
+        },
+        {
+          "id": "sm-ball-12015434",
+          "overNumber": "7.6",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Mitchell Van Buuren, 2 Wides",
+          "bowler": "Andile Mokgakane",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "6:56:27 PM"
+        },
+        {
+          "id": "sm-ball-12015435",
+          "overNumber": "7.6",
+          "runs": 0,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Connor Esterhuizen, No Run",
+          "bowler": "Andile Mokgakane",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "6:56:47 PM"
+        },
+        {
+          "id": "sm-ball-12015433",
+          "overNumber": "7.5",
+          "runs": 6,
+          "isWicket": false,
+          "isBoundary": true,
+          "isSix": true,
+          "description": "Andile Mokgakane to Mitchell Van Buuren, SIX",
+          "bowler": "Andile Mokgakane",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "6:54:59 PM",
+          "tag": "Six"
+        },
+        {
+          "id": "sm-ball-12015432",
+          "overNumber": "7.4",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Connor Esterhuizen, 1 Run",
+          "bowler": "Andile Mokgakane",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "6:54:46 PM"
+        },
+        {
+          "id": "sm-ball-12015431",
+          "overNumber": "7.3",
+          "runs": 2,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Connor Esterhuizen, 2 Runs",
+          "bowler": "Andile Mokgakane",
+          "batter": "Connor Esterhuizen",
+          "timestamp": "6:54:04 PM"
+        },
+        {
+          "id": "sm-ball-12015430",
+          "overNumber": "7.2",
+          "runs": 1,
+          "isWicket": false,
+          "isBoundary": false,
+          "isSix": false,
+          "description": "Andile Mokgakane to Mitchell Van Buuren, 1 Run",
+          "bowler": "Andile Mokgakane",
+          "batter": "Mitchell Van Buuren",
+          "timestamp": "6:53:30 PM"
+        }
+      ],
+      "innings": [
+        {
+          "inningsNumber": 1,
+          "teamName": "Warriors",
+          "teamShort": "WAR",
+          "score": "219/4",
+          "runs": 219,
+          "wickets": 4,
+          "overs": "20",
+          "runRate": 10.95,
+          "batters": [
+            {
+              "name": "Jordan Hermann",
+              "runs": 24,
+              "balls": 10,
+              "fours": 3,
+              "sixes": 1,
+              "sr": 240,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Bjorn Fortuin b Morteza Manack"
+            },
+            {
+              "name": "Sibonelo Makhanya",
+              "runs": 17,
+              "balls": 11,
+              "fours": 2,
+              "sixes": 1,
+              "sr": 155,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "b Bjorn Fortuin"
+            },
+            {
+              "name": "JP King",
+              "runs": 73,
+              "balls": 47,
+              "fours": 3,
+              "sixes": 5,
+              "sr": 155,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Nqabayomzi Peter b Codi Yusuf"
+            },
+            {
+              "name": "Matthew De Villiers",
+              "runs": 71,
+              "balls": 39,
+              "fours": 8,
+              "sixes": 3,
+              "sr": 182,
+              "isStriker": false,
+              "isNotOut": true,
+              "dismissal": "NOT OUT"
+            },
+            {
+              "name": "Tristan Stubbs",
+              "runs": 1,
+              "balls": 2,
+              "fours": 0,
+              "sixes": 0,
+              "sr": 50,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Onkgomoditse Richard Seletswane b Morteza Manack"
+            },
+            {
+              "name": "Patrick Kruger",
+              "runs": 29,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 2,
+              "sr": 264,
+              "isStriker": false,
+              "isNotOut": true,
+              "dismissal": "NOT OUT"
+            }
+          ],
+          "bowlers": [
+            {
+              "name": "Gerald Coetzee",
+              "overs": 4,
+              "maidens": 0,
+              "runs": 47,
+              "wickets": 0,
+              "economy": 11.75,
+              "wides": 2,
+              "noBalls": 0,
+              "isBowling": false
+            },
+            {
+              "name": "Codi Yusuf",
+              "overs": 4,
+              "maidens": 0,
+              "runs": 40,
+              "wickets": 1,
+              "economy": 10,
+              "wides": 1,
+              "noBalls": 0,
+              "isBowling": false
+            },
+            {
+              "name": "Morteza Manack",
+              "overs": 3,
               "maidens": 0,
               "runs": 39,
-              "wickets": 0,
-              "economy": 7.8,
-              "wides": 1,
+              "wickets": 2,
+              "economy": 13,
+              "wides": 0,
               "noBalls": 0,
               "isBowling": false
             },
             {
-              "name": "Alzarri Joseph",
-              "overs": 9,
-              "maidens": 1,
-              "runs": 81,
+              "name": "Bjorn Fortuin",
+              "overs": 4,
+              "maidens": 0,
+              "runs": 36,
               "wickets": 1,
               "economy": 9,
               "wides": 0,
@@ -556,75 +3392,382 @@
               "isBowling": false
             },
             {
-              "name": "Gudakesh Motie",
-              "overs": 10,
+              "name": "Nqabayomzi Peter",
+              "overs": 4,
               "maidens": 0,
-              "runs": 66,
+              "runs": 41,
               "wickets": 0,
-              "economy": 6.6,
+              "economy": 10.25,
               "wides": 0,
               "noBalls": 0,
               "isBowling": false
             },
             {
-              "name": "Roston Chase",
-              "overs": 10,
+              "name": "Siya Plaatjie",
+              "overs": 1,
               "maidens": 0,
-              "runs": 64,
-              "wickets": 1,
-              "economy": 6.4,
-              "wides": 0,
-              "noBalls": 0,
-              "isBowling": false
-            },
-            {
-              "name": "Keacy Carty",
-              "overs": 0.4,
-              "maidens": 0,
-              "runs": 17,
+              "runs": 15,
               "wickets": 0,
-              "economy": 25.5,
-              "wides": 3,
+              "economy": 15,
+              "wides": 0,
               "noBalls": 0,
               "isBowling": false
             }
           ],
           "fallOfWickets": [
             {
-              "batter": "Rohit Sharma",
-              "score": "74-1",
-              "over": "11.6",
+              "batter": "Jordan Hermann",
+              "score": "36/1",
+              "over": "2.4",
               "wicketNumber": 1
             },
             {
-              "batter": "Shubman Gill",
-              "score": "225-2",
-              "over": "33.6",
+              "batter": "Sibonelo Makhanya",
+              "score": "48/2",
+              "over": "3.5",
               "wicketNumber": 2
+            },
+            {
+              "batter": "JP King",
+              "score": "178/3",
+              "over": "16.4",
+              "wicketNumber": 3
+            },
+            {
+              "batter": "Tristan Stubbs",
+              "score": "180/4",
+              "over": "17.1",
+              "wicketNumber": 4
             }
           ],
-          "partnerships": [],
+          "partnerships": [
+            {
+              "batters": "JP King & Jordan Hermann",
+              "runs": 36,
+              "balls": 16
+            },
+            {
+              "batters": "JP King & JP King",
+              "runs": 12,
+              "balls": 7
+            },
+            {
+              "batters": "JP King & Matthew De Villiers",
+              "runs": 130,
+              "balls": 79
+            },
+            {
+              "batters": "Tristan Stubbs & Tristan Stubbs",
+              "runs": 2,
+              "balls": 4
+            },
+            {
+              "batters": "Patrick Kruger & Patrick Kruger",
+              "runs": 39,
+              "balls": 17
+            }
+          ],
           "yetToBat": [
-            "KL Rahul",
-            "Naman Dhir",
-            "Ravindra Jadeja",
-            "Nitish Kumar Reddy",
-            "Gurnoor Brar",
-            "Kuldeep Yadav",
-            "Prasidh Krishna"
+            "Andile Mokgakane",
+            "Beuran Hendricks",
+            "Kerwin Mungroo",
+            "Matthew Boast",
+            "Senuran Muthusamy",
+            "Modiri Litheko"
           ],
           "extras": {
-            "wides": 5,
+            "wides": 3,
             "noBalls": 0,
             "byes": 0,
             "legByes": 1,
             "penalty": 0,
-            "total": 6,
-            "details": "b 0, lb 1, w 5, nb 0"
+            "total": 4,
+            "details": "b 0, lb 1, w 3, nb 0, p 0"
+          }
+        },
+        {
+          "inningsNumber": 2,
+          "teamName": "Lions",
+          "teamShort": "HL",
+          "score": "183/7",
+          "runs": 183,
+          "wickets": 7,
+          "overs": "20",
+          "runRate": 9.15,
+          "batters": [
+            {
+              "name": "Onkgomoditse Richard Seletswane",
+              "runs": 6,
+              "balls": 8,
+              "fours": 0,
+              "sixes": 0,
+              "sr": 75,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Modiri Litheko b Beuran Hendricks"
+            },
+            {
+              "name": "Bjorn Fortuin",
+              "runs": 9,
+              "balls": 9,
+              "fours": 1,
+              "sixes": 0,
+              "sr": 100,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Modiri Litheko b Beuran Hendricks"
+            },
+            {
+              "name": "Rassie van der Dussen",
+              "runs": 2,
+              "balls": 4,
+              "fours": 0,
+              "sixes": 0,
+              "sr": 50,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Modiri Litheko b Beuran Hendricks"
+            },
+            {
+              "name": "Connor Esterhuizen",
+              "runs": 34,
+              "balls": 23,
+              "fours": 3,
+              "sixes": 1,
+              "sr": 148,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Patrick Kruger b Andile Mokgakane"
+            },
+            {
+              "name": "Mitchell Van Buuren",
+              "runs": 72,
+              "balls": 46,
+              "fours": 8,
+              "sixes": 2,
+              "sr": 157,
+              "isStriker": false,
+              "isNotOut": true,
+              "dismissal": "NOT OUT"
+            },
+            {
+              "name": "Delano Potgieter",
+              "runs": 30,
+              "balls": 12,
+              "fours": 1,
+              "sixes": 4,
+              "sr": 250,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Sibonelo Makhanya b Senuran Muthusamy"
+            },
+            {
+              "name": "Morteza Manack",
+              "runs": 2,
+              "balls": 3,
+              "fours": 0,
+              "sixes": 0,
+              "sr": 67,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Patrick Kruger b Kerwin Mungroo"
+            },
+            {
+              "name": "Nqabayomzi Peter",
+              "runs": 7,
+              "balls": 8,
+              "fours": 1,
+              "sixes": 0,
+              "sr": 88,
+              "isStriker": false,
+              "isNotOut": false,
+              "dismissal": "c Tristan Stubbs b Kerwin Mungroo"
+            },
+            {
+              "name": "Gerald Coetzee",
+              "runs": 16,
+              "balls": 7,
+              "fours": 2,
+              "sixes": 1,
+              "sr": 229,
+              "isStriker": false,
+              "isNotOut": true,
+              "dismissal": "NOT OUT"
+            }
+          ],
+          "bowlers": [
+            {
+              "name": "Beuran Hendricks",
+              "overs": 4,
+              "maidens": 0,
+              "runs": 31,
+              "wickets": 3,
+              "economy": 7.75,
+              "wides": 0,
+              "noBalls": 0,
+              "isBowling": false
+            },
+            {
+              "name": "Kerwin Mungroo",
+              "overs": 4,
+              "maidens": 0,
+              "runs": 29,
+              "wickets": 2,
+              "economy": 7.25,
+              "wides": 0,
+              "noBalls": 0,
+              "isBowling": false
+            },
+            {
+              "name": "Matthew Boast",
+              "overs": 4,
+              "maidens": 0,
+              "runs": 35,
+              "wickets": 0,
+              "economy": 8.75,
+              "wides": 1,
+              "noBalls": 0,
+              "isBowling": true
+            },
+            {
+              "name": "Senuran Muthusamy",
+              "overs": 4,
+              "maidens": 0,
+              "runs": 41,
+              "wickets": 1,
+              "economy": 10.25,
+              "wides": 1,
+              "noBalls": 0,
+              "isBowling": false
+            },
+            {
+              "name": "Andile Mokgakane",
+              "overs": 3,
+              "maidens": 0,
+              "runs": 37,
+              "wickets": 1,
+              "economy": 12.33,
+              "wides": 2,
+              "noBalls": 0,
+              "isBowling": false
+            },
+            {
+              "name": "Tristan Stubbs",
+              "overs": 1,
+              "maidens": 0,
+              "runs": 9,
+              "wickets": 0,
+              "economy": 9,
+              "wides": 0,
+              "noBalls": 0,
+              "isBowling": false
+            }
+          ],
+          "fallOfWickets": [
+            {
+              "batter": "Bjorn Fortuin",
+              "score": "15/1",
+              "over": "2.2",
+              "wicketNumber": 1
+            },
+            {
+              "batter": "Onkgomoditse Richard Seletswane",
+              "score": "16/2",
+              "over": "2.6",
+              "wicketNumber": 2
+            },
+            {
+              "batter": "Rassie van der Dussen",
+              "score": "25/3",
+              "over": "4.4",
+              "wicketNumber": 3
+            },
+            {
+              "batter": "Connor Esterhuizen",
+              "score": "83/4",
+              "over": "10.5",
+              "wicketNumber": 4
+            },
+            {
+              "batter": "Delano Potgieter",
+              "score": "138/5",
+              "over": "14.5",
+              "wicketNumber": 5
+            },
+            {
+              "batter": "Morteza Manack",
+              "score": "143/6",
+              "over": "15.4",
+              "wicketNumber": 6
+            },
+            {
+              "batter": "Nqabayomzi Peter",
+              "score": "163/7",
+              "over": "17.6",
+              "wicketNumber": 7
+            }
+          ],
+          "partnerships": [
+            {
+              "batters": "Onkgomoditse Richard Seletswane & Onkgomoditse Richard Seletswane",
+              "runs": 15,
+              "balls": 14
+            },
+            {
+              "batters": "Onkgomoditse Richard Seletswane & Rassie van der Dussen",
+              "runs": 1,
+              "balls": 4
+            },
+            {
+              "batters": "Connor Esterhuizen & Rassie van der Dussen",
+              "runs": 9,
+              "balls": 10
+            },
+            {
+              "batters": "Connor Esterhuizen & Mitchell Van Buuren",
+              "runs": 58,
+              "balls": 38
+            },
+            {
+              "batters": "Delano Potgieter & Delano Potgieter",
+              "runs": 55,
+              "balls": 25
+            },
+            {
+              "batters": "Morteza Manack & Morteza Manack",
+              "runs": 5,
+              "balls": 5
+            },
+            {
+              "batters": "Nqabayomzi Peter & Nqabayomzi Peter",
+              "runs": 20,
+              "balls": 14
+            },
+            {
+              "batters": "Mitchell Van Buuren & Nqabayomzi Peter",
+              "runs": 20,
+              "balls": 13
+            }
+          ],
+          "yetToBat": [
+            "Codi Yusuf",
+            "Siya Plaatjie"
+          ],
+          "extras": {
+            "wides": 4,
+            "noBalls": 0,
+            "byes": 0,
+            "legByes": 1,
+            "penalty": 0,
+            "total": 5,
+            "details": "b 0, lb 1, w 4, nb 0, p 0"
           }
         }
-      ]
-    },
-    "timestamp": 1790674527034
+      ],
+      "lastUpdated": "2026-11-23T12:46:18.731Z",
+      "toss": "Lions won the toss and elected to bowl",
+      "matchSummary": "Warriors won by 36 runs",
+      "umpires": "Bongani Jele, Stephen Harris"
+    }
   }
 }

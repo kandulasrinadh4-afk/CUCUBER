@@ -9,7 +9,6 @@ interface NavbarProps {
   setUser: React.Dispatch<React.SetStateAction<UserProfile>>;
   onOpenSearch: () => void;
   onOpenNotifications: () => void;
-  onOpenChat: () => void;
   unreadCount: number;
 }
 
@@ -20,7 +19,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   setUser,
   onOpenSearch,
   onOpenNotifications,
-  onOpenChat,
   unreadCount,
 }) => {
   const toggleTheme = () => {
@@ -108,20 +106,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span className="xs:hidden sm:hidden text-[10px] uppercase font-bold">
                 {user.preferences.busyMode ? 'Busy' : 'Normal'}
               </span>
-            </button>
-
-            {/* Gemini AI Chat Trigger */}
-            <button
-              onClick={onOpenChat}
-              className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold transition-all border shadow-xs ${
-                isDark
-                  ? 'bg-gradient-to-r from-cyan-950 to-blue-950 border-cyan-500/40 text-cyan-300 hover:border-cyan-400'
-                  : 'bg-cyan-50 border-cyan-300 text-cyan-900 hover:bg-cyan-100'
-              }`}
-              title="Ask Apex Gemini AI"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
-              <span className="hidden sm:inline">AI Assistant</span>
             </button>
 
             {/* Theme Switcher */}

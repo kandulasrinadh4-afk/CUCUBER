@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   Radio,
-  Sparkles,
   Bell,
   ChevronRight,
   Flame,
@@ -9,6 +8,7 @@ import {
   CheckCircle2,
   ShieldAlert,
   ArrowRight,
+  FileText,
 } from 'lucide-react';
 import { MatchData, NewsArticle, UserProfile } from '../types';
 import { TeamLogo } from './TeamLogo';
@@ -146,8 +146,8 @@ const LiveMatchSpotlightSkeleton: React.FC<{
               : 'bg-cyan-50 text-cyan-800 border border-cyan-200'
           }`}
         >
-          <Sparkles className="w-3.5 h-3.5 text-cyan-500" />
-          <span>AI Catch-Up</span>
+          <FileText className="w-3.5 h-3.5 text-cyan-500" />
+          <span>Match Brief</span>
         </button>
         <button
           onClick={() => onNavigateTab('matches')}
@@ -563,8 +563,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     : 'bg-cyan-100 hover:bg-cyan-200 text-cyan-950 border border-cyan-300 font-extrabold shadow-2xs'
                 }`}
               >
-                <Sparkles className="w-3.5 h-3.5 text-cyan-500" />
-                <span>AI Catch-Up</span>
+                <FileText className="w-3.5 h-3.5 text-cyan-500" />
+                <span>Match Brief</span>
               </button>
               <button
                 onClick={() => onSelectMatch(featuredLiveMatch)}
@@ -575,8 +575,22 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </button>
             </div>
           </div>
-        ) : (
+        ) : isLoading ? (
           <LiveMatchSpotlightSkeleton isDark={isDark} onNavigateTab={onNavigateTab} />
+        ) : (
+          <div
+            className={`p-5 rounded-2xl border flex items-center justify-between text-xs ${
+              isDark ? 'bg-[#091b2e] border-slate-800 text-slate-400' : 'bg-white border-slate-200 text-slate-600'
+            }`}
+          >
+            <span>No live or featured fixtures returned right now from Sportmonks Cricket API.</span>
+            <button
+              onClick={() => onNavigateTab('matches')}
+              className="text-cyan-500 font-bold hover:underline shrink-0 ml-3"
+            >
+              Open Fixtures &rarr;
+            </button>
+          </div>
         )}
       </div>
 
@@ -647,12 +661,16 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 </div>
               ))}
             </div>
-          ) : (
+          ) : isLoading ? (
             <div className="space-y-2">
               <UpcomingMatchPreviewSkeleton isDark={isDark} />
               <UpcomingMatchPreviewSkeleton isDark={isDark} />
               <UpcomingMatchPreviewSkeleton isDark={isDark} />
             </div>
+          ) : (
+            <p className={`text-xs py-4 text-center ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+              No upcoming fixtures scheduled in the current feed window.
+            </p>
           )}
         </div>
 
@@ -725,12 +743,16 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 </div>
               ))}
             </div>
-          ) : (
+          ) : isLoading ? (
             <div className="space-y-2">
               <RecentResultPreviewSkeleton isDark={isDark} />
               <RecentResultPreviewSkeleton isDark={isDark} />
               <RecentResultPreviewSkeleton isDark={isDark} />
             </div>
+          ) : (
+            <p className={`text-xs py-4 text-center ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+              No completed match results in the current feed window.
+            </p>
           )}
         </div>
       </div>

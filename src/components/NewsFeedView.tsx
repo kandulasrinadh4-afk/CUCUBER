@@ -10,8 +10,10 @@ import {
   X,
   Bookmark,
   BookmarkCheck,
+  ExternalLink,
 } from 'lucide-react';
 import { NewsArticle, UserProfile } from '../types';
+import { isSafeHttpUrl, getCricketDataStatus } from '../services/cricketDataService';
 
 interface NewsFeedViewProps {
   news: NewsArticle[];
@@ -146,10 +148,25 @@ export const NewsFeedView: React.FC<NewsFeedViewProps> = ({
               </div>
 
               <h2 className="text-xl sm:text-2xl font-extrabold">{selectedArticle.title}</h2>
-              <p className="text-sm leading-relaxed text-slate-300">{selectedArticle.summary}</p>
-              <div className="p-4 rounded-2xl bg-slate-800/40 text-xs text-slate-400 leading-relaxed">
-                Full coverage powered by Cucuber Cricket Desk. Stay tuned for real-time video highlights and post-match interview transcripts.
-              </div>
+              <p className={`text-xs font-mono ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+                Published: {selectedArticle.publishedTime || selectedArticle.timeAgo}
+              </p>
+              <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
+                {selectedArticle.summary}
+              </p>
+              {(isSafeHttpUrl(selectedArticle.url) || isSafeHttpUrl(selectedArticle.sourceUrl)) && (
+                <div className="pt-2">
+                  <a
+                    href={isSafeHttpUrl(selectedArticle.url) ? selectedArticle.url : selectedArticle.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs transition-all"
+                  >
+                    <span>Read Full Story on {selectedArticle.source}</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -217,8 +234,17 @@ export const NewsFeedView: React.FC<NewsFeedViewProps> = ({
       {/* News Cards Grid */}
       {filteredNews.length === 0 ? (
         <div className={`p-12 text-center rounded-3xl border space-y-2 ${isDark ? 'border-slate-800 bg-slate-900/30' : 'border-slate-200 bg-white shadow-xs'}`}>
-          <p className="font-bold text-sm">No news stories found in this category</p>
-          <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Try selecting 'All' or clearing your search filter.</p>
+          <p className="font-bold text-sm">
+            {news.length === 0
+              ? 'External cricket news feeds are currently unavailable'
+              : 'No news stories found in this category'}
+          </p>
+          <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+            {news.length === 0
+              ? getCricketDataStatus().lastNewsError ||
+                'Configured RSS feeds (ESPNcricinfo, BBC Sport, Cricket Australia, The Guardian) have no articles available right now.'
+              : "Try selecting 'All' or clearing your search filter."}
+          </p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

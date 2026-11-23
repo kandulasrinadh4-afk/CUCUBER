@@ -1,982 +1,1670 @@
 {
-  "timestamp": 1790656601848,
-  "count": 13,
-  "matches": [
+  "timestamp": 1795437968771,
+  "provider": "sportmonks",
+  "data": [
     {
-      "id": "womens-national-cricket-league-nsw-w-qld-w-2026-09-29",
-      "tournament": "Women's National Cricket League",
-      "title": "Match 1",
-      "status": "LIVE",
-      "startTime": "2026-09-29T00:30:00Z",
-      "venue": "Sydney Olympic Park",
-      "homeTeam": {
-        "name": "Queensland Fire Women",
-        "shortName": "QLD-W",
-        "score": "167/10",
-        "wickets": 10,
-        "overs": "38.0",
-        "logo": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=120&q=80"
-      },
-      "awayTeam": {
-        "name": "New South Wales Breakers Women",
-        "shortName": "NSW-W",
-        "score": "39/0",
-        "wickets": 0,
-        "overs": "6.1",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "target": null,
-      "requiredRuns": null,
-      "requiredBalls": null,
-      "runRate": null,
-      "result": null,
-      "statusText": "Queensland Fire Women 167/10 (38 ov), New South Wales Breakers Women *39/0 (6.1 ov)",
-      "sources": [
-        {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
-        }
-      ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
-      "teamA": {
-        "name": "Queensland Fire Women",
-        "shortName": "QLD-W",
-        "logo": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=120&q=80",
-        "score": "167/10",
-        "overs": "38.0"
-      },
-      "teamB": {
-        "name": "New South Wales Breakers Women",
-        "shortName": "NSW-W",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "39/0",
-        "overs": "6.1"
-      },
-      "recentBalls": [],
-      "currentInnings": {
-        "teamName": "Queensland Fire Women",
-        "teamShort": "QLD-W",
-        "score": "167/10",
-        "overs": "38.0",
-        "batters": [],
-        "bowlers": [],
-        "fallOfWickets": [],
-        "partnerships": [],
-        "yetToBat": []
-      },
-      "commentary": []
-    },
-    {
-      "id": "australia-u19-tour-of-india-ind-u19-aus-u19-2026-09-27",
-      "tournament": "Australia U19 tour of India",
-      "title": "1st Youth Test",
-      "status": "INTERRUPTED",
-      "startTime": "2026-09-27T05:00:00Z",
-      "venue": "Niranjan Shah Stadium, Khandheri, Rajkot",
-      "homeTeam": {
-        "name": "India Under-19s",
-        "shortName": "IND-U19",
-        "score": "430/8",
-        "wickets": 8,
-        "overs": "92.0",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "awayTeam": {
-        "name": "Australia Under-19s",
-        "shortName": "AUS-U19",
-        "score": "217/10",
-        "wickets": 10,
-        "overs": "86.5",
-        "logo": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=120&q=80"
-      },
-      "target": null,
-      "requiredRuns": null,
-      "requiredBalls": null,
-      "runRate": null,
-      "result": null,
-      "statusText": "Stumps : Day 2 - IND-U19 lead by 213 runs.",
-      "sources": [
-        {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
-        }
-      ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
-      "teamA": {
-        "name": "India Under-19s",
-        "shortName": "IND-U19",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "430/8",
-        "overs": "92.0"
-      },
-      "teamB": {
-        "name": "Australia Under-19s",
-        "shortName": "AUS-U19",
-        "logo": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=120&q=80",
-        "score": "217/10",
-        "overs": "86.5"
-      },
-      "recentBalls": [],
-      "currentInnings": {
-        "teamName": "India Under-19s",
-        "teamShort": "IND-U19",
-        "score": "430/8",
-        "overs": "92.0",
-        "batters": [],
-        "bowlers": [],
-        "fallOfWickets": [],
-        "partnerships": [],
-        "yetToBat": []
-      },
-      "commentary": []
-    },
-    {
-      "id": "canada-super-60-white-rock-warriors-brampton-blitz-2026-09-29",
-      "tournament": "Canada Super 60",
-      "title": "1st Match",
+      "id": "sm-71030",
+      "matchId": "sm-71030",
+      "provider": "sportmonks",
+      "providerMatchId": "71030",
+      "tournament": "Twenty20 International",
+      "category": "International",
+      "title": "2nd T20I • Carrara Oval",
+      "matchType": "T20I",
+      "date": "2026-11-24",
+      "venue": "Carrara Oval",
+      "city": "Carrara, Queensland",
+      "country": null,
       "status": "UPCOMING",
-      "startTime": "2026-09-29T00:00:00Z",
-      "venue": "BC Place Stadium, Vancouver",
+      "startTime": "2026-11-24T08:15:00.000000Z",
       "homeTeam": {
-        "name": "White Rock Warriors",
-        "shortName": "WRW",
+        "name": "Australia",
+        "shortName": "AUS",
         "score": null,
         "wickets": null,
         "overs": null,
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png"
       },
       "awayTeam": {
-        "name": "Brampton Blitz",
-        "shortName": "BBZ",
+        "name": "England",
+        "shortName": "ENG",
         "score": null,
         "wickets": null,
         "overs": null,
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png"
       },
       "target": null,
       "requiredRuns": null,
       "requiredBalls": null,
       "runRate": null,
       "result": null,
-      "statusText": "Toss delayed.",
+      "winner": null,
+      "tossWinner": null,
+      "tossDecision": null,
+      "playerOfMatch": null,
+      "statusText": "Starts Tue, 24 Nov 2026 08:15:00 GMT",
       "sources": [
         {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
         }
       ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
       "teamA": {
-        "name": "White Rock Warriors",
-        "shortName": "WRW",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "Scheduled",
-        "overs": "0.0"
+        "name": "Australia",
+        "shortName": "AUS",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png",
+        "score": "TBA",
+        "overs": ""
       },
       "teamB": {
-        "name": "Brampton Blitz",
-        "shortName": "BBZ",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
+        "name": "England",
+        "shortName": "ENG",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png",
+        "score": "TBA",
+        "overs": ""
       },
       "recentBalls": [],
       "currentInnings": {
-        "teamName": "White Rock Warriors",
-        "teamShort": "WRW",
-        "score": "Scheduled",
+        "inningsNumber": 1,
+        "teamName": "Australia",
+        "teamShort": "AUS",
+        "score": "0/0",
+        "runs": null,
+        "wickets": null,
         "overs": "0.0",
+        "runRate": null,
         "batters": [],
         "bowlers": [],
         "fallOfWickets": [],
         "partnerships": [],
         "yetToBat": []
       },
-      "commentary": []
+      "commentary": [],
+      "lastUpdated": "2026-11-23T12:46:08.768Z"
     },
     {
-      "id": "womens-national-cricket-league-victoria-w-south-australia-w-2026-09-29",
-      "tournament": "Women's National Cricket League",
-      "title": "Match 2",
+      "id": "sm-71031",
+      "matchId": "sm-71031",
+      "provider": "sportmonks",
+      "providerMatchId": "71031",
+      "tournament": "Twenty20 International",
+      "category": "International",
+      "title": "3rd T20I • The Gabba",
+      "matchType": "T20I",
+      "date": "2026-11-27",
+      "venue": "The Gabba",
+      "city": "Brisbane",
+      "country": null,
       "status": "UPCOMING",
-      "startTime": "2026-09-29T04:00:00Z",
-      "venue": "Melbourne",
+      "startTime": "2026-11-27T08:15:00.000000Z",
       "homeTeam": {
-        "name": "Victoria Women",
-        "shortName": "VCT-W",
+        "name": "Australia",
+        "shortName": "AUS",
         "score": null,
         "wickets": null,
         "overs": null,
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png"
       },
       "awayTeam": {
-        "name": "South Australia Women",
-        "shortName": "SAU-W",
+        "name": "England",
+        "shortName": "ENG",
         "score": null,
         "wickets": null,
         "overs": null,
-        "logo": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=120&q=80"
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png"
       },
       "target": null,
       "requiredRuns": null,
       "requiredBalls": null,
       "runRate": null,
       "result": null,
-      "statusText": "Scheduled start at 09:30 AM IST",
+      "winner": null,
+      "tossWinner": null,
+      "tossDecision": null,
+      "playerOfMatch": null,
+      "statusText": "Starts Fri, 27 Nov 2026 08:15:00 GMT",
       "sources": [
         {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
         }
       ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
       "teamA": {
-        "name": "Victoria Women",
-        "shortName": "VCT-W",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "Scheduled",
-        "overs": "0.0"
+        "name": "Australia",
+        "shortName": "AUS",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png",
+        "score": "TBA",
+        "overs": ""
       },
       "teamB": {
-        "name": "South Australia Women",
-        "shortName": "SAU-W",
-        "logo": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=120&q=80"
+        "name": "England",
+        "shortName": "ENG",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png",
+        "score": "TBA",
+        "overs": ""
       },
       "recentBalls": [],
       "currentInnings": {
-        "teamName": "Victoria Women",
-        "teamShort": "VCT-W",
-        "score": "Scheduled",
+        "inningsNumber": 1,
+        "teamName": "Australia",
+        "teamShort": "AUS",
+        "score": "0/0",
+        "runs": null,
+        "wickets": null,
         "overs": "0.0",
+        "runRate": null,
         "batters": [],
         "bowlers": [],
         "fallOfWickets": [],
         "partnerships": [],
         "yetToBat": []
       },
-      "commentary": []
+      "commentary": [],
+      "lastUpdated": "2026-11-23T12:46:08.768Z"
     },
     {
-      "id": "asian-games-mens-t20i-bangladesh-malaysia-2026-09-29",
-      "tournament": "Asian Games Men's T20I",
-      "title": "4th Quarter Final",
+      "id": "sm-71032",
+      "matchId": "sm-71032",
+      "provider": "sportmonks",
+      "providerMatchId": "71032",
+      "tournament": "Twenty20 International",
+      "category": "International",
+      "title": "4th T20I • Sydney Cricket Ground",
+      "matchType": "T20I",
+      "date": "2026-11-29",
+      "venue": "Sydney Cricket Ground",
+      "city": "Moore Park,  Sydney, New South Wales",
+      "country": null,
       "status": "UPCOMING",
-      "startTime": "2026-09-29T04:30:00Z",
-      "venue": "Korogi Sports Park, Nisshin",
+      "startTime": "2026-11-29T08:15:00.000000Z",
       "homeTeam": {
+        "name": "Australia",
+        "shortName": "AUS",
+        "score": null,
+        "wickets": null,
+        "overs": null,
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png"
+      },
+      "awayTeam": {
+        "name": "England",
+        "shortName": "ENG",
+        "score": null,
+        "wickets": null,
+        "overs": null,
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": null,
+      "result": null,
+      "winner": null,
+      "tossWinner": null,
+      "tossDecision": null,
+      "playerOfMatch": null,
+      "statusText": "Starts Sun, 29 Nov 2026 08:15:00 GMT",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
+      "teamA": {
+        "name": "Australia",
+        "shortName": "AUS",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png",
+        "score": "TBA",
+        "overs": ""
+      },
+      "teamB": {
+        "name": "England",
+        "shortName": "ENG",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png",
+        "score": "TBA",
+        "overs": ""
+      },
+      "recentBalls": [],
+      "currentInnings": {
+        "inningsNumber": 1,
+        "teamName": "Australia",
+        "teamShort": "AUS",
+        "score": "0/0",
+        "runs": null,
+        "wickets": null,
+        "overs": "0.0",
+        "runRate": null,
+        "batters": [],
+        "bowlers": [],
+        "fallOfWickets": [],
+        "partnerships": [],
+        "yetToBat": []
+      },
+      "commentary": [],
+      "lastUpdated": "2026-11-23T12:46:08.768Z"
+    },
+    {
+      "id": "sm-71033",
+      "matchId": "sm-71033",
+      "provider": "sportmonks",
+      "providerMatchId": "71033",
+      "tournament": "Twenty20 International",
+      "category": "International",
+      "title": "5th T20I • Manuka Oval",
+      "matchType": "T20I",
+      "date": "2026-12-02",
+      "venue": "Manuka Oval",
+      "city": "Manuka,  Canberra, Australian Capital Territory",
+      "country": null,
+      "status": "UPCOMING",
+      "startTime": "2026-12-02T08:15:00.000000Z",
+      "homeTeam": {
+        "name": "Australia",
+        "shortName": "AUS",
+        "score": null,
+        "wickets": null,
+        "overs": null,
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png"
+      },
+      "awayTeam": {
+        "name": "England",
+        "shortName": "ENG",
+        "score": null,
+        "wickets": null,
+        "overs": null,
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": null,
+      "result": null,
+      "winner": null,
+      "tossWinner": null,
+      "tossDecision": null,
+      "playerOfMatch": null,
+      "statusText": "Starts Wed, 02 Dec 2026 08:15:00 GMT",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
+      "teamA": {
+        "name": "Australia",
+        "shortName": "AUS",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png",
+        "score": "TBA",
+        "overs": ""
+      },
+      "teamB": {
+        "name": "England",
+        "shortName": "ENG",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png",
+        "score": "TBA",
+        "overs": ""
+      },
+      "recentBalls": [],
+      "currentInnings": {
+        "inningsNumber": 1,
+        "teamName": "Australia",
+        "teamShort": "AUS",
+        "score": "0/0",
+        "runs": null,
+        "wickets": null,
+        "overs": "0.0",
+        "runRate": null,
+        "batters": [],
+        "bowlers": [],
+        "fallOfWickets": [],
+        "partnerships": [],
+        "yetToBat": []
+      },
+      "commentary": [],
+      "lastUpdated": "2026-11-23T12:46:08.768Z"
+    },
+    {
+      "id": "sm-71039",
+      "matchId": "sm-71039",
+      "provider": "sportmonks",
+      "providerMatchId": "71039",
+      "tournament": "Twenty20 International",
+      "category": "International",
+      "title": "1st T20I • Diamond Oval",
+      "matchType": "T20I",
+      "date": "2026-12-10",
+      "venue": "Diamond Oval",
+      "city": "Kimberley",
+      "country": null,
+      "status": "UPCOMING",
+      "startTime": "2026-12-10T16:00:00.000000Z",
+      "homeTeam": {
+        "name": "South Africa",
+        "shortName": "SA",
+        "score": null,
+        "wickets": null,
+        "overs": null,
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/8/40.png"
+      },
+      "awayTeam": {
         "name": "Bangladesh",
         "shortName": "BAN",
         "score": null,
         "wickets": null,
         "overs": null,
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "awayTeam": {
-        "name": "Malaysia",
-        "shortName": "MAS",
-        "score": null,
-        "wickets": null,
-        "overs": null,
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/5/37.png"
       },
       "target": null,
       "requiredRuns": null,
       "requiredBalls": null,
       "runRate": null,
       "result": null,
-      "statusText": "Scheduled start at 10:00 AM IST",
+      "winner": null,
+      "tossWinner": null,
+      "tossDecision": null,
+      "playerOfMatch": null,
+      "statusText": "Starts Thu, 10 Dec 2026 16:00:00 GMT",
       "sources": [
         {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
         }
       ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
       "teamA": {
+        "name": "South Africa",
+        "shortName": "SA",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/8/40.png",
+        "score": "TBA",
+        "overs": ""
+      },
+      "teamB": {
         "name": "Bangladesh",
         "shortName": "BAN",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "Scheduled",
-        "overs": "0.0"
-      },
-      "teamB": {
-        "name": "Malaysia",
-        "shortName": "MAS",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/5/37.png",
+        "score": "TBA",
+        "overs": ""
       },
       "recentBalls": [],
       "currentInnings": {
-        "teamName": "Bangladesh",
-        "teamShort": "BAN",
-        "score": "Scheduled",
-        "overs": "0.0",
-        "batters": [],
-        "bowlers": [],
-        "fallOfWickets": [],
-        "partnerships": [],
-        "yetToBat": []
-      },
-      "commentary": []
-    },
-    {
-      "id": "asian-games-mens-t20i-sri-lanka-nepal-2026-09-29",
-      "tournament": "Asian Games Men's T20I",
-      "title": "3rd Quarter Final",
-      "status": "RECENT",
-      "startTime": "2026-09-29T00:00:00Z",
-      "venue": "Korogi Sports Park, Nisshin",
-      "homeTeam": {
-        "name": "Sri Lanka",
-        "shortName": "SL",
-        "score": null,
-        "wickets": null,
-        "overs": null,
-        "logo": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=120&q=80"
-      },
-      "awayTeam": {
-        "name": "Nepal",
-        "shortName": "NEP",
-        "score": null,
-        "wickets": null,
-        "overs": null,
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "target": null,
-      "requiredRuns": null,
-      "requiredBalls": null,
-      "runRate": null,
-      "result": "Match Abandoned. Sri Lanka advanced due to higher seeding.",
-      "statusText": "Match Abandoned. Sri Lanka advanced due to higher seeding.",
-      "sources": [
-        {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
-        }
-      ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
-      "teamA": {
-        "name": "Sri Lanka",
-        "shortName": "SL",
-        "logo": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=120&q=80",
-        "score": "Yet to bat",
-        "overs": "0.0"
-      },
-      "teamB": {
-        "name": "Nepal",
-        "shortName": "NEP",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "recentBalls": [],
-      "currentInnings": {
-        "teamName": "Sri Lanka",
-        "teamShort": "SL",
-        "score": "Yet to bat",
-        "overs": "0.0",
-        "batters": [],
-        "bowlers": [],
-        "fallOfWickets": [],
-        "partnerships": [],
-        "yetToBat": []
-      },
-      "commentary": []
-    },
-    {
-      "id": "asian-games-mens-t20i-india-afghanistan-2026-09-28",
-      "tournament": "Asian Games Men's T20I",
-      "title": "2nd Quarter Final",
-      "status": "RECENT",
-      "startTime": "2026-09-28T04:30:00Z",
-      "venue": "Korogi Sports Park, Nisshin",
-      "homeTeam": {
-        "name": "India",
-        "shortName": "IND",
-        "score": null,
-        "wickets": null,
-        "overs": null,
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "awayTeam": {
-        "name": "Afghanistan",
-        "shortName": "AFG",
-        "score": null,
-        "wickets": null,
-        "overs": null,
-        "logo": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=120&q=80"
-      },
-      "target": null,
-      "requiredRuns": null,
-      "requiredBalls": null,
-      "runRate": null,
-      "result": "Match Abandoned. India advanced due to higher seeding.",
-      "statusText": "Match Abandoned. India advanced due to higher seeding.",
-      "sources": [
-        {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
-        }
-      ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
-      "teamA": {
-        "name": "India",
-        "shortName": "IND",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "Yet to bat",
-        "overs": "0.0"
-      },
-      "teamB": {
-        "name": "Afghanistan",
-        "shortName": "AFG",
-        "logo": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=120&q=80"
-      },
-      "recentBalls": [],
-      "currentInnings": {
-        "teamName": "India",
-        "teamShort": "IND",
-        "score": "Yet to bat",
-        "overs": "0.0",
-        "batters": [],
-        "bowlers": [],
-        "fallOfWickets": [],
-        "partnerships": [],
-        "yetToBat": []
-      },
-      "commentary": []
-    },
-    {
-      "id": "asian-games-mens-t20i-pakistan-hong-kong-2026-09-28",
-      "tournament": "Asian Games Men's T20I",
-      "title": "1st Quarter Final",
-      "status": "RECENT",
-      "startTime": "2026-09-28T00:00:00Z",
-      "venue": "Korogi Sports Park, Nisshin",
-      "homeTeam": {
-        "name": "Pakistan",
-        "shortName": "PAK",
-        "score": null,
-        "wickets": null,
-        "overs": null,
-        "logo": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=120&q=80"
-      },
-      "awayTeam": {
-        "name": "Hong Kong, China",
-        "shortName": "HKG",
-        "score": null,
-        "wickets": null,
-        "overs": null,
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "target": null,
-      "requiredRuns": null,
-      "requiredBalls": null,
-      "runRate": null,
-      "result": "Match Abandoned. Pakistan advanced due to higher seeding.",
-      "statusText": "Match Abandoned. Pakistan advanced due to higher seeding.",
-      "sources": [
-        {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
-        }
-      ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
-      "teamA": {
-        "name": "Pakistan",
-        "shortName": "PAK",
-        "logo": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=120&q=80",
-        "score": "Yet to bat",
-        "overs": "0.0"
-      },
-      "teamB": {
-        "name": "Hong Kong, China",
-        "shortName": "HKG",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "recentBalls": [],
-      "currentInnings": {
-        "teamName": "Pakistan",
-        "teamShort": "PAK",
-        "score": "Yet to bat",
-        "overs": "0.0",
-        "batters": [],
-        "bowlers": [],
-        "fallOfWickets": [],
-        "partnerships": [],
-        "yetToBat": []
-      },
-      "commentary": []
-    },
-    {
-      "id": "north-american-cup-bermuda-cayman-islands-2026-09-27",
-      "tournament": "North American Cup",
-      "title": "Final",
-      "status": "RECENT",
-      "startTime": "2026-09-27T19:30:00Z",
-      "venue": "Jimmy Powell Oval, George Town",
-      "homeTeam": {
-        "name": "Bermuda",
-        "shortName": "BER",
-        "score": "101/9",
-        "wickets": 9,
-        "overs": "15.0",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "awayTeam": {
-        "name": "Cayman Islands",
-        "shortName": "CAY",
-        "score": "59/10",
-        "wickets": 10,
-        "overs": "15.0",
-        "logo": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=120&q=80"
-      },
-      "target": null,
-      "requiredRuns": null,
-      "requiredBalls": null,
-      "runRate": null,
-      "result": "Bermuda won by 42 runs.",
-      "statusText": "Bermuda won by 42 runs.",
-      "sources": [
-        {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
-        }
-      ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
-      "teamA": {
-        "name": "Bermuda",
-        "shortName": "BER",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "101/9",
-        "overs": "15.0"
-      },
-      "teamB": {
-        "name": "Cayman Islands",
-        "shortName": "CAY",
-        "logo": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=120&q=80",
-        "score": "59/10",
-        "overs": "15.0"
-      },
-      "recentBalls": [],
-      "currentInnings": {
-        "teamName": "Bermuda",
-        "teamShort": "BER",
-        "score": "101/9",
-        "overs": "15.0",
-        "batters": [],
-        "bowlers": [],
-        "fallOfWickets": [],
-        "partnerships": [],
-        "yetToBat": []
-      },
-      "commentary": []
-    },
-    {
-      "id": "west-indies-tour-of-india-ind-wi-2026-09-27",
-      "tournament": "West Indies tour of India",
-      "title": "1st ODI",
-      "status": "RECENT",
-      "startTime": "2026-09-27T08:30:00Z",
-      "venue": "Greenfield International Stadium, Thiruvananthapuram",
-      "homeTeam": {
-        "name": "India",
-        "shortName": "IND",
-        "score": "300/2",
-        "wickets": 2,
-        "overs": "41.4",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "awayTeam": {
-        "name": "West Indies",
-        "shortName": "WI",
-        "score": "295/7",
-        "wickets": 7,
-        "overs": "50.0",
-        "logo": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=120&q=80"
-      },
-      "target": 296,
-      "requiredRuns": null,
-      "requiredBalls": null,
-      "runRate": null,
-      "result": "India beat WI by 8 wickets.",
-      "statusText": "India beat West Indies by 8 wickets.",
-      "sources": [
-        {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
-        }
-      ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
-      "teamA": {
-        "name": "India",
-        "shortName": "IND",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "300/2",
-        "overs": "41.4"
-      },
-      "teamB": {
-        "name": "West Indies",
-        "shortName": "WI",
-        "logo": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=120&q=80",
-        "score": "295/7",
-        "overs": "50.0"
-      },
-      "recentBalls": [],
-      "currentInnings": {
-        "teamName": "India",
-        "teamShort": "IND",
-        "score": "300/2",
-        "overs": "41.4",
-        "batters": [],
-        "bowlers": [],
-        "fallOfWickets": [],
-        "partnerships": [],
-        "yetToBat": []
-      },
-      "commentary": []
-    },
-    {
-      "id": "australia-tour-of-south-africa-sa-aus-2026-09-27",
-      "tournament": "Australia tour of South Africa",
-      "title": "2nd ODI",
-      "status": "RECENT",
-      "startTime": "2026-09-27T08:00:00Z",
-      "venue": "DP World Wanderers Stadium, Sandton",
-      "homeTeam": {
-        "name": "South Africa",
-        "shortName": "SA",
-        "score": "365/9",
-        "wickets": 9,
-        "overs": "50.0",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "awayTeam": {
-        "name": "Australia",
-        "shortName": "AUS",
-        "score": "333/10",
-        "wickets": 10,
-        "overs": "49.5",
-        "logo": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=120&q=80"
-      },
-      "target": 366,
-      "requiredRuns": null,
-      "requiredBalls": null,
-      "runRate": null,
-      "result": "SA beat AUS by 32 runs.",
-      "statusText": "South Africa beat Australia by 32 runs.",
-      "sources": [
-        {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
-        }
-      ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
-      "teamA": {
-        "name": "South Africa",
-        "shortName": "SA",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "365/9",
-        "overs": "50.0"
-      },
-      "teamB": {
-        "name": "Australia",
-        "shortName": "AUS",
-        "logo": "https://images.unsplash.com/photo-1531415074868-036b1c57e359?auto=format&fit=crop&w=120&q=80",
-        "score": "333/10",
-        "overs": "49.5"
-      },
-      "recentBalls": [],
-      "currentInnings": {
+        "inningsNumber": 1,
         "teamName": "South Africa",
         "teamShort": "SA",
-        "score": "365/9",
-        "overs": "50.0",
+        "score": "0/0",
+        "runs": null,
+        "wickets": null,
+        "overs": "0.0",
+        "runRate": null,
         "batters": [],
         "bowlers": [],
         "fallOfWickets": [],
         "partnerships": [],
         "yetToBat": []
       },
-      "commentary": []
+      "commentary": [],
+      "lastUpdated": "2026-11-23T12:46:08.767Z"
     },
     {
-      "id": "sri-lanka-tour-of-england-eng-sl-2026-09-27",
-      "tournament": "Sri Lanka tour of England",
-      "title": "3rd ODI",
-      "status": "RECENT",
-      "startTime": "2026-09-27T10:00:00Z",
-      "venue": "The Kia Oval, London",
+      "id": "sm-70797",
+      "matchId": "sm-70797",
+      "provider": "sportmonks",
+      "providerMatchId": "70797",
+      "tournament": "Big Bash League",
+      "category": "Franchise",
+      "title": "1st Match • MA Chidambaram Stadium",
+      "matchType": "T20",
+      "date": "2026-12-12",
+      "venue": "MA Chidambaram Stadium",
+      "city": "Chennai",
+      "country": null,
+      "status": "UPCOMING",
+      "startTime": "2026-12-12T09:10:00.000000Z",
       "homeTeam": {
-        "name": "England",
-        "shortName": "ENG",
-        "score": "355/7",
+        "name": "Melbourne Renegades",
+        "shortName": "MR",
+        "score": null,
+        "wickets": null,
+        "overs": null,
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/18/50.png"
+      },
+      "awayTeam": {
+        "name": "Perth Scorchers",
+        "shortName": "PS",
+        "score": null,
+        "wickets": null,
+        "overs": null,
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/20/52.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": null,
+      "result": null,
+      "winner": null,
+      "tossWinner": null,
+      "tossDecision": null,
+      "playerOfMatch": null,
+      "statusText": "Starts Sat, 12 Dec 2026 09:10:00 GMT",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
+      "teamA": {
+        "name": "Melbourne Renegades",
+        "shortName": "MR",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/18/50.png",
+        "score": "TBA",
+        "overs": ""
+      },
+      "teamB": {
+        "name": "Perth Scorchers",
+        "shortName": "PS",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/20/52.png",
+        "score": "TBA",
+        "overs": ""
+      },
+      "recentBalls": [],
+      "currentInnings": {
+        "inningsNumber": 1,
+        "teamName": "Melbourne Renegades",
+        "teamShort": "MR",
+        "score": "0/0",
+        "runs": null,
+        "wickets": null,
+        "overs": "0.0",
+        "runRate": null,
+        "batters": [],
+        "bowlers": [],
+        "fallOfWickets": [],
+        "partnerships": [],
+        "yetToBat": []
+      },
+      "commentary": [],
+      "lastUpdated": "2026-11-23T12:46:08.767Z"
+    },
+    {
+      "id": "sm-71040",
+      "matchId": "sm-71040",
+      "provider": "sportmonks",
+      "providerMatchId": "71040",
+      "tournament": "Twenty20 International",
+      "category": "International",
+      "title": "2nd T20I • Willowmoore Park",
+      "matchType": "T20I",
+      "date": "2026-12-12",
+      "venue": "Willowmoore Park",
+      "city": "Benoni",
+      "country": null,
+      "status": "UPCOMING",
+      "startTime": "2026-12-12T12:30:00.000000Z",
+      "homeTeam": {
+        "name": "South Africa",
+        "shortName": "SA",
+        "score": null,
+        "wickets": null,
+        "overs": null,
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/8/40.png"
+      },
+      "awayTeam": {
+        "name": "Bangladesh",
+        "shortName": "BAN",
+        "score": null,
+        "wickets": null,
+        "overs": null,
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/5/37.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": null,
+      "result": null,
+      "winner": null,
+      "tossWinner": null,
+      "tossDecision": null,
+      "playerOfMatch": null,
+      "statusText": "Starts Sat, 12 Dec 2026 12:30:00 GMT",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
+      "teamA": {
+        "name": "South Africa",
+        "shortName": "SA",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/8/40.png",
+        "score": "TBA",
+        "overs": ""
+      },
+      "teamB": {
+        "name": "Bangladesh",
+        "shortName": "BAN",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/5/37.png",
+        "score": "TBA",
+        "overs": ""
+      },
+      "recentBalls": [],
+      "currentInnings": {
+        "inningsNumber": 1,
+        "teamName": "South Africa",
+        "teamShort": "SA",
+        "score": "0/0",
+        "runs": null,
+        "wickets": null,
+        "overs": "0.0",
+        "runRate": null,
+        "batters": [],
+        "bowlers": [],
+        "fallOfWickets": [],
+        "partnerships": [],
+        "yetToBat": []
+      },
+      "commentary": [],
+      "lastUpdated": "2026-11-23T12:46:08.767Z"
+    },
+    {
+      "id": "sm-71041",
+      "matchId": "sm-71041",
+      "provider": "sportmonks",
+      "providerMatchId": "71041",
+      "tournament": "Twenty20 International",
+      "category": "International",
+      "title": "3rd T20I • SuperSport Park",
+      "matchType": "T20I",
+      "date": "2026-12-13",
+      "venue": "SuperSport Park",
+      "city": "Centurion",
+      "country": null,
+      "status": "UPCOMING",
+      "startTime": "2026-12-13T12:30:00.000000Z",
+      "homeTeam": {
+        "name": "South Africa",
+        "shortName": "SA",
+        "score": null,
+        "wickets": null,
+        "overs": null,
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/8/40.png"
+      },
+      "awayTeam": {
+        "name": "Bangladesh",
+        "shortName": "BAN",
+        "score": null,
+        "wickets": null,
+        "overs": null,
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/5/37.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": null,
+      "result": null,
+      "winner": null,
+      "tossWinner": null,
+      "tossDecision": null,
+      "playerOfMatch": null,
+      "statusText": "Starts Sun, 13 Dec 2026 12:30:00 GMT",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
+      "teamA": {
+        "name": "South Africa",
+        "shortName": "SA",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/8/40.png",
+        "score": "TBA",
+        "overs": ""
+      },
+      "teamB": {
+        "name": "Bangladesh",
+        "shortName": "BAN",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/5/37.png",
+        "score": "TBA",
+        "overs": ""
+      },
+      "recentBalls": [],
+      "currentInnings": {
+        "inningsNumber": 1,
+        "teamName": "South Africa",
+        "teamShort": "SA",
+        "score": "0/0",
+        "runs": null,
+        "wickets": null,
+        "overs": "0.0",
+        "runRate": null,
+        "batters": [],
+        "bowlers": [],
+        "fallOfWickets": [],
+        "partnerships": [],
+        "yetToBat": []
+      },
+      "commentary": [],
+      "lastUpdated": "2026-11-23T12:46:08.767Z"
+    },
+    {
+      "id": "sm-71029",
+      "matchId": "sm-71029",
+      "provider": "sportmonks",
+      "providerMatchId": "71029",
+      "tournament": "Twenty20 International",
+      "category": "International",
+      "title": "1st T20I • Melbourne Cricket Ground",
+      "matchType": "T20I",
+      "date": "2026-11-21",
+      "venue": "Melbourne Cricket Ground",
+      "city": "Jolimont,  Melbourne, Victoria",
+      "country": null,
+      "status": "RECENT",
+      "startTime": "2026-11-21T08:15:00.000000Z",
+      "homeTeam": {
+        "name": "Australia",
+        "shortName": "AUS",
+        "score": "191/7",
         "wickets": 7,
-        "overs": "50.0",
-        "logo": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=120&q=80"
+        "overs": "19.5",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png"
       },
       "awayTeam": {
-        "name": "Sri Lanka",
-        "shortName": "SL",
-        "score": "132/10",
-        "wickets": 10,
-        "overs": "29.1",
-        "logo": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=120&q=80"
-      },
-      "target": 356,
-      "requiredRuns": null,
-      "requiredBalls": null,
-      "runRate": null,
-      "result": "ENG beat SL by 223 runs.",
-      "statusText": "England beat Sri Lanka by 223 runs.",
-      "sources": [
-        {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
-        }
-      ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
-      "teamA": {
         "name": "England",
         "shortName": "ENG",
-        "logo": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=120&q=80",
-        "score": "355/7",
-        "overs": "50.0"
+        "score": "187/9",
+        "wickets": 9,
+        "overs": "20",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png"
       },
-      "teamB": {
-        "name": "Sri Lanka",
-        "shortName": "SL",
-        "logo": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=120&q=80",
-        "score": "132/10",
-        "overs": "29.1"
-      },
-      "recentBalls": [],
-      "currentInnings": {
-        "teamName": "England",
-        "teamShort": "ENG",
-        "score": "355/7",
-        "overs": "50.0",
-        "batters": [],
-        "bowlers": [],
-        "fallOfWickets": [],
-        "partnerships": [],
-        "yetToBat": []
-      },
-      "commentary": []
-    },
-    {
-      "id": "west-indies-women-in-zimbabwe-zim-w-wi-w-2026-09-27",
-      "tournament": "West Indies Women in Zimbabwe",
-      "title": "2nd ODI",
-      "status": "RECENT",
-      "startTime": "2026-09-27T07:00:00Z",
-      "venue": "Harare",
-      "homeTeam": {
-        "name": "Zimbabwe Women",
-        "shortName": "ZIM-W",
-        "score": "140/6",
-        "wickets": 6,
-        "overs": "40.5",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "awayTeam": {
-        "name": "West Indies Women",
-        "shortName": "WI-W",
-        "score": "139/10",
-        "wickets": 10,
-        "overs": "39.3",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80"
-      },
-      "target": 140,
+      "target": null,
       "requiredRuns": null,
       "requiredBalls": null,
-      "runRate": null,
-      "result": "ZIM Women beat WI Women by 4 wickets.",
-      "statusText": "Zimbabwe Women beat West Indies Women by 4 wickets.",
+      "runRate": 9.63,
+      "result": "Australia won by 3 wickets (with 1 ball remaining)",
+      "winner": "Australia",
+      "tossWinner": "Australia",
+      "tossDecision": "bowl",
+      "playerOfMatch": "Nikhil Chaudhary",
+      "statusText": "Australia won by 3 wickets (with 1 ball remaining)",
       "sources": [
         {
-          "title": "indiagazette.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6"
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ8NQ-P7xOHchkOojx6Nosok_eu_KREDnARYorJFatv0BcB3-p5kahdJo3dK2uCPMtTfD0jMfnmaL9yHkPAXuryfsH1rg-0_V2C78muo1HlPynb-aIsiJK01sVUyrSF2wuNA=="
-        },
-        {
-          "title": "cricketworld.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGd8wqqigurf28gTrPqACgkwUiOyovaseRK91R_w8uu4EHhkuuFIutgfxsPoWFcwCdmsrdI6s4mxnQ-BbgL3EMA8ht3RqNn6s8BYbhh_h9GgXPOGRE8ne79prLxBslaCqUs57L4nKNQO4="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgbPsuo4yNiX0SdEdwaRrEE8TNYRj7InCt5XAg3JqoPm3RvnVsRjhp0wMvKwv-eyGZfxcP2-HRZZYgDPSNBKYjDS5Jb_K6KKttbkFfiWejcFC26lf0RHhBoejPYNT076yDXQqufd1wFBCNBnA="
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
         }
       ],
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMVYkQpjWz5yao1qceIH_OUauitqTPIb_Ko3MXhIehSF7RRkqqoD7ArYD6CsYr93ksGa_FPNsw8G5zhFaEp5_YvZYjx3rqXP7MG6aTBHMmEy_K0LhuD08JvqdEboYFkEes30u--oEYJLoS47BB9ThU2-qrtk7Dod_l6_24wTm-Jw2wFCLsDbs_l_EfHVO9aixs-vC5LfjXyADfGELyCOvjWfXC3gYra1q6",
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
       "teamA": {
-        "name": "Zimbabwe Women",
-        "shortName": "ZIM-W",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "140/6",
-        "overs": "40.5"
+        "name": "Australia",
+        "shortName": "AUS",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/4/36.png",
+        "score": "191/7",
+        "overs": "19.5"
       },
       "teamB": {
-        "name": "West Indies Women",
-        "shortName": "WI-W",
-        "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=120&q=80",
-        "score": "139/10",
-        "overs": "39.3"
+        "name": "England",
+        "shortName": "ENG",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/6/38.png",
+        "score": "187/9",
+        "overs": "20"
       },
+      "crr": 9.63,
       "recentBalls": [],
       "currentInnings": {
-        "teamName": "Zimbabwe Women",
-        "teamShort": "ZIM-W",
-        "score": "140/6",
-        "overs": "40.5",
+        "inningsNumber": 2,
+        "teamName": "Australia",
+        "teamShort": "AUS",
+        "score": "191/7",
+        "runs": 191,
+        "wickets": 7,
+        "overs": "19.5",
+        "runRate": 9.63,
         "batters": [],
         "bowlers": [],
         "fallOfWickets": [],
         "partnerships": [],
-        "yetToBat": []
+        "yetToBat": [],
+        "extras": {
+          "wides": 2,
+          "noBalls": 0,
+          "byes": 0,
+          "legByes": 1,
+          "penalty": 0,
+          "total": 3,
+          "details": "b 0, lb 1, w 2, nb 0, p 0"
+        }
       },
-      "commentary": []
+      "commentary": [],
+      "innings": [
+        {
+          "inningsNumber": 1,
+          "teamName": "England",
+          "teamShort": "ENG",
+          "score": "187/9",
+          "runs": 187,
+          "wickets": 9,
+          "overs": "20",
+          "runRate": 9.35,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 1,
+            "noBalls": 0,
+            "byes": 1,
+            "legByes": 1,
+            "penalty": 0,
+            "total": 3,
+            "details": "b 1, lb 1, w 1, nb 0, p 0"
+          }
+        },
+        {
+          "inningsNumber": 2,
+          "teamName": "Australia",
+          "teamShort": "AUS",
+          "score": "191/7",
+          "runs": 191,
+          "wickets": 7,
+          "overs": "19.5",
+          "runRate": 9.63,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 2,
+            "noBalls": 0,
+            "byes": 0,
+            "legByes": 1,
+            "penalty": 0,
+            "total": 3,
+            "details": "b 0, lb 1, w 2, nb 0, p 0"
+          }
+        }
+      ],
+      "lastUpdated": "2026-11-23T12:46:08.770Z",
+      "toss": "Australia won the toss and elected to bowl",
+      "matchSummary": "Australia won by 3 wickets (with 1 ball remaining)"
+    },
+    {
+      "id": "sm-72065",
+      "matchId": "sm-72065",
+      "provider": "sportmonks",
+      "providerMatchId": "72065",
+      "tournament": "CSA T20 Challenge",
+      "category": "Franchise",
+      "title": "Final • Newlands",
+      "matchType": "T20",
+      "date": "2026-11-14",
+      "venue": "Newlands",
+      "city": "Cape Town",
+      "country": null,
+      "status": "RECENT",
+      "startTime": "2026-11-14T16:30:00.000000Z",
+      "homeTeam": {
+        "name": "Warriors",
+        "shortName": "WAR",
+        "score": "219/4",
+        "wickets": 4,
+        "overs": "20",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/31/63.png"
+      },
+      "awayTeam": {
+        "name": "Lions",
+        "shortName": "HL",
+        "score": "183/7",
+        "wickets": 7,
+        "overs": "20",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/0/64.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": 9.15,
+      "result": "Warriors won by 36 runs",
+      "winner": "Warriors",
+      "tossWinner": "Lions",
+      "tossDecision": "bowl",
+      "playerOfMatch": null,
+      "statusText": "Warriors won by 36 runs",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
+      "teamA": {
+        "name": "Warriors",
+        "shortName": "WAR",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/31/63.png",
+        "score": "219/4",
+        "overs": "20"
+      },
+      "teamB": {
+        "name": "Lions",
+        "shortName": "HL",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/0/64.png",
+        "score": "183/7",
+        "overs": "20"
+      },
+      "crr": 9.15,
+      "recentBalls": [],
+      "currentInnings": {
+        "inningsNumber": 2,
+        "teamName": "Lions",
+        "teamShort": "HL",
+        "score": "183/7",
+        "runs": 183,
+        "wickets": 7,
+        "overs": "20",
+        "runRate": 9.15,
+        "batters": [],
+        "bowlers": [],
+        "fallOfWickets": [],
+        "partnerships": [],
+        "yetToBat": [],
+        "extras": {
+          "wides": 4,
+          "noBalls": 0,
+          "byes": 0,
+          "legByes": 1,
+          "penalty": 0,
+          "total": 5,
+          "details": "b 0, lb 1, w 4, nb 0, p 0"
+        }
+      },
+      "commentary": [],
+      "innings": [
+        {
+          "inningsNumber": 1,
+          "teamName": "Warriors",
+          "teamShort": "WAR",
+          "score": "219/4",
+          "runs": 219,
+          "wickets": 4,
+          "overs": "20",
+          "runRate": 10.95,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 3,
+            "noBalls": 0,
+            "byes": 0,
+            "legByes": 1,
+            "penalty": 0,
+            "total": 4,
+            "details": "b 0, lb 1, w 3, nb 0, p 0"
+          }
+        },
+        {
+          "inningsNumber": 2,
+          "teamName": "Lions",
+          "teamShort": "HL",
+          "score": "183/7",
+          "runs": 183,
+          "wickets": 7,
+          "overs": "20",
+          "runRate": 9.15,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 4,
+            "noBalls": 0,
+            "byes": 0,
+            "legByes": 1,
+            "penalty": 0,
+            "total": 5,
+            "details": "b 0, lb 1, w 4, nb 0, p 0"
+          }
+        }
+      ],
+      "lastUpdated": "2026-11-23T12:46:08.770Z",
+      "toss": "Lions won the toss and elected to bowl",
+      "matchSummary": "Warriors won by 36 runs"
+    },
+    {
+      "id": "sm-72064",
+      "matchId": "sm-72064",
+      "provider": "sportmonks",
+      "providerMatchId": "72064",
+      "tournament": "CSA T20 Challenge",
+      "category": "Franchise",
+      "title": "Semi Final • Newlands",
+      "matchType": "T20",
+      "date": "2026-11-14",
+      "venue": "Newlands",
+      "city": "Cape Town",
+      "country": null,
+      "status": "RECENT",
+      "startTime": "2026-11-14T12:00:00.000000Z",
+      "homeTeam": {
+        "name": "Lions",
+        "shortName": "HL",
+        "score": "194/6",
+        "wickets": 6,
+        "overs": "20",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/0/64.png"
+      },
+      "awayTeam": {
+        "name": "Western Province",
+        "shortName": "WP",
+        "score": "178/8",
+        "wickets": 8,
+        "overs": "20",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/12/2060.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": 8.9,
+      "result": "Lions won by 16 runs",
+      "winner": "Lions",
+      "tossWinner": "Lions",
+      "tossDecision": "bat",
+      "playerOfMatch": null,
+      "statusText": "Lions won by 16 runs",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
+      "teamA": {
+        "name": "Lions",
+        "shortName": "HL",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/0/64.png",
+        "score": "194/6",
+        "overs": "20"
+      },
+      "teamB": {
+        "name": "Western Province",
+        "shortName": "WP",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/12/2060.png",
+        "score": "178/8",
+        "overs": "20"
+      },
+      "crr": 8.9,
+      "recentBalls": [],
+      "currentInnings": {
+        "inningsNumber": 2,
+        "teamName": "Western Province",
+        "teamShort": "WP",
+        "score": "178/8",
+        "runs": 178,
+        "wickets": 8,
+        "overs": "20",
+        "runRate": 8.9,
+        "batters": [],
+        "bowlers": [],
+        "fallOfWickets": [],
+        "partnerships": [],
+        "yetToBat": [],
+        "extras": {
+          "wides": 6,
+          "noBalls": 1,
+          "byes": 0,
+          "legByes": 3,
+          "penalty": 0,
+          "total": 10,
+          "details": "b 0, lb 3, w 6, nb 1, p 0"
+        }
+      },
+      "commentary": [],
+      "innings": [
+        {
+          "inningsNumber": 1,
+          "teamName": "Lions",
+          "teamShort": "HL",
+          "score": "194/6",
+          "runs": 194,
+          "wickets": 6,
+          "overs": "20",
+          "runRate": 9.7,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 7,
+            "noBalls": 0,
+            "byes": 0,
+            "legByes": 5,
+            "penalty": 0,
+            "total": 12,
+            "details": "b 0, lb 5, w 7, nb 0, p 0"
+          }
+        },
+        {
+          "inningsNumber": 2,
+          "teamName": "Western Province",
+          "teamShort": "WP",
+          "score": "178/8",
+          "runs": 178,
+          "wickets": 8,
+          "overs": "20",
+          "runRate": 8.9,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 6,
+            "noBalls": 1,
+            "byes": 0,
+            "legByes": 3,
+            "penalty": 0,
+            "total": 10,
+            "details": "b 0, lb 3, w 6, nb 1, p 0"
+          }
+        }
+      ],
+      "lastUpdated": "2026-11-23T12:46:08.770Z",
+      "toss": "Lions won the toss and elected to bat",
+      "matchSummary": "Lions won by 16 runs"
+    },
+    {
+      "id": "sm-72063",
+      "matchId": "sm-72063",
+      "provider": "sportmonks",
+      "providerMatchId": "72063",
+      "tournament": "CSA T20 Challenge",
+      "category": "Franchise",
+      "title": "Semi Final • Newlands",
+      "matchType": "T20",
+      "date": "2026-11-14",
+      "venue": "Newlands",
+      "city": "Cape Town",
+      "country": null,
+      "status": "RECENT",
+      "startTime": "2026-11-14T07:30:00.000000Z",
+      "homeTeam": {
+        "name": "Warriors",
+        "shortName": "WAR",
+        "score": "163/2",
+        "wickets": 2,
+        "overs": "18.1",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/31/63.png"
+      },
+      "awayTeam": {
+        "name": "Rocks (Boland)",
+        "shortName": "ROC",
+        "score": "160/7",
+        "wickets": 7,
+        "overs": "20",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/15/2063.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": 8.97,
+      "result": "Warriors won by 8 wickets (with 11 balls remaining)",
+      "winner": "Warriors",
+      "tossWinner": "Warriors",
+      "tossDecision": "bowl",
+      "playerOfMatch": null,
+      "statusText": "Warriors won by 8 wickets (with 11 balls remaining)",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
+      "teamA": {
+        "name": "Warriors",
+        "shortName": "WAR",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/31/63.png",
+        "score": "163/2",
+        "overs": "18.1"
+      },
+      "teamB": {
+        "name": "Rocks (Boland)",
+        "shortName": "ROC",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/15/2063.png",
+        "score": "160/7",
+        "overs": "20"
+      },
+      "crr": 8.97,
+      "recentBalls": [],
+      "currentInnings": {
+        "inningsNumber": 2,
+        "teamName": "Warriors",
+        "teamShort": "WAR",
+        "score": "163/2",
+        "runs": 163,
+        "wickets": 2,
+        "overs": "18.1",
+        "runRate": 8.97,
+        "batters": [],
+        "bowlers": [],
+        "fallOfWickets": [],
+        "partnerships": [],
+        "yetToBat": [],
+        "extras": {
+          "wides": 5,
+          "noBalls": 1,
+          "byes": 2,
+          "legByes": 5,
+          "penalty": 0,
+          "total": 13,
+          "details": "b 2, lb 5, w 5, nb 1, p 0"
+        }
+      },
+      "commentary": [],
+      "innings": [
+        {
+          "inningsNumber": 1,
+          "teamName": "Rocks (Boland)",
+          "teamShort": "ROC",
+          "score": "160/7",
+          "runs": 160,
+          "wickets": 7,
+          "overs": "20",
+          "runRate": 8,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 4,
+            "noBalls": 0,
+            "byes": 0,
+            "legByes": 1,
+            "penalty": 0,
+            "total": 5,
+            "details": "b 0, lb 1, w 4, nb 0, p 0"
+          }
+        },
+        {
+          "inningsNumber": 2,
+          "teamName": "Warriors",
+          "teamShort": "WAR",
+          "score": "163/2",
+          "runs": 163,
+          "wickets": 2,
+          "overs": "18.1",
+          "runRate": 8.97,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 5,
+            "noBalls": 1,
+            "byes": 2,
+            "legByes": 5,
+            "penalty": 0,
+            "total": 13,
+            "details": "b 2, lb 5, w 5, nb 1, p 0"
+          }
+        }
+      ],
+      "lastUpdated": "2026-11-23T12:46:08.770Z",
+      "toss": "Warriors won the toss and elected to bowl",
+      "matchSummary": "Warriors won by 8 wickets (with 11 balls remaining)"
+    },
+    {
+      "id": "sm-71942",
+      "matchId": "sm-71942",
+      "provider": "sportmonks",
+      "providerMatchId": "71942",
+      "tournament": "CSA T20 Challenge",
+      "category": "Franchise",
+      "title": "72nd Match • SuperSport Park",
+      "matchType": "T20",
+      "date": "2026-11-11",
+      "venue": "SuperSport Park",
+      "city": "Centurion",
+      "country": null,
+      "status": "RECENT",
+      "startTime": "2026-11-11T16:00:00.000000Z",
+      "homeTeam": {
+        "name": "Titans",
+        "shortName": "MT",
+        "score": "180/9",
+        "wickets": 9,
+        "overs": "20",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/28/60.png"
+      },
+      "awayTeam": {
+        "name": "Warriors",
+        "shortName": "WAR",
+        "score": "183/3",
+        "wickets": 3,
+        "overs": "18.4",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/31/63.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": 9.8,
+      "result": "Warriors won by 7 wickets (with 8 balls remaining)",
+      "winner": "Warriors",
+      "tossWinner": "Warriors",
+      "tossDecision": "bowl",
+      "playerOfMatch": null,
+      "statusText": "Warriors won by 7 wickets (with 8 balls remaining)",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
+      "teamA": {
+        "name": "Titans",
+        "shortName": "MT",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/28/60.png",
+        "score": "180/9",
+        "overs": "20"
+      },
+      "teamB": {
+        "name": "Warriors",
+        "shortName": "WAR",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/31/63.png",
+        "score": "183/3",
+        "overs": "18.4"
+      },
+      "crr": 9.8,
+      "recentBalls": [],
+      "currentInnings": {
+        "inningsNumber": 2,
+        "teamName": "Warriors",
+        "teamShort": "WAR",
+        "score": "183/3",
+        "runs": 183,
+        "wickets": 3,
+        "overs": "18.4",
+        "runRate": 9.8,
+        "batters": [],
+        "bowlers": [],
+        "fallOfWickets": [],
+        "partnerships": [],
+        "yetToBat": [],
+        "extras": {
+          "wides": 3,
+          "noBalls": 0,
+          "byes": 1,
+          "legByes": 0,
+          "penalty": 0,
+          "total": 4,
+          "details": "b 1, lb 0, w 3, nb 0, p 0"
+        }
+      },
+      "commentary": [],
+      "innings": [
+        {
+          "inningsNumber": 1,
+          "teamName": "Titans",
+          "teamShort": "MT",
+          "score": "180/9",
+          "runs": 180,
+          "wickets": 9,
+          "overs": "20",
+          "runRate": 9,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 4,
+            "noBalls": 1,
+            "byes": 1,
+            "legByes": 0,
+            "penalty": 0,
+            "total": 6,
+            "details": "b 1, lb 0, w 4, nb 1, p 0"
+          }
+        },
+        {
+          "inningsNumber": 2,
+          "teamName": "Warriors",
+          "teamShort": "WAR",
+          "score": "183/3",
+          "runs": 183,
+          "wickets": 3,
+          "overs": "18.4",
+          "runRate": 9.8,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 3,
+            "noBalls": 0,
+            "byes": 1,
+            "legByes": 0,
+            "penalty": 0,
+            "total": 4,
+            "details": "b 1, lb 0, w 3, nb 0, p 0"
+          }
+        }
+      ],
+      "lastUpdated": "2026-11-23T12:46:08.771Z",
+      "toss": "Warriors won the toss and elected to bowl",
+      "matchSummary": "Warriors won by 7 wickets (with 8 balls remaining)"
+    },
+    {
+      "id": "sm-71941",
+      "matchId": "sm-71941",
+      "provider": "sportmonks",
+      "providerMatchId": "71941",
+      "tournament": "CSA T20 Challenge",
+      "category": "Franchise",
+      "title": "71st Match • Boland Park",
+      "matchType": "T20",
+      "date": "2026-11-11",
+      "venue": "Boland Park",
+      "city": "Paarl",
+      "country": null,
+      "status": "RECENT",
+      "startTime": "2026-11-11T11:00:00.000000Z",
+      "homeTeam": {
+        "name": "Rocks (Boland)",
+        "shortName": "ROC",
+        "score": "134/8",
+        "wickets": 8,
+        "overs": "20",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/15/2063.png"
+      },
+      "awayTeam": {
+        "name": "Lions",
+        "shortName": "HL",
+        "score": "135/5",
+        "wickets": 5,
+        "overs": "19.4",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/0/64.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": 6.86,
+      "result": "Lions won by 5 wickets (with 2 balls remaining)",
+      "winner": "Lions",
+      "tossWinner": "Rocks (Boland)",
+      "tossDecision": "bat",
+      "playerOfMatch": null,
+      "statusText": "Lions won by 5 wickets (with 2 balls remaining)",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
+      "teamA": {
+        "name": "Rocks (Boland)",
+        "shortName": "ROC",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/15/2063.png",
+        "score": "134/8",
+        "overs": "20"
+      },
+      "teamB": {
+        "name": "Lions",
+        "shortName": "HL",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/0/64.png",
+        "score": "135/5",
+        "overs": "19.4"
+      },
+      "crr": 6.86,
+      "recentBalls": [],
+      "currentInnings": {
+        "inningsNumber": 2,
+        "teamName": "Lions",
+        "teamShort": "HL",
+        "score": "135/5",
+        "runs": 135,
+        "wickets": 5,
+        "overs": "19.4",
+        "runRate": 6.86,
+        "batters": [],
+        "bowlers": [],
+        "fallOfWickets": [],
+        "partnerships": [],
+        "yetToBat": [],
+        "extras": {
+          "wides": 1,
+          "noBalls": 1,
+          "byes": 0,
+          "legByes": 9,
+          "penalty": 0,
+          "total": 11,
+          "details": "b 0, lb 9, w 1, nb 1, p 0"
+        }
+      },
+      "commentary": [],
+      "innings": [
+        {
+          "inningsNumber": 1,
+          "teamName": "Rocks (Boland)",
+          "teamShort": "ROC",
+          "score": "134/8",
+          "runs": 134,
+          "wickets": 8,
+          "overs": "20",
+          "runRate": 6.7,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 14,
+            "noBalls": 0,
+            "byes": 0,
+            "legByes": 0,
+            "penalty": 0,
+            "total": 14,
+            "details": "b 0, lb 0, w 14, nb 0, p 0"
+          }
+        },
+        {
+          "inningsNumber": 2,
+          "teamName": "Lions",
+          "teamShort": "HL",
+          "score": "135/5",
+          "runs": 135,
+          "wickets": 5,
+          "overs": "19.4",
+          "runRate": 6.86,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 1,
+            "noBalls": 1,
+            "byes": 0,
+            "legByes": 9,
+            "penalty": 0,
+            "total": 11,
+            "details": "b 0, lb 9, w 1, nb 1, p 0"
+          }
+        }
+      ],
+      "lastUpdated": "2026-11-23T12:46:08.771Z",
+      "toss": "Rocks (Boland) won the toss and elected to bat",
+      "matchSummary": "Lions won by 5 wickets (with 2 balls remaining)"
+    },
+    {
+      "id": "sm-71940",
+      "matchId": "sm-71940",
+      "provider": "sportmonks",
+      "providerMatchId": "71940",
+      "tournament": "CSA T20 Challenge",
+      "category": "Franchise",
+      "title": "70th Match • Newlands",
+      "matchType": "T20",
+      "date": "2026-11-10",
+      "venue": "Newlands",
+      "city": "Cape Town",
+      "country": null,
+      "status": "RECENT",
+      "startTime": "2026-11-10T16:00:00.000000Z",
+      "homeTeam": {
+        "name": "Western Province",
+        "shortName": "WP",
+        "score": "105/5",
+        "wickets": 5,
+        "overs": "14.3",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/12/2060.png"
+      },
+      "awayTeam": {
+        "name": "South Western Districts",
+        "shortName": "SWD",
+        "score": "99",
+        "wickets": 10,
+        "overs": "19.3",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/0/3104.png"
+      },
+      "target": null,
+      "requiredRuns": null,
+      "requiredBalls": null,
+      "runRate": 7.24,
+      "result": "Western Province won by 5 wickets (with 33 balls remaining)",
+      "winner": "Western Province",
+      "tossWinner": "Western Province",
+      "tossDecision": "bowl",
+      "playerOfMatch": null,
+      "statusText": "Western Province won by 5 wickets (with 33 balls remaining)",
+      "sources": [
+        {
+          "title": "Sportmonks Cricket API",
+          "url": "https://www.sportmonks.com/cricket-api/"
+        }
+      ],
+      "sourceUrl": "https://www.sportmonks.com/cricket-api/",
+      "ballByBallSupported": false,
+      "teamA": {
+        "name": "Western Province",
+        "shortName": "WP",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/12/2060.png",
+        "score": "105/5",
+        "overs": "14.3"
+      },
+      "teamB": {
+        "name": "South Western Districts",
+        "shortName": "SWD",
+        "logo": "https://cdn.sportmonks.com/images/cricket/teams/0/3104.png",
+        "score": "99",
+        "overs": "19.3"
+      },
+      "crr": 7.24,
+      "recentBalls": [],
+      "currentInnings": {
+        "inningsNumber": 2,
+        "teamName": "Western Province",
+        "teamShort": "WP",
+        "score": "105/5",
+        "runs": 105,
+        "wickets": 5,
+        "overs": "14.3",
+        "runRate": 7.24,
+        "batters": [],
+        "bowlers": [],
+        "fallOfWickets": [],
+        "partnerships": [],
+        "yetToBat": [],
+        "extras": {
+          "wides": 6,
+          "noBalls": 0,
+          "byes": 1,
+          "legByes": 5,
+          "penalty": 0,
+          "total": 12,
+          "details": "b 1, lb 5, w 6, nb 0, p 0"
+        }
+      },
+      "commentary": [],
+      "innings": [
+        {
+          "inningsNumber": 1,
+          "teamName": "South Western Districts",
+          "teamShort": "SWD",
+          "score": "99",
+          "runs": 99,
+          "wickets": 10,
+          "overs": "19.3",
+          "runRate": 5.08,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 4,
+            "noBalls": 0,
+            "byes": 0,
+            "legByes": 1,
+            "penalty": 0,
+            "total": 5,
+            "details": "b 0, lb 1, w 4, nb 0, p 0"
+          }
+        },
+        {
+          "inningsNumber": 2,
+          "teamName": "Western Province",
+          "teamShort": "WP",
+          "score": "105/5",
+          "runs": 105,
+          "wickets": 5,
+          "overs": "14.3",
+          "runRate": 7.24,
+          "batters": [],
+          "bowlers": [],
+          "fallOfWickets": [],
+          "partnerships": [],
+          "yetToBat": [],
+          "extras": {
+            "wides": 6,
+            "noBalls": 0,
+            "byes": 1,
+            "legByes": 5,
+            "penalty": 0,
+            "total": 12,
+            "details": "b 1, lb 5, w 6, nb 0, p 0"
+          }
+        }
+      ],
+      "lastUpdated": "2026-11-23T12:46:08.771Z",
+      "toss": "Western Province won the toss and elected to bowl",
+      "matchSummary": "Western Province won by 5 wickets (with 33 balls remaining)"
     }
   ]
 }

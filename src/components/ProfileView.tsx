@@ -318,7 +318,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
               <Globe className={`w-4 h-4 ${isDark ? 'text-cyan-400' : 'text-cyan-700'}`} />
               <div>
                 <h4 className="font-bold text-xs">Display Language</h4>
-                <p className={`text-[11px] ${isDark ? 'text-slate-400' : 'text-slate-600 font-medium'}`}>Language for scoreboards and AI digests</p>
+                <p className={`text-[11px] ${isDark ? 'text-slate-400' : 'text-slate-600 font-medium'}`}>Language for scoreboards and match digests</p>
               </div>
             </div>
             <select
@@ -371,7 +371,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
           <button
             onClick={async () => {
               setLoadingApiStatus(true);
-              const res = await fetchApiStatus();
+              const res = await fetchApiStatus(true);
               if (res) setApiStatus(res);
               setLoadingApiStatus(false);
             }}
@@ -379,41 +379,77 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             className={`p-1.5 rounded-lg border text-xs font-mono flex items-center gap-1 transition-colors ${
               isDark ? 'bg-slate-800 hover:bg-slate-700 text-cyan-400 border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-300'
             }`}
-            title="Refresh API connectivity status"
+            title="Verify live API connectivity status"
           >
             <RefreshCw className={`w-3 h-3 ${loadingApiStatus ? 'animate-spin' : ''}`} />
-            <span className="text-[10px] hidden sm:inline">Refresh</span>
+            <span className="text-[10px] hidden sm:inline">Verify Live</span>
           </button>
         </div>
 
         <div className="space-y-3">
-          {/* Matches API Feed Status */}
-          <div className={`flex items-center justify-between p-3.5 rounded-2xl border ${isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-slate-50 border-slate-200'}`}>
-            <div className="flex items-center gap-3">
-              <div className={`p-2 rounded-xl ${isDark ? 'bg-cyan-500/10 text-cyan-400' : 'bg-cyan-100 text-cyan-800'}`}>
+          {/* Sportmonks Primary Matches API Feed Status */}
+          <div className={`flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-2xl border ${isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-slate-50 border-slate-200'}`}>
+            <div className="flex items-start gap-3">
+              <div className={`p-2 rounded-xl mt-0.5 ${isDark ? 'bg-cyan-500/10 text-cyan-400' : 'bg-cyan-100 text-cyan-800'}`}>
                 <Radio className="w-4 h-4" />
               </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h4 className="font-bold text-xs">Matches & Scorecard API</h4>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h4 className="font-bold text-xs">Matches &amp; Scorecard API</h4>
                   <span
                     className={`px-2 py-0.5 text-[9px] font-mono font-bold rounded-full border ${
-                      apiStatus?.matchesApi.connected
+                      apiStatus?.matchesApi.verified
                         ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-500/30'
-                        : 'bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 border-cyan-500/30'
+                        : apiStatus?.matchesApi.cooldownRemainingSeconds
+                        ? 'bg-amber-500/20 text-amber-600 dark:text-amber-400 border-amber-500/30'
+                        : apiStatus?.matchesApi.primaryConfigured
+                        ? 'bg-red-500/20 text-red-500 border-red-500/30'
+                        : 'bg-slate-500/20 text-slate-600 dark:text-slate-400 border-slate-500/30'
                     }`}
                   >
-                    {apiStatus?.matchesApi.connected ? 'LIVE API ACTIVE' : 'TELEMETRY SYNCED'}
+                    {apiStatus?.matchesApi.verified
+                      ? 'VERIFIED LIVE'
+                      : apiStatus?.matchesApi.cooldownRemainingSeconds
+                      ? `COOLDOWN (${apiStatus.matchesApi.cooldownRemainingSeconds}s)`
+                      : apiStatus?.matchesApi.primaryConfigured
+                      ? `AUTH ERROR (${apiStatus.matchesApi.verificationStatusCode || 'CHECK'})`
+                      : 'TOKEN NOT CONFIGURED'}
                   </span>
                 </div>
                 <p className={`text-[11px] ${isDark ? 'text-slate-400' : 'text-slate-600 font-medium'}`}>
-                  Provider: <span className="font-semibold">{apiStatus?.matchesApi.provider || 'CricAPI / Telemetry'}</span>
+                  Primary Provider: <span className="font-semibold">{apiStatus?.matchesApi.provider || 'Sportmonks Cricket API v2.0'}</span>
+                  {apiStatus?.matchesApi.checkedAt && (
+                    <span className="ml-2 text-[10px] opacity-75">
+                      • Checked {new Date(apiStatus.matchesApi.checkedAt).toLocaleTimeString()}
+                    </span>
+                  )}
                 </p>
+                {apiStatus?.matchesApi.verificationError && (
+                  <p className="text-[11px] text-amber-500 font-mono">
+                    {apiStatus.matchesApi.verificationError}
+                  </p>
+                )}
+                {apiStatus?.matchesApi.leagues && apiStatus.matchesApi.leagues.length > 0 && (
+                  <div className="flex flex-wrap gap-1 pt-1">
+                    {apiStatus.matchesApi.leagues.slice(0, 8).map((l) => (
+                      <span
+                        key={l.id}
+                        className={`px-2 py-0.5 rounded-md text-[10px] font-mono border ${
+                          isDark
+                            ? 'bg-slate-900/70 text-cyan-300 border-slate-700'
+                            : 'bg-white text-slate-700 border-slate-300'
+                        }`}
+                      >
+                        {l.name}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
             <button
               onClick={() => onNavigateTab('matches')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition-colors ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition-colors shrink-0 ${
                 isDark ? 'bg-slate-800 hover:bg-slate-700 text-cyan-400 border-slate-700' : 'bg-slate-200 hover:bg-slate-300 text-slate-900 border-slate-300'
               }`}
             >
@@ -421,27 +457,57 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             </button>
           </div>
 
-          {/* News API Feed Status */}
+          {/* Secondary Cricket Provider Adapter Status */}
+          <div className={`flex items-center justify-between p-3.5 rounded-2xl border ${isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-slate-50 border-slate-200'}`}>
+            <div className="flex items-center gap-3">
+              <div className={`p-2 rounded-xl ${isDark ? 'bg-cyan-500/10 text-cyan-400' : 'bg-cyan-100 text-cyan-800'}`}>
+                <Cpu className="w-4 h-4" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h4 className="font-bold text-xs">Secondary Cricket Providers</h4>
+                  <span
+                    className={`px-2 py-0.5 text-[9px] font-mono font-bold rounded-full border ${
+                      apiStatus?.matchesApi.secondaryProviders?.some((p) => p.connected)
+                        ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-500/30'
+                        : 'bg-slate-500/20 text-slate-600 dark:text-slate-400 border-slate-500/30'
+                    }`}
+                  >
+                    {apiStatus?.matchesApi.secondaryProviders?.some((p) => p.connected) ? 'FALLBACK ACTIVE' : 'OPTIONAL / UNCONFIGURED'}
+                  </span>
+                </div>
+                <p className={`text-[11px] ${isDark ? 'text-slate-400' : 'text-slate-600 font-medium'}`}>
+                  {apiStatus?.matchesApi.secondaryProviders?.length
+                    ? apiStatus.matchesApi.secondaryProviders
+                        .map((p) => `${p.name} (${p.connected ? 'Configured' : 'Off'})`)
+                        .join(', ')
+                    : 'Extensible adapter registry (activated when provider credentials exist)'}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* External Cricket News RSS Feed Status */}
           <div className={`flex items-center justify-between p-3.5 rounded-2xl border ${isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-slate-50 border-slate-200'}`}>
             <div className="flex items-center gap-3">
               <div className={`p-2 rounded-xl ${isDark ? 'bg-cyan-500/10 text-cyan-400' : 'bg-cyan-100 text-cyan-800'}`}>
                 <Newspaper className="w-4 h-4" />
               </div>
               <div>
-                <div className="flex items-center gap-2">
-                  <h4 className="font-bold text-xs">Cricket News API</h4>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h4 className="font-bold text-xs">Cricket News RSS Feeds</h4>
                   <span
                     className={`px-2 py-0.5 text-[9px] font-mono font-bold rounded-full border ${
                       apiStatus?.newsApi.connected
                         ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-500/30'
-                        : 'bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 border-cyan-500/30'
+                        : 'bg-amber-500/20 text-amber-600 dark:text-amber-400 border-amber-500/30'
                     }`}
                   >
-                    {apiStatus?.newsApi.connected ? 'LIVE API ACTIVE' : 'NEWS WIRE SYNCED'}
+                    {apiStatus?.newsApi.connected ? 'RSS FEEDS ACTIVE' : 'UNAVAILABLE'}
                   </span>
                 </div>
                 <p className={`text-[11px] ${isDark ? 'text-slate-400' : 'text-slate-600 font-medium'}`}>
-                  Provider: <span className="font-semibold">{apiStatus?.newsApi.provider || 'NewsAPI / Live Wire'}</span>
+                  Sources: <span className="font-semibold">{apiStatus?.newsApi.provider || 'ESPNcricinfo, BBC Sport Cricket, Cricket Australia, The Guardian'}</span>
                 </p>
               </div>
             </div>
@@ -453,26 +519,6 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             >
               View News
             </button>
-          </div>
-
-          {/* AI Intelligence Status */}
-          <div className={`flex items-center justify-between p-3.5 rounded-2xl border ${isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-slate-50 border-slate-200'}`}>
-            <div className="flex items-center gap-3">
-              <div className={`p-2 rounded-xl ${isDark ? 'bg-cyan-500/10 text-cyan-400' : 'bg-cyan-100 text-cyan-800'}`}>
-                <Cpu className="w-4 h-4" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h4 className="font-bold text-xs">Gemini AI Match Intelligence</h4>
-                  <span className="px-2 py-0.5 text-[9px] font-mono font-bold rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
-                    ONLINE
-                  </span>
-                </div>
-                <p className={`text-[11px] ${isDark ? 'text-slate-400' : 'text-slate-600 font-medium'}`}>
-                  Model: <span className="font-semibold">Gemini 2.5 Flash</span> (Catch-up, tactical analysis & chatbot)
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

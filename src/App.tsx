@@ -15,8 +15,6 @@ import { AuthModal } from './components/AuthModal';
 import { OnboardingModal } from './components/OnboardingModal';
 import { SearchModal } from './components/SearchModal';
 import { NotificationsDrawer } from './components/NotificationsDrawer';
-import { GeminiChatbot } from './components/GeminiChatbot';
-import { Sparkles } from 'lucide-react';
 
 import { DEFAULT_USER } from './data/mockData';
 import { MatchData, NewsArticle, UserProfile, AuthScreenType } from './types';
@@ -45,7 +43,6 @@ export function App() {
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
 
   // Real-time Cricket Match Data & News Subscription
   useEffect(() => {
@@ -63,7 +60,7 @@ export function App() {
         setMatchesLoading(false);
       });
 
-    // Subscribe to real-time live match telemetry (polls every 180s to respect Gemini API quotas)
+    // Subscribe to real-time live match telemetry (Sportmonks & configured providers)
     const unsubscribe = subscribeToCricketTelemetry((liveMatches) => {
       if (liveMatches && liveMatches.length > 0) {
         setMatches(liveMatches);
@@ -82,7 +79,7 @@ export function App() {
       }
     }, 180000);
 
-    // Subscribe to real-time grounded cricket news (with immediate cache delivery & cooldown auto-retry)
+    // Subscribe to real-time external cricket RSS news feeds
     const unsubscribeNews = subscribeToCricketNews((freshNews) => {
       if (freshNews && freshNews.length > 0) {
         setNews(freshNews);
@@ -238,7 +235,6 @@ export function App() {
         setUser={setUser}
         onOpenSearch={() => setIsSearchOpen(true)}
         onOpenNotifications={() => setIsNotificationsOpen(true)}
-        onOpenChat={() => setIsChatOpen(true)}
         unreadCount={unreadNotifCount}
       />
 
@@ -368,32 +364,6 @@ export function App() {
           setIsOnboardingOpen(false);
           setActiveTab('home');
         }}
-      />
-
-      {/* Floating Gemini AI Chat Widget Launcher */}
-      {!isChatOpen && (
-        <button
-          onClick={() => setIsChatOpen(true)}
-          className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 z-40 p-3.5 sm:p-4 rounded-full bg-gradient-to-r from-cyan-500 via-teal-500 to-blue-600 text-white font-bold shadow-2xl shadow-cyan-500/40 hover:scale-105 active:scale-95 transition-all flex items-center gap-2 group border border-cyan-300/40"
-          title="Ask Apex Gemini AI Assistant"
-        >
-          <div className="relative">
-            <Sparkles className="w-5 h-5 animate-pulse" />
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-slate-900 animate-ping"></span>
-          </div>
-          <span className="hidden sm:inline text-xs font-mono font-bold tracking-wider uppercase">
-            Ask Gemini AI
-          </span>
-        </button>
-      )}
-
-      {/* Gemini Multi-Turn Context-Aware Chatbot */}
-      <GeminiChatbot
-        isOpen={isChatOpen}
-        onClose={() => setIsChatOpen(false)}
-        user={user}
-        selectedMatch={selectedMatch}
-        isDark={isDark}
       />
     </div>
   );

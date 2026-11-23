@@ -64,6 +64,9 @@ export interface BallCommentary {
 export interface MatchData {
   id: string;
   matchId?: string;
+  provider?: string;
+  category?: 'International' | 'Domestic' | 'Franchise';
+  ballByBallSupported?: boolean;
   title: string; // e.g., "1st T20I • Wankhede Stadium, Mumbai"
   tournament: string; // "ICC T20 Men's World Cup 2026"
   matchType?: string; // "ODI" | "T20" | "T20I" | "Test" | "List A"
@@ -140,6 +143,7 @@ export interface NewsArticle {
   summary: string;
   category: 'Latest' | 'For You' | 'Teams' | 'Players' | 'Tournaments' | 'Matches' | 'Breaking News';
   timeAgo: string;
+  publishedTime?: string;
   readTime: string;
   imageUrl: string;
   source: string;

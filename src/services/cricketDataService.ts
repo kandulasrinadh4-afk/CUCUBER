@@ -217,15 +217,42 @@ export function filterValidPlayersForTeams(playerNames: string[], selectedTeams:
 // REAL-TIME CRICKET MATCH & DATA SERVICE
 // ==========================================
 
-import { MatchData, NewsArticle } from '../types';
+import { MatchData, NewsArticle, InningsScorecard, BallCommentary, MatchStatusType } from '../types';
+
+/**
+ * Validates that an external link uses a safe HTTP/HTTPS protocol.
+ */
+export function isSafeHttpUrl(rawUrl?: string | null): boolean {
+  if (!rawUrl || typeof rawUrl !== 'string') return false;
+  try {
+    const parsed = new URL(rawUrl.trim());
+    return parsed.protocol === 'https:' || parsed.protocol === 'http:';
+  } catch {
+    return false;
+  }
+}
 
 /**
  * Configuration flag for live cricket API integration.
- * Enables live match telemetry polling and live news feed synchronization with the backend API.
+ * Enables live match telemetry polling and external RSS news synchronization with the backend API.
  */
 export const IS_LIVE_CRICKET_API_ENABLED = true;
 
-const CLIENT_STORAGE_KEY = 'cucuber_grounded_matches_cache';
+const CLIENT_STORAGE_KEY = 'cucuber_sportmonks_matches_cache_v2';
+const CLIENT_NEWS_STORAGE_KEY = 'cucuber_rss_news_cache_v2';
+
+// Purge legacy Gemini-era localStorage caches if present
+function purgeLegacyGeminiStorage() {
+  try {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.removeItem('cucuber_grounded_matches_cache');
+      localStorage.removeItem('cucuber_grounded_news_cache');
+    }
+  } catch {
+    // Ignore storage access issues
+  }
+}
+purgeLegacyGeminiStorage();
 
 function loadCachedMatchesFromStorage(): MatchData[] {
   try {
@@ -234,7 +261,6 @@ function loadCachedMatchesFromStorage(): MatchData[] {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed?.matches) && parsed.matches.length > 0) {
-          console.log(`[CricketClient] Cache HIT: loaded ${parsed.matches.length} verified matches from client storage.`);
           return parsed.matches;
         }
       }
@@ -258,8 +284,6 @@ function saveCachedMatchesToStorage(matches: MatchData[]) {
   }
 }
 
-const CLIENT_NEWS_STORAGE_KEY = 'cucuber_grounded_news_cache';
-
 function loadCachedNewsFromStorage(): NewsArticle[] {
   try {
     if (typeof window !== 'undefined' && window.localStorage) {
@@ -267,7 +291,6 @@ function loadCachedNewsFromStorage(): NewsArticle[] {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed?.articles) && parsed.articles.length > 0) {
-          console.log(`[NewsClient] Cache HIT: loaded ${parsed.articles.length} verified articles from client storage.`);
           return parsed.articles;
         }
       }
@@ -294,12 +317,13 @@ function saveCachedNewsToStorage(articles: NewsArticle[]) {
 let cachedMatchesList: MatchData[] = loadCachedMatchesFromStorage();
 let cachedNewsList: NewsArticle[] = loadCachedNewsFromStorage();
 let lastFetchError: string | null = null;
+let lastNewsError: string | null = null;
 let hasRateLimitError: boolean = false;
 let lastMatchesClientFetchTime: number = 0;
 let clientRateLimitCooldownUntil: number = 0;
 let inFlightFetchMatchesPromise: Promise<MatchData[]> | null = null;
 let cooldownTimerId: any = null;
-const CLIENT_MATCHES_CACHE_TTL_MS = 60000; // 60s client cache TTL
+const CLIENT_MATCHES_CACHE_TTL_MS = 45000; // 45s client cache TTL
 
 let lastNewsClientFetchTime: number = 0;
 let clientNewsRateLimitCooldownUntil: number = 0;
@@ -327,15 +351,11 @@ function scheduleCooldownAutoRetry(delaySeconds: number) {
     cooldownTimerId = null;
   }
 
-  const delayMs = Math.max(2000, (delaySeconds * 1000) + 1000); // 1s buffer after cooldown window
-  console.log(`[CricketClient] Gemini cooldown ACTIVE: auto-retry scheduled in ${Math.round(delayMs / 1000)}s.`);
-
+  const delayMs = Math.max(2000, (delaySeconds * 1000) + 1000);
   cooldownTimerId = setTimeout(async () => {
     cooldownTimerId = null;
-    console.log('[CricketClient] Gemini cooldown EXPIRED: retry started now...');
     try {
       const fresh = await fetchCricketMatches(false);
-      console.log(`[CricketClient] Retry completed: returned ${fresh.length} verified matches.`);
       if (fresh && fresh.length > 0) {
         notifyTelemetrySubscribers(fresh);
       }
@@ -365,15 +385,11 @@ function scheduleNewsCooldownAutoRetry(delaySeconds: number) {
     newsCooldownTimerId = null;
   }
 
-  const delayMs = Math.max(2000, (delaySeconds * 1000) + 1000); // 1s buffer after cooldown window
-  console.log(`[NewsClient] auto-retry scheduled in ${Math.round(delayMs / 1000)}s.`);
-
+  const delayMs = Math.max(2000, (delaySeconds * 1000) + 1000);
   newsCooldownTimerId = setTimeout(async () => {
     newsCooldownTimerId = null;
-    console.log('[NewsClient] Gemini cooldown EXPIRED: auto-retrying news sync...');
     try {
       const fresh = await fetchCricketNews(false);
-      console.log(`[NewsClient] Retry completed: returned ${fresh.length} verified articles.`);
       if (fresh && fresh.length > 0) {
         notifyNewsSubscribers(fresh);
       }
@@ -388,6 +404,7 @@ export function getCricketDataStatus() {
     connected: IS_LIVE_CRICKET_API_ENABLED,
     hasRateLimitError,
     lastError: lastFetchError,
+    lastNewsError,
     matchCount: cachedMatchesList.length,
     newsCount: cachedNewsList.length,
     isCooldownActive: Date.now() < clientRateLimitCooldownUntil,
@@ -399,25 +416,35 @@ export function getCricketDataStatus() {
 
 export interface ApiConnectionStatus {
   status: string;
+  timestamp?: string;
   matchesApi: {
     connected: boolean;
+    primaryConfigured?: boolean;
+    verified?: boolean;
+    verificationStatusCode?: number;
+    verificationError?: string;
+    checkedAt?: string;
+    leagues?: { id: number; name: string; type?: string }[];
     provider: string;
+    dataSource?: string;
+    cooldownRemainingSeconds?: number;
+    secondaryProviders?: { id: string; name: string; connected: boolean }[];
   };
   newsApi: {
     connected: boolean;
     provider: string;
-  };
-  geminiApi: {
-    connected: boolean;
+    dataSource?: string;
+    providers?: { id: string; name: string; enabled: boolean }[];
   };
 }
 
 /**
- * Checks connectivity status of backend Matches, News, and AI keys.
+ * Checks connectivity status of backend Sportmonks, secondary cricket providers, and RSS news feeds.
  */
-export async function fetchApiStatus(): Promise<ApiConnectionStatus | null> {
+export async function fetchApiStatus(forceVerify: boolean = false): Promise<ApiConnectionStatus | null> {
   try {
-    const res = await fetch('/api/cricket/status');
+    const url = forceVerify ? '/api/cricket/status?verify=true' : '/api/cricket/status';
+    const res = await fetch(url);
     if (!res.ok) return null;
     return await res.json();
   } catch (err) {
@@ -427,8 +454,7 @@ export async function fetchApiStatus(): Promise<ApiConnectionStatus | null> {
 }
 
 /**
- * Fetches real-time cricket matches from the server/third-party API proxy.
- * Includes live fixtures, upcoming matches, and recent results.
+ * Fetches real-time cricket matches from the Sportmonks & configured secondary backend providers.
  */
 export async function fetchCricketMatches(forceRefresh: boolean = false): Promise<MatchData[]> {
   if (!IS_LIVE_CRICKET_API_ENABLED) {
@@ -437,40 +463,27 @@ export async function fetchCricketMatches(forceRefresh: boolean = false): Promis
 
   const now = Date.now();
 
-  // If in active rate-limit cooldown
   if (now < clientRateLimitCooldownUntil) {
     const remainingSecs = Math.max(1, Math.ceil((clientRateLimitCooldownUntil - now) / 1000));
-    if (cachedMatchesList.length > 0) {
-      console.log(`[CricketClient] Cache HIT: serving ${cachedMatchesList.length} verified matches during active cooldown (${remainingSecs}s remaining).`);
-      return cachedMatchesList;
-    }
-    console.log(`[CricketClient] Cache MISS & Gemini cooldown ACTIVE: ${remainingSecs}s remaining (auto-retry armed).`);
     if (!cooldownTimerId) {
       scheduleCooldownAutoRetry(remainingSecs);
     }
     return cachedMatchesList;
   }
 
-  // Reuse fresh client-side cache unless this is a user-initiated forced refresh
   if (!forceRefresh && cachedMatchesList.length > 0 && (now - lastMatchesClientFetchTime < CLIENT_MATCHES_CACHE_TTL_MS)) {
-    console.log(`[CricketClient] Cache HIT: serving ${cachedMatchesList.length} fresh client-cached matches.`);
     return cachedMatchesList;
   }
 
-  // Reuse pending in-flight promise to avoid duplicate concurrent calls
   if (inFlightFetchMatchesPromise) {
-    console.log('[CricketClient] Deduplicating matches fetch with active in-flight request.');
     return inFlightFetchMatchesPromise;
   }
 
   inFlightFetchMatchesPromise = (async () => {
     try {
-      console.log(`[CricketClient] Requesting /api/cricket/matches (forceRefresh=${forceRefresh})...`);
       const url = forceRefresh ? '/api/cricket/matches?refresh=true' : '/api/cricket/matches';
       const res = await fetch(url);
       const data = await res.json().catch(() => null);
-
-      console.log(`[CricketClient] API status: ${res.status}`);
 
       if (!res.ok) {
         lastFetchError = data?.error || `HTTP ${res.status}: Failed to fetch matches`;
@@ -481,7 +494,6 @@ export async function fetchCricketMatches(forceRefresh: boolean = false): Promis
           let retrySec = retrySecBody || (retryHeader ? parseInt(retryHeader, 10) : 60);
           if (isNaN(retrySec) || retrySec <= 0) retrySec = 60;
           clientRateLimitCooldownUntil = Date.now() + (retrySec * 1000);
-          console.warn(`[CricketClient] Gemini cooldown ACTIVE (status 429). Retry in ${retrySec}s.`);
           scheduleCooldownAutoRetry(retrySec);
         }
         return cachedMatchesList;
@@ -496,7 +508,6 @@ export async function fetchCricketMatches(forceRefresh: boolean = false): Promis
           cooldownTimerId = null;
         }
         lastMatchesClientFetchTime = Date.now();
-        console.log(`[CricketClient] Verified matches returned: ${data.matches.length} (source=${data.source}, cached=${data.cached})`);
         if (data.matches.length > 0) {
           cachedMatchesList = data.matches;
           saveCachedMatchesToStorage(data.matches);
@@ -518,7 +529,7 @@ export async function fetchCricketMatches(forceRefresh: boolean = false): Promis
 }
 
 /**
- * Fetches complete scorecard, player stats, commentary, and telemetry for a specific match.
+ * Fetches complete match details for a specific match.
  */
 export async function fetchMatchById(matchId: string, forceRefresh: boolean = false): Promise<MatchData | null> {
   if (!IS_LIVE_CRICKET_API_ENABLED) {
@@ -538,6 +549,83 @@ export async function fetchMatchById(matchId: string, forceRefresh: boolean = fa
   } catch (err) {
     console.warn(`Could not fetch match ${matchId}:`, err);
     return null;
+  }
+}
+
+export interface ScorecardFetchResult {
+  scorecardAvailable: boolean;
+  partial: boolean;
+  ballByBallAvailable: boolean;
+  status: MatchStatusType | 'UNKNOWN';
+  statusCode: number;
+  code?: string;
+  error?: string;
+  innings: InningsScorecard[];
+  currentInnings: InningsScorecard | null;
+  commentary: BallCommentary[];
+  recentBalls: string[];
+  match: MatchData | null;
+}
+
+/**
+ * Fetches detailed scorecard from the dedicated scorecard endpoint.
+ * Explicitly handles non-200 unavailable/scheduled/rate-limit states without fabricating data.
+ */
+export async function fetchMatchScorecard(
+  matchId: string,
+  forceRefresh: boolean = false
+): Promise<ScorecardFetchResult> {
+  try {
+    const url = forceRefresh
+      ? `/api/cricket/matches/${encodeURIComponent(matchId)}/scorecard?refresh=true`
+      : `/api/cricket/matches/${encodeURIComponent(matchId)}/scorecard`;
+    const res = await fetch(url);
+    const data = await res.json().catch(() => null);
+
+    if (!data) {
+      return {
+        scorecardAvailable: false,
+        partial: false,
+        ballByBallAvailable: false,
+        status: 'UNKNOWN',
+        statusCode: res.status,
+        error: `HTTP ${res.status}: Unable to load scorecard.`,
+        innings: [],
+        currentInnings: null,
+        commentary: [],
+        recentBalls: [],
+        match: null,
+      };
+    }
+
+    return {
+      scorecardAvailable: Boolean(data.scorecardAvailable && res.ok),
+      partial: Boolean(data.partial),
+      ballByBallAvailable: Boolean(data.ballByBallAvailable),
+      status: data.status || 'UNKNOWN',
+      statusCode: res.status,
+      code: data.code,
+      error: data.error,
+      innings: Array.isArray(data.innings) ? data.innings : [],
+      currentInnings: data.currentInnings || null,
+      commentary: Array.isArray(data.commentary) ? data.commentary : [],
+      recentBalls: Array.isArray(data.recentBalls) ? data.recentBalls : [],
+      match: data.match || null,
+    };
+  } catch (err: any) {
+    return {
+      scorecardAvailable: false,
+      partial: false,
+      ballByBallAvailable: false,
+      status: 'UNKNOWN',
+      statusCode: 500,
+      error: err?.message || 'Network error fetching scorecard.',
+      innings: [],
+      currentInnings: null,
+      commentary: [],
+      recentBalls: [],
+      match: null,
+    };
   }
 }
 
@@ -577,20 +665,24 @@ export function mergeMatchSafely(prev: MatchData, fresh: MatchData): MatchData {
   const prevHasDetails = hasDetailedScorecard(prev);
   const freshHasDetails = hasDetailedScorecard(fresh);
 
-  // If incoming fresh match already has full verified scorecard, accept it
   if (freshHasDetails) {
     return fresh;
   }
 
-  // If prev does not have detailed data either, take fresh
   if (!prevHasDetails) {
     return fresh;
   }
 
-  // Prev has detailed scorecard data and fresh is fixture-only:
-  // Update lightweight/live summary fields only, never overwrite detailed fields with undefined/empty fixture values
   return {
     ...prev,
+    category: fresh.category || prev.category,
+    matchType: fresh.matchType || prev.matchType,
+    city: fresh.city || prev.city,
+    country: fresh.country || prev.country,
+    ballByBallSupported:
+      fresh.ballByBallSupported !== undefined
+        ? fresh.ballByBallSupported
+        : prev.ballByBallSupported,
     status: fresh.status || prev.status,
     statusText: fresh.statusText || prev.statusText,
     result: fresh.result || prev.result,
@@ -649,7 +741,6 @@ export function mergeMatchSafely(prev: MatchData, fresh: MatchData): MatchData {
         }
       : fresh.awayTeam,
 
-    // PRESERVE existing detailed fields:
     innings: prev.innings,
     currentInnings: {
       ...prev.currentInnings,
@@ -682,7 +773,7 @@ export function mergeMatchSafely(prev: MatchData, fresh: MatchData): MatchData {
 }
 
 /**
- * Fetches real-time cricket news articles.
+ * Fetches real-time cricket news articles from permitted external RSS feeds.
  */
 export async function fetchCricketNews(forceRefresh: boolean = false): Promise<NewsArticle[]> {
   if (!IS_LIVE_CRICKET_API_ENABLED) {
@@ -692,39 +783,26 @@ export async function fetchCricketNews(forceRefresh: boolean = false): Promise<N
   const now = Date.now();
   const isCooldownActive = now < clientNewsRateLimitCooldownUntil;
 
-  // 1. If currently in rate-limit cooldown:
   if (isCooldownActive) {
     const remainingSecs = Math.max(1, Math.ceil((clientNewsRateLimitCooldownUntil - now) / 1000));
-    if (cachedNewsList.length > 0) {
-      console.log(`[NewsClient] Cache HIT: serving ${cachedNewsList.length} verified news articles during active cooldown (${remainingSecs}s remaining).`);
-      return cachedNewsList;
-    }
-    console.log(`[NewsClient] Cache MISS & Gemini cooldown ACTIVE: ${remainingSecs}s remaining (auto-retry armed).`);
     if (!newsCooldownTimerId) {
       scheduleNewsCooldownAutoRetry(remainingSecs);
     }
     return cachedNewsList;
   }
 
-  // 2. Client-side caching: reuse fresh news
   if (!forceRefresh && cachedNewsList.length > 0 && (now - lastNewsClientFetchTime < CLIENT_NEWS_CACHE_TTL_MS)) {
-    console.log(`[NewsClient] Cache HIT: serving ${cachedNewsList.length} fresh client-cached news articles.`);
     return cachedNewsList;
   }
 
-  // 3. Request deduplication: reuse active in-flight request
   if (inFlightFetchNewsPromise) {
-    console.log('[NewsClient] Deduplicating news request with active in-flight request.');
     return inFlightFetchNewsPromise;
   }
 
   inFlightFetchNewsPromise = (async () => {
     try {
       const url = forceRefresh ? '/api/cricket/news?refresh=true' : '/api/cricket/news';
-      console.log(`[NewsClient] Requesting /api/cricket/news (forceRefresh=${forceRefresh})...`);
       const res = await fetch(url);
-      console.log(`[NewsClient] API status: ${res.status}`);
-
       const retryAfterHeader = res.headers.get('Retry-After');
       const data = await res.json().catch(() => null);
 
@@ -736,16 +814,15 @@ export async function fetchCricketNews(forceRefresh: boolean = false): Promise<N
             : (retryAfterHeader ? parseInt(retryAfterHeader, 10) : 60);
           const safeRetrySec = isNaN(retrySec) || retrySec <= 0 ? 60 : retrySec;
           clientNewsRateLimitCooldownUntil = Date.now() + (safeRetrySec * 1000);
-          console.warn(`[NewsClient] Gemini cooldown ACTIVE (status 429). Retry in ${safeRetrySec}s.`);
           scheduleNewsCooldownAutoRetry(safeRetrySec);
         }
-        lastFetchError = data?.error || `HTTP ${res.status}: Failed to fetch news`;
+        lastNewsError = data?.error || `HTTP ${res.status}: Failed to fetch news`;
         return cachedNewsList;
       }
 
       if (data && Array.isArray(data.articles)) {
         lastNewsClientFetchTime = Date.now();
-        lastFetchError = null;
+        lastNewsError = null;
         hasRateLimitError = false;
         clientNewsRateLimitCooldownUntil = 0;
         if (newsCooldownTimerId) {
@@ -753,7 +830,6 @@ export async function fetchCricketNews(forceRefresh: boolean = false): Promise<N
           newsCooldownTimerId = null;
         }
 
-        console.log(`[NewsClient] verified news count: ${data.articles.length} (source=${data.source}, cached=${data.cached})`);
         if (data.articles.length > 0) {
           cachedNewsList = data.articles;
           saveCachedNewsToStorage(data.articles);
@@ -765,7 +841,7 @@ export async function fetchCricketNews(forceRefresh: boolean = false): Promise<N
       return cachedNewsList;
     } catch (err: any) {
       console.warn('[NewsClient] Network or fetch error in fetchCricketNews:', err);
-      lastFetchError = err?.message || 'Network error fetching news';
+      lastNewsError = err?.message || 'Network error fetching news';
       return cachedNewsList;
     } finally {
       inFlightFetchNewsPromise = null;
@@ -777,7 +853,6 @@ export async function fetchCricketNews(forceRefresh: boolean = false): Promise<N
 
 /**
  * Subscribes to real-time cricket news updates.
- * Calls `onUpdate` immediately if cached news is available, and then periodically syncs.
  */
 export function subscribeToCricketNews(
   onUpdate: (articles: NewsArticle[]) => void,
@@ -789,9 +864,7 @@ export function subscribeToCricketNews(
 
   newsListeners.add(onUpdate);
 
-  // If valid cached news exists, serve immediately so UI displays articles with zero delay
   if (cachedNewsList.length > 0) {
-    console.log(`[NewsClient] Immediately serving ${cachedNewsList.length} verified cached articles to news subscriber.`);
     onUpdate(cachedNewsList);
   }
 
@@ -799,13 +872,9 @@ export function subscribeToCricketNews(
 
   const performFetch = async () => {
     if (!isMounted) return;
-    if (Date.now() < clientNewsRateLimitCooldownUntil) {
-      console.log('[NewsClient] News poll: Gemini cooldown active, auto-retry timer is armed.');
-      return;
-    }
+    if (Date.now() < clientNewsRateLimitCooldownUntil) return;
 
     try {
-      console.log('[NewsClient] News poll: checking for verified news updates...');
       const liveNews = await fetchCricketNews();
       if (isMounted && liveNews && liveNews.length > 0) {
         onUpdate(liveNews);
@@ -815,9 +884,7 @@ export function subscribeToCricketNews(
     }
   };
 
-  // Initial background fetch
   performFetch();
-
   const intervalId = setInterval(performFetch, intervalMs);
 
   return () => {
@@ -828,7 +895,7 @@ export function subscribeToCricketNews(
 }
 
 /**
- * Fetches structured match summary, top performers, and tactical turning points.
+ * Fetches factual match summary derived from verified provider data.
  */
 export async function fetchMatchSummary(matchId: string): Promise<any> {
   if (!IS_LIVE_CRICKET_API_ENABLED) {
@@ -836,7 +903,7 @@ export async function fetchMatchSummary(matchId: string): Promise<any> {
   }
 
   try {
-    const res = await fetch(`/api/cricket/summary/${matchId}`);
+    const res = await fetch(`/api/cricket/summary/${encodeURIComponent(matchId)}`);
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
     }
@@ -849,12 +916,10 @@ export async function fetchMatchSummary(matchId: string): Promise<any> {
 
 /**
  * Subscribes to real-time live match telemetry.
- * Calls `onUpdate` immediately and then on a regular interval (default: 5000ms).
- * In UI-development mode, this is idle and returns a no-op unmount function.
  */
 export function subscribeToCricketTelemetry(
   onUpdate: (matches: MatchData[]) => void,
-  intervalMs: number = 180000
+  intervalMs: number = 60000
 ): () => void {
   if (!IS_LIVE_CRICKET_API_ENABLED) {
     return () => {};
@@ -862,9 +927,7 @@ export function subscribeToCricketTelemetry(
 
   telemetryListeners.add(onUpdate);
 
-  // If valid cached matches exist, serve immediately so UI displays matches with zero delay
   if (cachedMatchesList.length > 0) {
-    console.log(`[CricketClient] Immediately serving ${cachedMatchesList.length} verified cached matches to subscriber.`);
     onUpdate(cachedMatchesList);
   }
 
@@ -872,13 +935,9 @@ export function subscribeToCricketTelemetry(
 
   const performFetch = async () => {
     if (!isMounted) return;
-    if (Date.now() < clientRateLimitCooldownUntil) {
-      console.log('[CricketClient] Telemetry poll: Gemini cooldown active, auto-retry timer is armed.');
-      return;
-    }
+    if (Date.now() < clientRateLimitCooldownUntil) return;
 
     try {
-      console.log('[CricketClient] Telemetry poll: checking for match updates...');
       const liveMatches = await fetchCricketMatches();
       if (isMounted && liveMatches && liveMatches.length > 0) {
         onUpdate(liveMatches);
@@ -888,9 +947,7 @@ export function subscribeToCricketTelemetry(
     }
   };
 
-  // Perform background check
   performFetch();
-
   const intervalId = setInterval(performFetch, intervalMs);
 
   return () => {
@@ -899,3 +956,4 @@ export function subscribeToCricketTelemetry(
     clearInterval(intervalId);
   };
 }
+
